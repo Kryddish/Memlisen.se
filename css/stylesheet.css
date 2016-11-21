@@ -1,0 +1,119 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+   
+*{margin: 0px; padding: 0}
+
+body, html {
+    height: 100%;
+    color: #2a5157;
+    line-height: 1.8;
+}
+ 
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    opacity: 0.7;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('images/bakgrund.jpg');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("http://sareklint.se/Johanna/images/boris_images/boris_sida_1.jpg");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("http://www.agria.se/imagevault/publishedmedia/mvuxjp10eo2tqziuxpyv/katt-gaspar_-2-.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+.contact-div{
+    text-align: center;
+}
+form {
+    width: 50%;
+    margin: auto;
+}
+
+input[type=text], input[type=email]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+}
+    input[type=text]:focus {
+        background-color: lightblue;
+        border: 1px solid #234b62;
+    }
+
+    input[type=email]:focus {
+        background-color: lightblue;
+        border: 1px solid #234b62;
+    }
+
+   #arrow-down{width: 25%; display: block; margin-left: 30%; margin-top: 50%;} 
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-width: 1024px) {
+    .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+
+
+    
+    /* mobile 320px*480px*/
+@media only screen and (max-width: 760px){
+    .bgimg-2, .bgimg-3  {
+    background-image: none;
+}
+body {
+    color: #582D26;
+}
+
+.bgimg-1{
+    background-image: url(images/mobile-bg.jpg);
+}
+
+.navbar {
+    font-size: 10px;
+    }
+
+    .navbar li{
+        text-align: center;
+        margin-left: 3%;
+    }
+
+.picture-header{
+    font-size: 14px;
+    text-align: center;
+}
+
+#arrow-down{
+    text-align: center;
+    width: 20%;
+    margin: 50% auto 0 auto;
+}
+
+#projekt {
+    display: none;
+}
+
+
+
+}
+
+
+
