@@ -2,7 +2,7 @@ window.onload = function () {
 
   var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
         'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-        't', 'u', 'v', 'w', 'x', 'y', 'z'];
+        't', 'u', 'v', 'w', 'x', 'y', 'z','å', 'ä', 'ö'];
   
   var categories;         // Array of topics
   var chosenCategory;     // Selected catagory
@@ -42,11 +42,11 @@ window.onload = function () {
   // Select Catagory
   var selectCat = function () {
     if (chosenCategory === categories[0]) {
-      catagoryName.innerHTML = "The Chosen Category Is Premier League Football Teams";
+      catagoryName.innerHTML = "Kategorin är djurater!";
     } else if (chosenCategory === categories[1]) {
-      catagoryName.innerHTML = "The Chosen Category Is Films";
+      catagoryName.innerHTML = "Kategorin är engelska tv-serier";
     } else if (chosenCategory === categories[2]) {
-      catagoryName.innerHTML = "The Chosen Category Is Cities";
+      catagoryName.innerHTML = "Kategorin är städer";
     }
   }
 
@@ -74,13 +74,13 @@ window.onload = function () {
   
   // Show lives
    comments = function () {
-    showLives.innerHTML = "You have " + lives + " lives";
+    showLives.innerHTML = "Du har " + lives + " liv";
     if (lives < 1) {
-      showLives.innerHTML = "Game Over";
+      showLives.innerHTML = "Spelet är slut";
     }
     for (var i = 0; i < geusses.length; i++) {
       if (counter + space === geusses.length) {
-        showLives.innerHTML = "You Win!";
+        showLives.innerHTML = "Grattis, du klarade det!";
       }
     }
   }
@@ -183,9 +183,9 @@ window.onload = function () {
   // Play
   play = function () {
     categories = [
-        ["everton", "liverpool", "swansea", "chelsea", "hull", "manchester-city", "newcastle-united"],
-        ["alien", "dirty-harry", "gladiator", "finding-nemo", "jaws"],
-        ["manchester", "milan", "madrid", "amsterdam", "prague"]
+        ["flodhäst", "zebra", "mygga", "fjäril", "ekorre", "leopardgecko", "sköldpadda"],
+        ["dr who", "breaking bad", "the walking dead", "game of thrones", "one tree hill"],
+        ["manchester", "london", "madrid", "amsterdam", "stockholm"]
     ];
 
     chosenCategory = categories[Math.floor(Math.random() * categories.length)];
@@ -211,14 +211,14 @@ window.onload = function () {
     hint.onclick = function() {
 
       hints = [
-        ["Based in Mersyside", "Based in Mersyside", "First Welsh team to reach the Premier Leauge", "Owned by A russian Billionaire", "Once managed by Phil Brown", "2013 FA Cup runners up", "Gazza's first club"],
-        ["Science-Fiction horror film", "1971 American action film", "Historical drama", "Anamated Fish", "Giant great white shark"],
-        ["Northern city in the UK", "Home of AC and Inter", "Spanish capital", "Netherlands capital", "Czech Republic capital"]
+        ["Gillar vatten", "Liten och surrar", "Kan flyga, färgglad", "Klättrar i träd", "Liten ödla", "Långsam med ett skal"],
+        ["En mystisk doktor", "Skapar froger", "Världen har gått under..", "winter is comming..", "High school och basket"],
+        ["Nordlig stad i UK", "Har en drottning", "Ligger i Spanien", "Stad i Nederländerna", "Czech Republic capital"]
     ];
 
     var catagoryIndex = categories.indexOf(chosenCategory);
     var hintIndex = chosenCategory.indexOf(word);
-    showClue.innerHTML = "Clue: - " +  hints [catagoryIndex][hintIndex];
+    showClue.innerHTML = "Ledtråd: - " +  hints [catagoryIndex][hintIndex];
   };
 
    // Reset
