@@ -54,7 +54,13 @@
 		background-color: rgba(250,250,250,0.4);
    		border: none;
 
+
 	}
+
+#scroll-blogg{
+	margin-left: 60%;
+	margin-top: -20%;
+}
 
 	@media screen and (max-width: 768px) {
 		.stycke-none {
