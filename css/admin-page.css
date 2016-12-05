@@ -1,0 +1,18 @@
+body {
+		color: #023C23;
+	font-weight: bold;
+	font-family: cursive;
+	text-align: center;
+}
+
+#login-form {
+	text-align: center;
+	margin: 20%;
+	}
+
+	input[type=submit]{
+	height: 5%;
+    width: 10%;
+    background-color: #023C23;
+    color: white;
+}

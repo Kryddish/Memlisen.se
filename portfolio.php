@@ -1,4 +1,18 @@
 <?php 
+session_start();
+echo "<link rel='stylesheet' href='css/admin-page.css'>"; 
+if ($_SESSION['loggedin'] == true) {
+  echo "
+  <div class='fixed'>
+  <h2>Välkommen admin!</h2>
+  <form method='post'>
+  <input type='submit' name='logout' value='Logout'>
+  </form></div>
+  ";
+}
+if (isset($_POST['logout'])) {
+  $_SESSION['loggedin'] = false;
+}
 echo "
 <!DOCTYPE html>
 <html>

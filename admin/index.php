@@ -1,56 +1,51 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title></title>
-	<style type='text/css'>
-		.entry {
-			border: 1px solid;
-			margin: 10px;
-			padding: 10px;
-		}
-	</style>
-</head>
-<body>
-	<h1>Gästbok</h1>
+<?php 
 
+session_start();
+
+echo "<link rel='stylesheet' href='../css/admin.css'>"; 
+
+if (isset($_POST['password'])) {
+	if ($_POST['username'] == 'admin' && $_POST['password'] == 'maow') {
+		$_SESSION['loggedin'] = true;
+	}
+}
+
+if (isset($_POST['logout'])) {
+	$_SESSION['loggedin'] = false;
+}
+
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+	echo "
+	<h2>Välkommen admin!</h2>
 	<form method='post'>
-		<textarea name='message'></textarea>
-		<input type='text' name='sender'>
-		<input type='submit' value='Skicka inlägget'>
+	<input type='submit' name='logout' value='Logout'>
 	</form>
-	<?php 
-		echo $_POST['id'];
-		// Connect to database
-		$db = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784', 'mjaumaow123', '219317-memlisendb');
+	
+      <a href='../?page=home'>Startsida</a>
+      <a href='../?page=about'>Om mig</a>        
+      <a href='../?page=resume'>CV</a>
+      <a href='../?page=portfolio'>Portfolio</a>
+    
 
-		if (isset($_POST['message']) && isset($_POST['sender'])) {
 
-			$sender = $_POST['sender'];
-			$message = $_POST['message'];
-			//sätter in infon i tabellen
-			$query = "INSERT INTO entries (date, sender, message) VALUES (NOW(), '$sender', '$message')";
 
-			mysqli_query($db, $query);
+				";
+}
 
-			echo "Skickat!";
-																}	
+else {
+	echo "
+	<form id='login-form' method='post'>
+	<label>Användarnamn:</label><input type='text' name='username'>
+	<label>Lösenord:</label><input type='password' name='password' >
+	<input type='submit' value='Login'>
+	</form>
 
-			// Create query den ska ladda alla existerande inlägg. hämtar alla kolummer men den söker inte.
-			$query = 'SELECT * FROM entries ORDER BY date DESC';
 
-			// Get result
-			$result = mysqli_query($db, $query);
 
-			// Check result
-			while ($row = mysqli_fetch_assoc($result)) {
-				echo 
-				"<div class='entry'>
-					<p>{$row['date']}</p>
-					<p>{$row['message']}</p>
-					<p>/{$row['sender']}</p>
-				</div>";
-			}
-	 ?>
-</body>
-</html>
+	 ";
+
+	 if (isset($_POST['password']) && $_SESSION['loggedin'] == false) {
+	 	echo "Du har angivit fel lösenord!";
+	 }
+}
+?>
