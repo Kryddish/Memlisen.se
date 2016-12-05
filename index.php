@@ -6,8 +6,7 @@ echo "
 <title>Memlisen.se | Emmelie Sundell | Hem | Student KYH</title>
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<link rel='stylesheet' href='css/color.css'>
-<link rel='stylesheet' type='text/css' href='css/stylesheet.css'>
+<link rel='stylesheet' type='text/css' href='css/index.css'>
 <body>
   <!--facebook share plugin, hämtad kod-->
   <div id='fb-root'></div>
