@@ -1,3 +1,7 @@
+/* ========================================
+   Main
+======================================== */
+
 *{margin: 0;
 	padding: 0;}
 
@@ -6,6 +10,17 @@
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
 		color: #2a5157;
+	}
+
+
+	h1{
+		margin-left: 46%;
+		margin-bottom: 0;
+	}
+
+	#welcome{
+		margin-left: 48%;
+		margin-bottom: 0;
 	}
 
 	.top {
@@ -24,6 +39,10 @@
 
 	 }
 
+
+/* ========================================
+   Menu
+======================================== */
 	.fixed-nav-bar {
 		position: fixed;
 		top: 0;
@@ -33,15 +52,6 @@
 		height: 50px;
 	}
 
-	h1{
-		margin-left: 46%;
-		margin-bottom: 0;
-	}
-
-	#welcome{
-		margin-left: 48%;
-		margin-bottom: 0;
-	}
 
 	.jag {
 		margin-top: 10%;
@@ -61,6 +71,10 @@
 	margin-left: 60%;
 	margin-top: -20%;
 }
+
+/* ========================================
+   Mobile screen
+======================================== */
 
 	@media screen and (max-width: 768px) {
 		.stycke-none {
