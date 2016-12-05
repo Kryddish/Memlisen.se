@@ -184,8 +184,8 @@ window.onload = function () {
   play = function () {
     categories = [
         ["flodhäst", "zebra", "mygga", "fjäril", "ekorre", "leopardgecko", "sköldpadda"],
-        ["dr who", "breaking bad", "the walking dead", "game of thrones", "one tree hill"],
-        ["manchester", "london", "madrid", "amsterdam", "stockholm"]
+        ["dr who", "breaking bad", "the walking dead", "game of thrones", "one tree hill", "luke cage", "war and peace", "daredevil", "stranger things", "halt and catch fire" ],
+        ["manchester", "london", "madrid", "amsterdam", "stockholm", "paris", "osaka", "alingsås", "chicago", "kairo", "bombay", "dehli", "peking", "sydney", "melbourne", "söderköping"] 
     ];
 
     chosenCategory = categories[Math.floor(Math.random() * categories.length)];
@@ -211,9 +211,12 @@ window.onload = function () {
     hint.onclick = function() {
 
       hints = [
-        ["Gillar vatten", "Liten och surrar", "Kan flyga, färgglad", "Klättrar i träd", "Liten ödla", "Långsam med ett skal"],
-        ["En mystisk doktor", "Skapar froger", "Världen har gått under..", "winter is comming..", "High school och basket"],
-        ["Nordlig stad i UK", "Har en drottning", "Ligger i Spanien", "Stad i Nederländerna", "Czech Republic capital"]
+        ["Gillar vatten", "Liten och surrar", "Kan flyga, färgglad", "Klättrar i träd", "Liten ödla", "Långsam med ett skal", "Ett kattdjur", "Stor och farlig med 4 ramar",
+         "Gillar lera", "röd, lever bland träden", "lever i vatten", "knubbig, lever i djupare vatten", "gillar att slå upp sin stjärt", "har stora horn" ],
+
+        ["En mystisk doktor", "Skapar froger", "Världen har gått under..", "winter is comming..", "High school och basket", "Skygg men skottsäker marvel hjälte", 
+        "Baserad på en novell  under franska invasionen", "Blind brottskämpe", "Pojkes försvinnande i India", "80-talet, mordern teknik"],
+        ["Nordlig stad i UK", "Har en drottning", "Ligger i Spanien", "Stad i Nederländerna", "Czech Republic capital", "Stor stad i Sverige", "Stort torn, fin kultur", ]
     ];
 
     var catagoryIndex = categories.indexOf(chosenCategory);

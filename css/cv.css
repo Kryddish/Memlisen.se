@@ -1,5 +1,6 @@
-
-/****   MAIN   ****/
+/* ========================================
+   Main
+======================================== */
 
 body {
  font-family: Georgia;
@@ -36,10 +37,12 @@ strong {
  h3 {display: inline;}
 
 
-
-/**** MENU ****/
+/* ========================================
+   Menu
+======================================== */
 .navbar{
   list-style-type: none;
+  background-color: white;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -60,7 +63,9 @@ strong {
           text-decoration: none;
         }
 
-/**** HEADER ****/
+/* ========================================
+   Header
+======================================== */
 
 #top-line{ 
   padding: 10px 80px;
@@ -70,7 +75,6 @@ strong {
   border-width: 8px 0 2px 0;
 }
 
-/* //-- header, body, footer -- */
 #hd{ 
   margin: 2.5em 0 3em 0;
   padding-bottom: 1.5em;
@@ -100,7 +104,9 @@ strong {
   font-style: italic; 
 }
 
-/* //-- section styles -- */
+/* ========================================
+   section styles
+======================================== */
 
 a#pdf { 
   display: block; 
@@ -118,7 +124,9 @@ a#pdf:hover {
 
 
 
-
+/* ========================================
+   Table
+======================================== */
 .talent { 
   width: 32%; 
   float: left;
@@ -157,11 +165,6 @@ a#pdf:hover {
     color: #990003 
   }
 
-
-
- 
-
-  
   .expand {
     position:fixed;
     top: 20vh;
@@ -193,7 +196,9 @@ a#pdf:hover {
   table li, a{text-decoration: none; margin: 2%; list-style-type: none;}
 
 
-
+/* ========================================
+  Mobile screen
+======================================== */
 
   @media screen and (max-width: 844px) {
 
