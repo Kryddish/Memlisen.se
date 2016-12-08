@@ -1,8 +1,9 @@
 <?php 
 session_start();
-echo "<link rel='stylesheet' href='css/admin-page.css'>"; 
+ 
 if ($_SESSION['loggedin'] == true) {
   echo "
+  <link rel='stylesheet' href='css/admin-page.css'>
   <div class='fixed'>
   <h2>Välkommen admin!</h2>
   <form method='post'>
@@ -62,9 +63,10 @@ switch ($page) {
     break;
   
   default:
+  ob_end_clean();
   echo "
 
-// <!-- First Parallax Image with Logo Text -->
+<!-- First Parallax Image with Logo Text -->
 <div class='bgimg-1 pitcure-position'>
   <div class='picture-header' style='white-space:nowrap;'>
    <h2>Välkommen till memlisen.se!</h2>
@@ -74,7 +76,7 @@ switch ($page) {
 </div>
 </div>
 
-// <!-- Container (About Section) -->
+<!-- Container (About Section) -->
 <div class='content padding'>
   <h3 class='heading'>Om mig</h3>
   <p class='heading'><em>I love Animals</em></p>
@@ -88,7 +90,7 @@ switch ($page) {
     </div>
     <a href='mittcv.html' target='_blank'>Klicka här för att lästa mitt cv!</a>
 
-    // <!-- Hide this text on small devices -->
+    <!-- Hide this text on small devices -->
     <div class='w3-col m6 w3-hide-small margin'>
       <p>Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 18 år gammal och studerar på kyh i odenplan till front end devolper. Denna sida ingår alltså som en del i utbildningen som kallas för 'induviduella projektet'. Vi ska alltså skapa en sida och under dessa år utvecckla denna med hjälp av kunskaperna vi får och sedan blir detta vårat examenarbete som vi i framtiden kommer visa upp för att söka jobb. detta betyder alltså att denna sida är ett projektet som hela tiden byggs på nya saker vilket gör att allt kanske inte fungerar som det ska. upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi! </p>
       <a href='aboutme.html'>klicka här för att gå till sidan 'mer om mig'</a>

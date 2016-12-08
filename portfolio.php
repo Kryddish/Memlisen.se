@@ -7,7 +7,8 @@ if ($_SESSION['loggedin'] == true) {
   <h2>Välkommen admin!</h2>
   <form method='post'>
   <input type='submit' name='logout' value='Logout'>
-  </form></div>
+  </form>
+  </div>
   ";
 }
 if (isset($_POST['logout'])) {
