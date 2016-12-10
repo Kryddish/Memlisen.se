@@ -63,7 +63,6 @@ switch ($page) {
     break;
   
   default:
-  ob_end_clean();
   echo "
 
 <!-- First Parallax Image with Logo Text -->
