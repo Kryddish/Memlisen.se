@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: headline;
+    src: url(fonts/headline.otf);
+}
 
 
 /* ========================================
@@ -42,6 +45,9 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 .w3-hover-opacity {cursor: pointer;}
 #arrow-down{width: 25%; display: block; margin-left: 30%; margin-top: 50%;} 
 
+.only-on-mobile {
+        display: none;
+}
 
 
 /* ========================================
@@ -269,8 +275,14 @@ input[type=submit] {
 @media only screen and (max-width: 760px){
     .bgimg-1, .bgimg-2, .bgimg-3  {
     background-image: none;
+    display: none;
+
     }
 
+    body{
+        background-color: black;
+    }
+    
     .navbar {
        display: none;
         }
@@ -283,11 +295,21 @@ input[type=submit] {
     #arrow-down{
         text-align: center;
         width: 20%;
-        margin: 50% auto 0 auto;
+        margin: 100% auto 0 auto;
     }
 
     #projekt {
         display: none;
+    }
+
+
+    .only-on-mobile{
+        display: block;
+        text-align: center;
+        margin-top: 20%;
+        font-size: 50px;
+        color: #00F9FF;
+        font-family: headline;
     }
 }
 
