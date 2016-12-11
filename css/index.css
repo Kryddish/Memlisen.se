@@ -1,6 +1,11 @@
+
+
+
 /* ========================================
    Main
 ======================================== */
+
+
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
    
 *{margin: 0px; padding: 0}
@@ -37,9 +42,12 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 .w3-hover-opacity {cursor: pointer;}
 #arrow-down{width: 25%; display: block; margin-left: 30%; margin-top: 50%;} 
 
+
+
 /* ========================================
    Bilder
 ======================================== */
+
 
 .img-me{
     border-radius:50%;
@@ -88,12 +96,17 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
     min-height: 400px;
 }
 
+
+
 /* ========================================
    Menu
 ======================================== */
+
+
 .navbar{
     list-style-type: none;
-    background-color: white;
+    background-color: rgba(200);
+    float: left;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -120,9 +133,12 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
     z-index:1
                 }
 
+
 /* ========================================
    Head
 ======================================== */
+
+
 
 .content{
     max-width:980px;
@@ -142,9 +158,12 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 .w3-row:after,.w3-row-padding:after
 {content:"";display:table;clear:both; background-color: #ecf0f5;}
 
+
+
 /* ========================================
    Kontaktformulär
 ======================================== */
+
 
 .contact-div{
     text-align: center;
@@ -171,9 +190,18 @@ input[type=text], input[type=email]{
         border: 1px solid #234b62;
     }
 
+input[type=submit] {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+
+
 /* ========================================
    Inputs
 ======================================== */
+
+
 .input-style{
     padding:8px;
     display:block;
@@ -186,9 +214,13 @@ input[type=text], input[type=email]{
         border:1px solid #ccc
     }
 
+
+
 /* ========================================
    Buttons
 ======================================== */
+
+
 .send-btn{
     border:none;
     display:inline-block;
@@ -217,9 +249,11 @@ input[type=text], input[type=email]{
     }
 
 
+
 /* ========================================
    Mobile screen
 ======================================== */
+
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-width: 1024px) {
@@ -233,43 +267,34 @@ input[type=text], input[type=email]{
     
     /* mobile 320px*480px*/
 @media only screen and (max-width: 760px){
-    .bgimg-2, .bgimg-3  {
+    .bgimg-1, .bgimg-2, .bgimg-3  {
     background-image: none;
-}
-body {
-    color: #582D26;
-}
-
-.bgimg-1{
-    background-image: url(images/mobile-bg.jpg);
-}
-
-.navbar {
-    font-size: 10px;
+    background-color: black;
     }
+    
+    .bgimg-1 {
+        display: none;
+    }
+   
 
-    .navbar li{
+    .navbar {
+       display: none;
+        }
+
+    .picture-header{
+        font-size: 14px;
         text-align: center;
-        margin-left: 3%;
     }
 
-.picture-header{
-    font-size: 14px;
-    text-align: center;
-}
+    #arrow-down{
+        text-align: center;
+        width: 20%;
+        margin: 50% auto 0 auto;
+    }
 
-#arrow-down{
-    text-align: center;
-    width: 20%;
-    margin: 50% auto 0 auto;
-}
-
-#projekt {
-    display: none;
-}
-
-
-
+    #projekt {
+        display: none;
+    }
 }
 
 /* gör så all text i 2 stycket syns om skärmen är tillräcklig stor */

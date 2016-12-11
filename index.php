@@ -18,10 +18,14 @@ if (isset($_POST['logout'])) {
 echo "
 <!DOCTYPE html>
 <html>
-<title>Memlisen.se | Emmelie Sundell | Hem | Student KYH</title>
-<meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<link rel='stylesheet' type='text/css' href='css/index.css'>
+<head>
+  <title>Memlisen.se | Emmelie Sundell | Hem | Student KYH</title>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' href='css/index.css'>
+  <link rel='stylesheet' type='text/css' href='css/mobilemenu.css'>
+  <script src='scripts/jquery.min.js'></script>
+  </head>
 <body>
   <!--facebook share plugin, hämtad kod-->
   <div id='fb-root'></div>
@@ -36,13 +40,30 @@ echo "
 
   <div class='menu-position'>
     <ul class='navbar' id='myNavbar'>
-      <li><a href='?page=home'>Startsida</a></li>
+      <li><a href='/'>Startsida</a></li>
       <li><a href='?page=about'>Om mig</a></li>        
       <li><a href='?page=resume'>CV</a></li>
       <li><a href='?page=portfolio'>Portfolio</a></li>
     </li>
   </ul>
 </div>
+
+<!-- Hamburger menu on phone -->
+<div id='nav-container'>
+  <div class='toggle-icon'>
+    <span class='bar'></span>
+    <span class='bar'></span>
+    <span class='bar'></span>
+  </div><!-- /toggle-icon -->
+</div><!-- /nav-container -->
+
+<script type='text/javascript'>
+$('.toggle-icon').click(function() {
+  $('#nav-container').toggleClass('pushed');
+});
+</script>
+
+
 ";
 
 $page = $_GET['page'];
@@ -68,16 +89,14 @@ switch ($page) {
 <!-- First Parallax Image with Logo Text -->
 <div class='bgimg-1 pitcure-position'>
   <div class='picture-header' style='white-space:nowrap;'>
-   <h2>Välkommen till memlisen.se!</h2>
-   <a href='#'>
-    <img id='arrow-down' onclick='scrollDown()' src='css/images/arrow-down.png'>
-  </a>
+    <h2>Välkommen till memlisen.se!</h2>
+    <a class='scrollbutton' href='#scroll'><img id='arrow-down' src='css/images/arrow-down.png'></a>
 </div>
 </div>
 
 <!-- Container (About Section) -->
 <div class='content padding'>
-  <h3 class='heading'>Om mig</h3>
+  <h3 class='heading' id='scroll'>Om mig</h3>
   <p class='heading'><em>I love Animals</em></p>
   <p>
     Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. 
@@ -98,14 +117,14 @@ switch ($page) {
 </div>
 
 
-// <!-- Second Parallax Image with Portfolio Text -->
+<!-- Second Parallax Image with Portfolio Text -->
 <div class='bgimg-2 pitcure-position'>
   <div class='picture-header'>
     <span class='rubrik'>Portfolio</span>
   </div>
 </div>
 
-// <!-- Container (Portfolio Section) -->
+<!-- Container (Portfolio Section) -->
 <div class='content  padding'>
   <h3 class='heading'>Mina arbeten</h3>
   <p class='heading'><em>Här är några protyper på mina senaste arbeten<br> klicka på bilden för att göra dem större!</em></p><br>
@@ -150,7 +169,7 @@ switch ($page) {
 </div>
 
 
-// <!-- Modal for full size images on click-->
+<!-- Modal for full size images on click-->
 <div id='fullsize-image' class='img-fullsize' onclick='this.style.display='none''>
   <span class='close-btn btn-style'>×</span>
   <div class='heading padding'>
@@ -158,14 +177,14 @@ switch ($page) {
   </div>
 </div>
 
-// <!-- Third Parallax Image with Portfolio Text -->
+<!-- Third Parallax Image with Portfolio Text -->
 <div class='bgimg-3 pitcure-position'>
   <div class='picture-header'>
    <span class='rubrik'>Kontakt</span>
  </div>
 </div>
 
-// <!-- Container (Contact Section) -->
+<!-- Container (Contact Section) -->
 <div class='content  padding'>
  <h3 class='heading'>Kontakta mig!!</h3>
  <p class='heading'><em>Ge mig gärna lite feedback!</em></p>      
@@ -184,13 +203,12 @@ switch ($page) {
       <input name='name' class='input-style input-border ' type='text' placeholder='Namn'>
       <input name='email' class='input-style input-border' type='email' placeholder='Email'>
       <input name='text' class='input-style input-border' type='text' placeholder='skriv din text här...'>
-
-        <div class='fb-like' data-href='https://memlisen.se' data-layout='standard' data-action='like' data-show-faces='true' data-share='true'></div>
-
       <input type='submit' class='send-btn margin w3-right'>
 
-        <script src='//platform.linkedin.com/in.js' type='text/javascript'></script>
-        <script type='IN/MemberProfile' data-id='https://www.linkedin.com/in/emmelie-sundell-41bba2128' data-format='hover' data-text='Emmelie Sundell'></script>
+      <div class='fb-like' data-href='https://memlisen.se' data-width='200' data-layout='standard' data-action='like' data-show-faces='true' data-share='true'></div>
+
+      <script src='//platform.linkedin.com/in.js' type='text/javascript'></script>
+      <script type='IN/MemberProfile' data-id='https://www.linkedin.com/in/emmelie-sundell-41bba2128' data-format='hover' data-text='Emmelie Sundell'></script>
         
     </form>
   </div>
@@ -250,6 +268,7 @@ echo "
 </script>
 
 <script type='text/javascript' src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5818b18185638455'></script> 
+<script src='scripts/jquery_scroll_down.js'></script>
 </body>
 </html>
 ";
