@@ -90,9 +90,11 @@ switch ($page) {
 <div class='bgimg-1 pitcure-position'>
   <div class='picture-header' style='white-space:nowrap;'>
     <h2>Välkommen till memlisen.se!</h2>
-    <a class='scrollbutton' href='#scroll'><img id='arrow-down' src='css/images/arrow-down.png'></a>
+    </div>
 </div>
-</div>
+
+<div class='only-on-mobile'>Hello There!</div>
+<a class='scrollbutton' href='#scroll'><img id='arrow-down' src='css/images/arrow-down.png'></a>
 
 <!-- Container (About Section) -->
 <div class='content padding'>
