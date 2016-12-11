@@ -269,13 +269,7 @@ input[type=submit] {
 @media only screen and (max-width: 760px){
     .bgimg-1, .bgimg-2, .bgimg-3  {
     background-image: none;
-    background-color: black;
     }
-    
-    .bgimg-1 {
-        display: none;
-    }
-   
 
     .navbar {
        display: none;
@@ -307,3 +301,8 @@ input[type=submit] {
 .w3-col.m3{width:24.99999%}
 
 
+@media only screen and (max-width: 760px) {
+    .bgimg-1 {
+        background-image: none;
+    }
+}

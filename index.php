@@ -58,9 +58,9 @@ echo "
 </div><!-- /nav-container -->
 
 <script type='text/javascript'>
-$('.toggle-icon').click(function() {
-  $('#nav-container').toggleClass('pushed');
-});
+  $('.toggle-icon').click(function() {
+    $('#nav-container').toggleClass('pushed');
+  });
 </script>
 
 
