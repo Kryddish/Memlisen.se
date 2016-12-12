@@ -71,7 +71,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
     height:100%;
     overflow:auto;
     background-color:rgb(0,0,0);
-    background-color:rgba(0,0,0,0.4)
+    background-color:rgba(0,0,0,0.4);
     color:#fff;
     background-color:#000;}
 
@@ -257,7 +257,9 @@ input[type=submit] {
         top:0;
     }
 
-
+#arrow-down-m {
+    display: none;
+}
 
 /* ========================================
    Mobile screen
@@ -283,7 +285,8 @@ input[type=submit] {
     }
 
     body{
-        background-color: black;
+        background-image: url(images/mobile-bg.jpg);
+        background-size: 100% 100%;
     }
     
     .navbar {
@@ -295,10 +298,11 @@ input[type=submit] {
         text-align: center;
     }
 
-    #arrow-down{
+    #arrow-down-m{
+        display: block;
         text-align: center;
         width: 20%;
-        margin: 100% auto 0 auto;
+        margin: 50% auto 0 auto;
     }
 
     #projekt {
@@ -306,21 +310,30 @@ input[type=submit] {
     }
 
 
-    .only-on-mobile{
+    .only-on-mobile {
         display: block;
         text-align: center;
-        margin-top: 20%;
-        font-size: 50px;
+        margin-top: 10%;
         color: #00F9FF;
-        font-family: headline;
+        font-size: 12px;
+        height: 100vh;
     }
+
+        .mobile-head{
+        font-weight: normal;
+        font-size: 50px;
+        font-family: headline;
+             }
+
+
 }
 
 /* gör så all text i 2 stycket syns om skärmen är tillräcklig stor */
 @media only screen and (min-width:601px){
 .w3-col.m4{width:33.33333%}
 .w3-col.m6,.w3-half{width:49.99999%}
-.w3-col.m8,{width:66.66666%}}
+.w3-col.m8{width:66.66666%}
+}
 
 .w3-col,.w3-half{float:left;width:100%}
 .w3-col.m3{width:24.99999%}

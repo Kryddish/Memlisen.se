@@ -95,7 +95,12 @@ switch ($page) {
     </div>
 </div>
 
-  <div class='only-on-mobile'>Hello There!</div>
+<div class='only-on-mobile'>
+  <h1 class='mobile-head'>Hello There!<h1>
+    <p>Check out my menu! this site is under counstraction</p>
+      <a class='scrollbutton' href='#scroll'><img id='arrow-down-m' src='css/images/arrow-down.png'></a>
+</div>
+
   
 
 
