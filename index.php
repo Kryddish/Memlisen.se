@@ -97,7 +97,7 @@ switch ($page) {
 
 <div class='only-on-mobile'>
   <h1 class='mobile-head'>Hello There!<h1>
-    <p>Check out my menu! this site is under counstraction</p>
+    <p>Check out my menu! This site is under counstraction</p>
       <a class='scrollbutton' href='#scroll'><img id='arrow-down-m' src='css/images/arrow-down.png'></a>
 </div>
 
@@ -106,6 +106,7 @@ switch ($page) {
 
 
 <!-- Container (About Section) -->
+<div id='body'>
 <div class='content padding'>
   <h3 class='heading' id='scroll'>Om mig</h3>
   <p class='heading'><em>I love Animals</em></p>
@@ -223,6 +224,7 @@ switch ($page) {
         
     </form>
   </div>
+</div> <!--body-->
 ";
 
 if($_POST) {
