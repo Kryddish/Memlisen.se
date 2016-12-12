@@ -1,4 +1,5 @@
 <?php 
+error_reporting(0);
 session_start();
  
 if ($_SESSION['loggedin'] == true) {
@@ -90,11 +91,14 @@ switch ($page) {
 <div class='bgimg-1 pitcure-position'>
   <div class='picture-header' style='white-space:nowrap;'>
     <h2>Välkommen till memlisen.se!</h2>
+    <a class='scrollbutton' href='#scroll'><img id='arrow-down' src='css/images/arrow-down.png'></a>
     </div>
 </div>
 
-<div class='only-on-mobile'>Hello There!</div>
-<a class='scrollbutton' href='#scroll'><img id='arrow-down' src='css/images/arrow-down.png'></a>
+  <div class='only-on-mobile'>Hello There!</div>
+  
+
+
 
 <!-- Container (About Section) -->
 <div class='content padding'>

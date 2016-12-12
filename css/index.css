@@ -20,11 +20,14 @@ body, html {
 }
  
 .bgimg-1, .bgimg-2, .bgimg-3 {
-    opacity: 0.7;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.bgimg-2, .bgimg-3 {
+    opacity: 0.7;
 }
 
 a { color: #990003 
@@ -86,7 +89,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('images/bakgrund.jpg');
+    background-image: url('images/bb-8.jpg');
     min-height: 100%;
 }
 
