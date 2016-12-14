@@ -105,27 +105,35 @@ switch ($page) {
 
 <div class='only-on-mobile' id='m-scroll'>
   <h1 class='mobile-head'>Hello There!<h1>
-    <p>Check out my menu! This site is under counstraction</p>
+    <p>Welcome to my invidual project at KYH Stockholm! This site is under construcation, please check out my cool menu button :)</p>
       <a class='scrollbutton' href='#aboutme-mobile'><img id='arrow-down-m' src='css/images/arrow-down.png'></a>
 </div>
 
 <div id='aboutme-mobile'>
- <h1>Who am I?</h1>
+  <div class='header-m'>
+      <h1>Who am I?</h1>
+  </div>
  
+
   <p id='last'><</p>
-   <img id='myimage' src='css/images/jag.JPG'>
+   <img id='myimage' src='css/images/jaag.png'>
   <p id='next'>></p>
+  <h5><em>Emmelie Sundell</em></h5>
   
  
-  <p><em>Emmelie Sundell 19 year</em></p>
-  <h3>Hi!</h3>
+  
   <p>
-  My name is Emmelie and right now im studiyng on KYH to become a front end devoloper. This site is my induvidual project.
-  I'm 19 years old living with my mom in a town called Järfälla in sweden. My name is Emmelie and right now im studiyng on KYH to become a front end devoloper. This site is my induvidual project.
+  My name is Emmelie and right now im studiyng on KYH to become a front end devoloper. I have graduate as an animal caretaaker year 2016. 
+  I'm 19 years old living with my mom in a town called Järfälla in sweden.
+  bla bla bla bla bla bla bla lite text sen kommer mera text och då blir det en massa text och nu blev det svengelska.
   </p>
-  <a id='more-m' href='#'>click here to learn more about me!--></a>
+  <a id='more-m' href='notfound.php'>click here to learn more about me!--></a>
 
 </div>
+
+<!-- <div class='header-m'>
+      <h1>Who am I?</h1>
+  </div> -->
 
   
 

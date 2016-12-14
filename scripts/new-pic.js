@@ -1,8 +1,10 @@
 var images = [
-	"css/images/jag.JPG",
 	"css/images/meobella.JPG",
 	"css/images/meohest.JPG",
-	"css/images/me.PNG"
+	"css/images/ronjaobamse.JPG",
+	"css/images/lillata.JPG",
+	"css/images/miniofalcon.JPG"
+
 	];
 
 $(document).ready(function() {
