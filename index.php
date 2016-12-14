@@ -1,6 +1,7 @@
 <?php 
 error_reporting(0);
 session_start();
+mysqli_query($link, 'SET NAMES utf8');
  
 if ($_SESSION['loggedin'] == true) {
   echo "
@@ -99,6 +100,12 @@ switch ($page) {
   <h1 class='mobile-head'>Hello There!<h1>
     <p>Check out my menu! This site is under counstraction</p>
       <a class='scrollbutton' href='#scroll'><img id='arrow-down-m' src='css/images/arrow-down.png'></a>
+</div>
+
+<div id='aboutme-mobile'>
+  <h1>who am I?</h1>
+  <img src='css/images/337H.jpg'>
+
 </div>
 
   
@@ -225,6 +232,26 @@ switch ($page) {
     </form>
   </div>
 </div> <!--body-->
+
+<div class='hangman'>
+  <div class='wrapper'>
+    <h1>Hänga gubbe</h1>
+    <h4>Använd alfabetet nedan för att kunna gissa. Fastnar du så klicka på ledtråd för att få hjälp.</h4>
+    <p id='catagoryName'></p>
+  </div>
+  <div class='wrapper'>
+    <div id='buttons'></div>  
+  </div>
+  <div id='hold'></div>
+  <p id='mylives'></p>
+  <p id='clue'>Ledtråden -</p>  
+  <canvas id='stickman'>This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+  <div class='container'>
+    <button id='hint'>Ledtråd</button>
+    <button id='reset'>Spela igen!</button>
+  </div>
+</div>
+
 ";
 
 if($_POST) {
@@ -236,8 +263,9 @@ if($_POST) {
   $message = $_POST['text'];
 
   $message = <<<EMAIL
-  $name
-  $email
+ 
+ Sent from; $name , $email
+  Meddelande;
   $message
 EMAIL;
   mail($to, $subject, $message);
@@ -252,36 +280,11 @@ echo "
     document.getElementById('fullsize-image').style.display = 'block';
   }
 
-// Change style of navbar on scroll
-  window.onscroll = function() {myFunction()};
-  function myFunction() {
-    var navbar = document.getElementById('myNavbar');
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      navbar.className = 'navbar' + ' w3-card-2' + ' w3-animate-top' + ' w3-white';
-    } else {
-      navbar.className = navbar.className.replace(' w3-card-2 w3-animate-top w3-white', '');
-    }
-  }
-
-  window.onscroll = function() {
-    scrolled = true;
-  }
-
-  function scrollDown() {
-    autoScroll = true;
-    if(autoScroll) {
-      if(window.pageYOffset <= document.getElementsByClassName('pitcure-position')[0].offsetHeight) {
-        window.scrollBy(0, 5);
-        scrolldelay = setTimeout('scrollDown()', 10);
-      }
-      autoScroll = false;
-    } 
-  }
-
 </script>
 
 <script type='text/javascript' src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5818b18185638455'></script> 
 <script src='scripts/jquery_scroll_down.js'></script>
+<script src='hangman/hangman.js'></script>
 </body>
 </html>
 ";

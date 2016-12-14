@@ -1,4 +1,30 @@
-window.onload = function () {
+$(document).ready(function () {
+
+  var keys = {};
+  var found = false;
+
+$(document).keydown(function (e) {
+  keys[e.which] = true;
+
+  if (found == false && keys[13] == true && keys[72] == true) {
+    
+    alert("Grattis! Du har hittat mitt easter egg");
+
+    $(".hangman").css("display", "block");
+
+    $("html, body").animate({
+      scrollTop: $(".hangman").offset().top
+    }, 1500);
+
+    found = true;
+  }
+
+  });
+
+$(document).keyup(function (e) {
+  delete keys[e.which];
+});
+
 
   var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
         'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
@@ -233,6 +259,4 @@ window.onload = function () {
     context.clearRect(0, 0, 400, 400);
     play();
   }
-}
-
-
+});
