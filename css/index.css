@@ -350,17 +350,25 @@ form {
 
 #aboutme-mobile{
     height: 100vh;
+    background-color: black;
+    color: #00F9FF;
+    text-align: center;
 }
 
-  #aboutme-mobile h1{
-      text-align: center;
-      z-index: 99;
+  #aboutme-mobile p{
+      padding: 1%;
   }
 
-    #aboutme-mobile img{
-      width: 20%;
-      height: 20%;
-    }
+   #aboutme-mobile a {
+    float: right;
+   } 
+
+      #aboutme-mobile img{
+        width: 50%;
+        height: 30%;
+        border-radius: 100%;
+        
+      }
 
 
 

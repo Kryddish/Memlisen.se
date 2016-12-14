@@ -92,19 +92,33 @@ switch ($page) {
 <div class='bgimg-1 pitcure-position'>
   <div class='picture-header' style='white-space:nowrap;'>
     <h2>Välkommen till memlisen.se!</h2>
-    <a class='scrollbutton' href='#scroll'><img id='arrow-down' src='css/images/arrow-down.png'></a>
+    <a class='scrollbutton' href='scroll'><img id='arrow-down' src='css/images/arrow-down.png'></a>
     </div>
 </div>
 
-<div class='only-on-mobile'>
+
+                <!-- /* ========================================
+                   Mobile screen
+                   ======================================== */ -->
+
+<div class='only-on-mobile' id='m-scroll'>
   <h1 class='mobile-head'>Hello There!<h1>
     <p>Check out my menu! This site is under counstraction</p>
-      <a class='scrollbutton' href='#scroll'><img id='arrow-down-m' src='css/images/arrow-down.png'></a>
+      <a class='scrollbutton' href='#aboutme-mobile'><img id='arrow-down-m' src='css/images/arrow-down.png'></a>
 </div>
 
 <div id='aboutme-mobile'>
-  <h1>who am I?</h1>
-  <img src='css/images/337H.jpg'>
+
+  <h1>Who am I?</h1>
+  <img src='css/images/jag.JPG'>
+  <p><em>Emmelie Sundell 19 year</em></p>
+  <h3>Hi!</h3>
+  <p>
+  My name is Emmelie and right now im studiyng on KYH to become a front end devoloper. This site is my induvidual project.
+  I'm 19 years old living with my mom in a town called Järfälla in sweden. My name is Emmelie and right now im studiyng on KYH to become a front end devoloper. This site is my induvidual project.
+  I'm 19 years old living with my mom in a town called Järfälla in sweden.
+  </p>
+  <a href='#'>click here to learn more about me!--></a>
 
 </div>
 
