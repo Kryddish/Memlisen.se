@@ -26,7 +26,9 @@ echo "
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' href='css/index.css'>
   <link rel='stylesheet' type='text/css' href='css/mobilemenu.css'>
+  <link rel='stylesheet' type='text/css' href='css/hangman.css'>
   <script src='scripts/jquery.min.js'></script>
+  <script src='scripts/new-pic.js'></script>
   </head>
 <body>
   <!--facebook share plugin, hämtad kod-->
@@ -108,17 +110,20 @@ switch ($page) {
 </div>
 
 <div id='aboutme-mobile'>
-
-  <h1>Who am I?</h1>
-  <img src='css/images/jag.JPG'>
+ <h1>Who am I?</h1>
+ 
+  <p id='last'><</p>
+   <img id='myimage' src='css/images/jag.JPG'>
+  <p id='next'>></p>
+  
+ 
   <p><em>Emmelie Sundell 19 year</em></p>
   <h3>Hi!</h3>
   <p>
   My name is Emmelie and right now im studiyng on KYH to become a front end devoloper. This site is my induvidual project.
   I'm 19 years old living with my mom in a town called Järfälla in sweden. My name is Emmelie and right now im studiyng on KYH to become a front end devoloper. This site is my induvidual project.
-  I'm 19 years old living with my mom in a town called Järfälla in sweden.
   </p>
-  <a href='#'>click here to learn more about me!--></a>
+  <a id='more-m' href='#'>click here to learn more about me!--></a>
 
 </div>
 
