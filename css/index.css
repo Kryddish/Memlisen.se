@@ -357,9 +357,20 @@ form {
     display: block;
 }
 
+#portfolio-m {
+    background-image: url(http://trendar.nu/upload/media/posts/2016-04/18/speltavlingen-kodkampen-ska-fa-fler-barn-och-unga-intresserade-av-programmering_1460968832-b.jpg);
+    height: 100vh;
+     background-size: 100% 100%;
+    text-align: center;
+    color: #00F9FF;
+}
+
+
+
   #aboutme-mobile p{
       padding: 2%;
-      color: pink;
+      color: cyan;
+      background-color: rgba(0, 0, 0, 0.19);
 
   }
 
@@ -387,6 +398,7 @@ form {
     padding: 5%;
     margin-bottom: 2%;
     margin-top: -5%;
+
 }
 
 #next {
