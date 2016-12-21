@@ -7,7 +7,7 @@
 
 	body {
 		background-image: url("images/bakgrund.jpg");
-		background-size: 100% 100%;
+		background-size: 100%;
 		background-repeat: no-repeat;
 		color: #2a5157;
 	}
@@ -16,6 +16,7 @@
 	h1{
 		margin-left: 46%;
 		margin-bottom: 0;
+		margin-top: 2%;
 	}
 
 	#welcome{
@@ -43,16 +44,6 @@
 /* ========================================
    Menu
 ======================================== */
-	.fixed-nav-bar {
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 9999;
-		width: 100%;
-		height: 50px;
-	}
-
-
 	.jag {
 		margin-top: 10%;
 		margin-left: 1%;
@@ -65,11 +56,42 @@
    		border: none;
 
 
-	}
+}
 
 #scroll-blogg{
 	margin-left: 60%;
 	margin-top: -20%;
+}
+
+
+.navbar{
+    list-style-type: none;
+    background-color: rgba(200);
+    float: left;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+    .navbar li{
+        float: left;
+    }
+        .navbar li a{
+            display: block;
+            padding: 8px 16px;
+        }
+            .navbar li a:hover{
+                color: #000;
+                background-color: #ccc;
+            }
+                .navbar a{
+                    text-decoration: none;
+                }
+
+.menu-position {
+    position:fixed;
+    width:100%;
+    z-index:1
 }
 
 /* ========================================
