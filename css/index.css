@@ -415,6 +415,21 @@ form {
     
 }
 
+.navbar.responsive {
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: absolute;
+    margin-top: 20%;
+    
+    list-style-type: none;
+    background-color: black;
+}
+.navbar.responsive li {
+    float: none;
+    display: block;
+}
+
 
 
 

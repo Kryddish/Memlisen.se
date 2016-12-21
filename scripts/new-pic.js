@@ -9,7 +9,7 @@ var images = [
 
 $(document).ready(function() {
 
-	console.log(images.length - 1);
+	// console.log(images.length - 1);
 
 	var index = 0;
 

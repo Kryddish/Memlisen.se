@@ -52,7 +52,6 @@ echo "
   </ul>
 </div>
 
-<!-- Hamburger menu on phone -->
 <div id='nav-container'>
   <div class='toggle-icon'>
     <span class='bar'></span>
@@ -60,14 +59,6 @@ echo "
     <span class='bar'></span>
   </div><!-- /toggle-icon -->
 </div><!-- /nav-container -->
-
-<script type='text/javascript'>
-  $('.toggle-icon').click(function() {
-    $('#nav-container').toggleClass('pushed');
-  });
-</script>
-
-
 ";
 
 $page = $_GET['page'];
@@ -134,6 +125,8 @@ switch ($page) {
 <div id=portfolio-m>
   <div class='header-m'>
       <h1>My work</h1>
+      <p>bla bla bla bla bla bla bla lite text sen kommer mera text och då blir det en massa text och nu blev det svengelska.bla bla bla bla bla bla bla lite text sen kommer mera text och då blir det en massa text och nu blev det svengelska.bla bla bla bla bla bla bla lite text sen kommer mera text och då blir det en massa text och nu blev det svengelska.</p>
+
 
   </div>
 </div>
@@ -234,6 +227,8 @@ switch ($page) {
  </div>
 </div>
 
+</div> <!--body-->
+
 <!-- Container (Contact Section) -->
 <div class='content  padding'>
  <h3 class='heading'>Kontakta mig!!</h3>
@@ -262,7 +257,7 @@ switch ($page) {
         
     </form>
   </div>
-</div> <!--body-->
+
 
 <div class='hangman'>
   <div class='wrapper'>
@@ -316,6 +311,7 @@ echo "
 <script type='text/javascript' src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5818b18185638455'></script> 
 <script src='scripts/jquery_scroll_down.js'></script>
 <script src='hangman/hangman.js'></script>
+<script src='scripts/script.js'></script>
 </body>
 </html>
 ";
