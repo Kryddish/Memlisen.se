@@ -1,7 +1,8 @@
 <?php 
+$database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784', 'mjaumaow123', '219317-memlisendb' );
 error_reporting(0);
 session_start();
-mysqli_query($link, 'SET NAMES utf8');
+// mysqli_query($link, 'SET NAMES utf8');
  
 if ($_SESSION['loggedin'] == true) {
   echo "
@@ -122,7 +123,7 @@ switch ($page) {
 
 </div>
 
-<div id=portfolio-m>
+<div id='portfolio-m'>
   <div class='header-m'>
       <h1>My work</h1>
       <p>bla bla bla bla bla bla bla lite text sen kommer mera text och då blir det en massa text och nu blev det svengelska.bla bla bla bla bla bla bla lite text sen kommer mera text och då blir det en massa text och nu blev det svengelska.bla bla bla bla bla bla bla lite text sen kommer mera text och då blir det en massa text och nu blev det svengelska.</p>
@@ -247,6 +248,7 @@ switch ($page) {
     <form method='post'>
       <input name='name' class='input-style input-border ' type='text' placeholder='Namn'>
       <input name='email' class='input-style input-border' type='email' placeholder='Email'>
+      <input name='phone' class='input-style input-border ' type='text' placeholder='Telefonnummer'>
       <input name='text' class='input-style input-border' type='text' placeholder='skriv din text här...'>
       <input type='submit' class='send-btn margin w3-right'>
 
@@ -286,7 +288,30 @@ if($_POST) {
 
   $name = $_POST['name'];
   $email = $_POST['email'];
+  $phone = $_POST['phone'];
   $message = $_POST['text'];
+
+  $query = "
+     
+      INSERT INTO messages
+      (
+        meddelande,
+        avsändare, 
+        telefonnummer,
+        epost
+      )
+
+      VALUES 
+      (
+        '$message',
+        '$name',
+        '$phone',
+        '$email'
+      )
+
+    ";
+
+    mysqli_query($database, $query);
 
   $message = <<<EMAIL
  
@@ -296,8 +321,14 @@ if($_POST) {
 EMAIL;
   mail($to, $subject, $message);
   $feedback = 'Your message has been sent!';
+  echo $feedback;
   $headers .= 'Content-type: text/html; charset=UTF-8';
+
 }
+
+
+
+
 echo "
 <script type='text/javascript'> 
 // Modal Image Gallery
