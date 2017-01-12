@@ -1,0 +1,33 @@
+body {
+	background-color: blue;
+}
+
+.navbar{
+    list-style-type: none;
+    background-color: rgba(200);
+    float: left;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+    .navbar li{
+        float: left;
+    }
+        .navbar li a{
+            display: block;
+            padding: 8px 16px;
+        }
+            .navbar li a:hover{
+                color: #000;
+                background-color: #ccc;
+            }
+                .navbar a{
+                    text-decoration: none;
+                }
+
+.menu-position {
+    position:fixed;
+    width:100%;
+    z-index:1
+}
