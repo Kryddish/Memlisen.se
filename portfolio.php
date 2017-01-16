@@ -3,7 +3,7 @@ $database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784'
 error_reporting(0);
 session_start();
 // mysqli_query($link, 'SET NAMES utf8');
-echo " -->
+echo "
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +39,7 @@ echo " -->
 
 </article>
 
-<!-- ";
+ ";
 
 $page = $_GET['page'];
 
@@ -65,12 +65,12 @@ switch ($page) {
 
 
 
-echo " -->
+echo "
 
 </body>
 </html>
-<!-- "; -->
+ ";
 
 
 
-<!-- ?>
+ ?>
