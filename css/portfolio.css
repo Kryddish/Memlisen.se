@@ -1,5 +1,9 @@
-body {
-	background-color: blue;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a { color: #990003 
 }
 
 .navbar{
@@ -31,3 +35,52 @@ body {
     width:100%;
     z-index:1
 }
+
+
+.introduction p {
+    padding-top: 2%;
+    text-align: center;
+    font-size: 22px;
+    width: 50%;
+    margin-left: 25%;
+    color: white;
+    font-weight: bold;
+}
+
+#portfolio-loggo {
+    padding-top: 10%;
+    color: #0dbbe2;
+    text-shadow: 4px 4px 2px rgb(16, 19, 94);
+    text-align: center;
+    font-size: 72px;
+}
+
+article {
+  position: relative;
+  z-index: 1;
+}
+
+article:before {
+  content: " ";
+  position: absolute;
+  width: 100vw; 
+  height: 100vh;  
+  opacity: .7; 
+  z-index: -1;
+  background: url(https://images.alphacoders.com/106/106571.jpg);
+}
+
+.btn-style {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    border: 2px solid #0dbbe2;
+    font-size: 18px;
+    padding: 1%;
+    margin-left: 46%;
+    margin-top: 7%;
+}
+
+    .btn-style:hover {
+        background-color: #0dbbe2;
+    }

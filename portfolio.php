@@ -3,7 +3,7 @@ $database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784'
 error_reporting(0);
 session_start();
 // mysqli_query($link, 'SET NAMES utf8');
-echo "
+echo " -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +15,8 @@ echo "
 </head>
 <body>
 
+<article>
+
   <div class='menu-position'>
     <ul class='navbar' id='myNavbar'>
       <li><a href='/'>Startsida</a></li>
@@ -24,8 +26,20 @@ echo "
     </li>
   </ul>
 </div>
-<h1>Hej</h1>
-";
+
+<div class='introduction'>
+	<h1 id='portfolio-loggo'>Emmelies portfolio</h1>
+	<p>
+		Lorem ipsum dolor sit amet, vim ad unum appellantur, at mundi detraxit sit. Ei etiam disputationi sit. Eum ei case menandri euripidis. Et eam dolores appetere vulputate, his unum nibh audire id. Nam ea liber dolores, omnis iudico placerat id vim. An vix amet definitiones, cu iisque accusam sea.
+	</p>
+
+</div>
+
+<button class='btn-style'>Klicka på mig!</button>
+
+</article>
+
+<!-- ";
 
 $page = $_GET['page'];
 
@@ -51,12 +65,12 @@ switch ($page) {
 
 
 
-echo "
+echo " -->
 
 </body>
 </html>
-";
+<!-- "; -->
 
 
 
-?>
+<!-- ?>
