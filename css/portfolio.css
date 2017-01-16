@@ -85,3 +85,16 @@ article:before {
     .btn-style:hover {
         background-color: #0dbbe2;
     }
+
+
+@media only screen and (max-width: 760px) {
+
+#portfolio-loggo {
+    font-size: 30px;
+    float: left;
+}
+
+
+
+
+}
