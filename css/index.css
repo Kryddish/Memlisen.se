@@ -158,8 +158,7 @@ a { color: #990003
 
 .menu-position {
     position:fixed;
-    width:100%;
-    z-index:1
+    z-index:1;
 }
 
 

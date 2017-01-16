@@ -2,66 +2,36 @@
    Main
 ======================================== */
 
-body {
+#resume {
  font-family: Georgia;
   color: #2a5157;
   background-color: #E9E8ED;
    }
 
-h2 {
+#resume h2 {
   font-size: 152%
 }
 
-h3, h4 { 
+#resume h3, h4 { 
   font-size: 122%;
 }
 
-h1, h2, h3, h4{ 
+ #resume h1, h2, h3, h4{ 
   color: #333; 
 }
 
-p { 
+#resume p { 
   font-size: 100%;
   line-height: 18px;
   padding-right: 3em;
 }
 
-a { 
-  color: #990003
-}
-
-strong { 
+#resume strong { 
   font-weight: bold;
 }
 
- h3 {display: inline;}
+ #resume h3 {display: inline;}
 
-
-/* ========================================
-   Menu
-======================================== */
-.navbar{
-  list-style-type: none;
-  background-color: white;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-  .navbar li{
-    float: left;
-  }
-    .navbar li a{
-      display: block;
-      padding: 8px 16px;
-    }
-      .navbar li a:hover{
-        color: #000;
-        background-color: #ccc;
-      }
-        .navbar a{
-          text-decoration: none;
-        }
 
 /* ========================================
    Header

@@ -1,22 +1,22 @@
 <?php 
-$database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784', 'mjaumaow123', '219317-memlisendb' );
-error_reporting(0);
+// $database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784', 'mjaumaow123', '219317-memlisendb' );
+// error_reporting(0);
 session_start();
 // mysqli_query($link, 'SET NAMES utf8');
  
-if ($_SESSION['loggedin'] == true) {
-  echo "
-  <link rel='stylesheet' href='css/admin-page.css'>
-  <div class='fixed'>
-  <h2>Välkommen admin!</h2>
-  <form method='post'>
-  <input type='submit' name='logout' value='Logout'>
-  </form></div>
-  ";
-}
-if (isset($_POST['logout'])) {
-  $_SESSION['loggedin'] = false;
-}
+// if ($_SESSION['loggedin'] == true) {
+//   echo "
+//   <link rel='stylesheet' href='css/admin-page.css'>
+//   <div class='fixed'>
+//   <h2>Välkommen admin!</h2>
+//   <form method='post'>
+//   <input type='submit' name='logout' value='Logout'>
+//   </form></div>
+//   ";
+// }
+// if (isset($_POST['logout'])) {
+//   $_SESSION['loggedin'] = false;
+// }
 
 echo "
 <!DOCTYPE html>
@@ -348,6 +348,3 @@ echo "
 ";
     break;
 }
-
-
-?>+0ktj

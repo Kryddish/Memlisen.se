@@ -28,7 +28,7 @@ if (isset($_POST['logout'])) {
   <link rel='stylesheet' type='text/css' href='css/cv.css' media='all' />
 
 </head>
-<body>
+<body id="resume">
 
 <div class='menu-position'>
     <ul class='navbar' id='myNavbar'>
