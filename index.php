@@ -1,22 +1,22 @@
 <?php 
-$database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784', 'mjaumaow123', '219317-memlisendb' );
-error_reporting(0);
-session_start();
-mysqli_query($link, 'SET NAMES utf8');
+// $database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784', 'mjaumaow123', '219317-memlisendb' );
+// error_reporting(0);
+// session_start();
+// mysqli_query($link, 'SET NAMES utf8');
  
-if ($_SESSION['loggedin'] == true) {
-  echo "
-  <link rel='stylesheet' href='css/admin-page.css'>
-  <div class='fixed'>
-  <h2>Välkommen admin!</h2>
-  <form method='post'>
-  <input type='submit' name='logout' value='Logout'>
-  </form></div>
-  ";
-}
-if (isset($_POST['logout'])) {
-  $_SESSION['loggedin'] = false;
-}
+// if ($_SESSION['loggedin'] == true) {
+//   echo "
+//   <link rel='stylesheet' href='css/admin-page.css'>
+//   <div class='fixed'>
+//   <h2>Välkommen admin!</h2>
+//   <form method='post'>
+//   <input type='submit' name='logout' value='Logout'>
+//   </form></div>
+//   ";
+// }
+// if (isset($_POST['logout'])) {
+//   $_SESSION['loggedin'] = false;
+// }
 
 echo "
 <!DOCTYPE html>
@@ -66,16 +66,19 @@ $page = $_GET['page'];
 
 switch ($page) {
   case 'about':
-    ob_end_clean();
+   
     include("aboutme.php");
     break;
 
     case 'resume':
-    ob_end_clean();
     include("mittcv.php");
     break;
 
     case 'portfolio':
+    include("portfolio.php");
+    break;
+
+    case 'admin':
     include("portfolio.php");
     break;
   

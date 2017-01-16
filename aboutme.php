@@ -38,10 +38,9 @@ echo "
  <div id='scroll-blogg'>
  <h4>Scrolla ner för att läsa min blogg! </h4>
  <a href='#'>Klicka här för att komma till mitt första inlägg!</a>
- </div>
+ </div>";
 
- 
-
+	echo "
 <script type='text/javascript' src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5818b18185638455'></script> 
     </body>
     </html>
