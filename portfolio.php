@@ -12,7 +12,7 @@ echo "
 </head>
 <body>
 
-	<article id='portfolio'>
+	<article>
 
 			<div class='menu-position'>
 				<ul class='navbar' id='myNavbar'>
@@ -30,22 +30,21 @@ echo "
 			<p>
 				Lorem ipsum dolor sit amet, vim ad unum appellantur, at mundi detraxit sit. Ei etiam disputationi sit. Eum ei case menandri euripidis. Et eam dolores appetere vulputate, his unum nibh audire id. Nam ea liber dolores, omnis iudico placerat id vim. An vix amet definitiones, cu iisque accusam sea.
 			</p>
+			<p>
 			<button class='btnp-style'>Klicka på mig!</button>
+			</p>
 		</div>
 	</article>
 
-	<div class='project-type-1' class='glada-geten'>
-	<h1>Den Glada Geten</h1>
-	<img src='css/images/'>
 
+
+	<div class='project-type-1' class='glada-geten'>
+	
 
 
 
 	</div>
 
-<div project-type-2>
-	
-</div>
 
 </body>
 </html>
