@@ -7,7 +7,7 @@ echo "
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <link rel='stylesheet' href='css/color.css'>
 <link rel='stylesheet' type='text/css' href='css/aboutme.css'>
-<body id="aboutme">
+<body id='aboutme'>
 
 <div class='menu-position'>
     <ul class='navbar' id='myNavbar'>
@@ -40,10 +40,7 @@ echo "
  <a href='#'>Klicka här för att komma till mitt första inlägg!</a>
  </div>
 
-<div class='container'>
-  
-
-</div>
+ 
 
 <script type='text/javascript' src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5818b18185638455'></script> 
     </body>
