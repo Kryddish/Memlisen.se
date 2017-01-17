@@ -1,0 +1,116 @@
+/* ========================================
+   Mobile screen
+   ======================================== */
+
+
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-width: 1024px) {
+
+.bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+}}
+
+
+/* mobile 320px*480px*/
+@media only screen and (max-width: 760px){
+
+#body {
+    display: none;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3  {
+    background-image: none;
+    display: none;
+}
+
+.navbar {
+    display: none;
+ }
+
+ .picture-header{
+    font-size: 14px;
+    text-align: center;
+}
+
+#arrow-down-m{
+    display: block;
+    text-align: center;
+    width: 20%;
+    margin: 50% auto 0 auto;
+}
+
+#projekt {
+    display: none;
+}
+
+
+.only-on-mobile {
+    background-image: url(images/mobile-bg.jpg);
+    background-size: 100% 100%;
+    display: block;
+    text-align: center;
+    color: #00F9FF;
+    font-size: 12px;
+    height: 100vh;
+}
+
+.mobile-head{
+    padding-top: 12%;
+    font-weight: normal;
+    font-size: 50px;
+    font-family: headline;
+}
+
+#aboutme-mobile{
+    height: 100vh;
+    background-color: black;
+    color: #00F9FF;
+    text-align: center;
+    display: block;
+}
+
+  #aboutme-mobile p{
+      padding: 1%;
+  }
+
+   #aboutme-mobile #more-m {
+    float: right;
+   } 
+
+      #aboutme-mobile img{
+        width: 50%;
+        height: 30%;
+        border-radius: 100%;
+        
+      }
+        #aboutme-mobile .new-pic{
+          text-decoration: none;
+          font-size: 
+        }
+
+
+
+
+
+
+
+}
+
+/* gör så all text i 2 stycket syns om skärmen är tillräcklig stor */
+@media only screen and (min-width:601px){
+    .w3-col.m4{width:33.33333%}
+    .w3-col.m6,.w3-half{width:49.99999%}
+    .w3-col.m8{width:66.66666%}
+}
+
+.w3-col,.w3-half{float:left;width:100%}
+.w3-col.m3{width:24.99999%}
+
+
+@media only screen and (max-width: 760px) {
+    .bgimg-1 {
+        background-image: none;
+    }
+}
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <title>Emmelie Sundell</title>
+  <script src="../scripts/jquery.min.js"></script>
+</head>
+<style type="text/css">
+
+body {
+  background-color: #cdb7b5;
+  color: #8b3a62;
+  text-align:center;
+  font-size:18px;
+}
+
+.wrappper{
+  @include clear;
+  width:100%;
+  margin:0 auto;
+}
+
+canvas{
+  color: #cdb7b5;
+  border: 2px dashed black;
+  padding:15px;
+}
+
+
+#alphabet {
+  @include clear;
+  margin:15px auto;
+  padding:0;
+  max-width:900px;
+}
+
+#alphabet li {
+  float:left;
+  margin: 0 5px 5px 0;
+  list-style:none;
+  width:35px;
+  height:30px;
+  padding-top:10px;
+  color: green;
+  cursor:pointer;
+  @include corners(5px);
+  border: solid 2px grey;
+  border-radius: 30%;
+    
+  }
+
+#my-word {
+  margin: 0;
+  display: block;
+  padding: 0;
+  display:block;
+}
+
+#my-word li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size:1.6em;
+}
+
+#hold {
+  margin-top: 10%;
+}
+
+#mylives{
+  font-size:1.6em;
+  text-align:center;
+  display:block;
+}
+
+button{
+  @include corners (5px);
+  background-color: #cdb7b5;
+  color: #8b3a62;
+  border: solid 2px green;
+  text-decoration:none;
+  cursor:pointer;
+  font-size:1.2em;
+  padding:18px 10px;
+  width:180px;
+  margin: 10px;
+  outline: none;
+  
+    &:hover{
+      @include transition;
+      background-color: white;
+         color: green;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+  #alphabet {
+  padding:0 0 0 15px;
+}
+  }
+
+  @media (max-width: 480px) {
+  #alphabet {
+  padding:0 0 0 25px;
+}
+  }
+</style>
+<body>
+
+<div class="wrapper">
+   <h1>Hänga gubbe</h1>
+    <h4>Använd alfabetet nedan för att kunna gissa. Fastnar du så klicka på ledtråd för att få hjälp.</h4>
+       <p id="catagoryName"></p>
+</div>
+<div class="wrapper">
+    <div id="buttons">
+    </div>  
+    </div>
+    <div id="hold">
+    </div>
+    <p id="mylives"></p>
+    <p id="clue">Ledtråden -</p>  
+     <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+    <div class="container">
+      <button id="hint">Ledtråd</button>
+      <button id="reset">Spela igen!</button>
+    
+</div>
+
+
+
+
+
+
+<script src="hangman.js"></script>
+</body>
+</html>
+
+
+

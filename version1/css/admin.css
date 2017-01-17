@@ -1,0 +1,97 @@
+body {
+	background-image: url('../css/images/bg-admin.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: #023C23;
+	font-weight: bold;
+	font-family: cursive;
+	text-align: center;
+}
+
+.fixed {
+	position: fixed;
+}
+
+h3 {
+	text-align: center;
+}
+
+#login-form {
+	text-align: center;
+	margin: 20%;
+	}
+
+label {
+	font-size: 20px;
+	padding: 1%;
+}
+
+input[type=text] {
+    background-color: #3CBC8D;
+    color: white;
+    height: 5%;
+    width: 20%;
+}
+
+		input[type=text]:focus {
+	    background-color: lightblue;
+	}
+
+input[type=password] {
+	height: 5%;
+    width: 20%;
+}
+
+		input[type=password]:focus {
+		    border: 3px solid #555;
+
+		}
+
+input[type=submit]{
+	height: 5%;
+    width: 10%;
+    background-color: #023C23;
+    color: white;
+}
+
+@media only screen and (max-width: 760px){
+
+	#login-form {
+		display: inline-block;
+		margin: auto;
+	}
+
+	label{
+		display: inline-block;
+		font-size: 30px;
+	}
+
+	input[type=text] {
+    background-color: pink;
+    color: white;
+    height: 5%;
+    width: 50%;
+}
+
+		input[type=text]:focus {
+	    background-color: lightblue;
+	}
+
+input[type=password] {
+	height: 5%;
+    width: 20%;
+}
+
+		input[type=password]:focus {
+		    border: 3px solid #555;
+
+		}
+
+input[type=submit]{
+	height: 5%;
+    width: 10%;
+    background-color: #023C23;
+    color: white;
+}
+
+}
