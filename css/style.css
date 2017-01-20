@@ -1,0 +1,165 @@
+/* ========================================
+            Main
+======================================== */ 
+
+
+
+*{margin: 0; padding: 0;}
+
+@font-face {
+  font-family: caveman;
+  src: url('caveman.ttf');
+}
+
+body{
+  font-family: caveman;
+
+}
+
+
+
+/* ========================================
+            Head
+======================================== */ 
+
+.block{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(https://images.alphacoders.com/106/106571.jpg);;
+}
+.block:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    bottom: 0;
+    transform-origin: right bottom;
+    transform: skewY(-3deg);
+
+}
+
+.introduction p {
+  padding-top: 2%;
+    text-align: center;
+    font-size: 22px;
+    width: 50%;
+    color: white;
+     text-shadow: 2px 2px 2px black;
+    margin: auto;
+    font-style: oblique;
+}
+
+#portfolio-loggo {
+    padding-top: 10%;
+    color: #0dbbe2;
+    text-shadow: 4px 4px 2px rgb(16, 19, 94);
+    text-align: center;
+    font-size: 78px;
+}
+
+.btnp-style {
+    margin: 5%;
+    padding: 2%;
+    background-color: transparent;
+    border: 2px solid #0dbbe2;
+    font-size: 18px;
+    font-family: caveman;
+    text-shadow: 2px 2px 2px black;
+    color: #e2acbc;
+
+}
+
+    .btnp-style:hover {
+        background-color: #0dbbe2;
+    }
+
+
+
+
+/* ========================================
+            Project
+======================================== */ 
+
+
+.project-info {
+  display: block;
+  text-align: center;
+}
+
+.project-info h1{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 42px;
+  margin-top: 10%;
+  
+}
+
+.project-info p {
+  box-sizing: border-box;
+  vertical-align: top;
+  display: none;
+  width: 40%;
+}
+
+.about-menu {
+  text-align: center;
+  padding: 2%;
+}
+  .about-menu li{
+    display: inline;
+    width: 100%;
+    padding: 2%;
+    font-size: 26px;
+  }
+
+  .about-menu li a {
+    color: black;
+    text-decoration: none;
+  }
+
+    .about-menu li a:hover{
+      color: blue;
+      text-decoration: underline;
+    }
+
+    .about-menu li a.selected {
+      color: red;
+    }
+
+.bild {
+  font-size: 8em;
+  display: inline-block;
+ 
+}
+
+/* ========================================
+            Mobile
+======================================== */ 
+
+
+
+@media only screen and (max-width: 760px) {
+
+#portfolio-loggo {
+    padding: 10%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.btnp-style {
+  float: left;
+  margin: 25%;
+  padding: 3%;
+}
+
+.introduction p{
+    font-size: 14px;
+    text-align: center;
+    width: 90%;
+}
+
+}
+

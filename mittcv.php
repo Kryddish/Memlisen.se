@@ -1,18 +1,4 @@
 <?php 
-session_start();
-echo "<link rel='stylesheet' href='css/admin-page.css'>"; 
-if ($_SESSION['loggedin'] == true) {
-  echo "
-  <div class='fixed'>
-  <h2>Välkommen admin!</h2>
-  <form method='post'>
-  <input type='submit' name='logout' value='Logout'>
-  </form></div>
-  ";
-}
-if (isset($_POST['logout'])) {
-  $_SESSION['loggedin'] = false;
-}
   echo "
   <!DOCTYPE html>
 <html>
@@ -20,26 +6,33 @@ if (isset($_POST['logout'])) {
 
   <title>Emmelie Sundell | studerande KYH | Memlisen.se</title>
   <meta http-equiv='content-type' content='text/html; charset=utf-8' />
-  <meta name='keywords' content=' />
-  <meta name='description' content=' />
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  
   <!--Font-style -->
   <link rel='stylesheet' type='text/css' href='css/mercv.css' media='all' /> 
   <link rel='stylesheet' type='text/css' href='css/cv.css' media='all' />
 
 </head>
-<body id="resume">
+<body id='resume'>
 
-<div class='menu-position'>
-    <ul class='navbar' id='myNavbar'>
-      <li><a href='?page=home'>Startsida</a></li>
+  <div id='mySidenav' class='sidenav'>
+     <ul class='navbar' id='myNavbar'>
+      <li><a href='/'>Startsida</a></li>
       <li><a href='?page=about'>Om mig</a></li>        
       <li><a href='?page=resume'>CV</a></li>
       <li><a href='?page=portfolio'>Portfolio</a></li>
     </li>
   </ul>
-</div>
+  </div>
 
+  <!-- Knappen -->
+  <div id='nav-container'>
+      <div class='toggle-icon'>
+        <span class='bar'></span>
+        <span class='bar'></span>
+        <span class='bar'></span>
+      </div>
+  </div>
 
 <div id='background-position' class='yui-t7'>
   <div id='top-line'>

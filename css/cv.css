@@ -5,7 +5,13 @@
 #resume {
  font-family: Georgia;
   color: #2a5157;
-  background-color: #E9E8ED;
+   content: " ";
+  position: absolute;
+  width: 100vw; 
+  height: 100vh;  
+  opacity: .8; 
+  z-index: -1;
+  background: url(https://images.alphacoders.com/106/106571.jpg);
    }
 
 #resume h2 {
