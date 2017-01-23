@@ -1,6 +1,6 @@
 
 // Globala variabler
-var content = $('.project-info p');
+var content = $('.content');
 var chosen = 1;
 
 $(document).ready(function() {

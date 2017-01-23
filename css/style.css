@@ -124,7 +124,6 @@ body{
 
 .project-info {
   display: block;
-  text-align: center;
   height: 100vh;
 }
 
@@ -136,15 +135,27 @@ body{
   
 }
 
+.project-info div.content {
+  display: none;
+  overflow: auto;
+}
+
+  .about{
+    width: 50%;
+
+  }
+
+      .about p{
+    width: 80%;
+    padding: 0 0 16px 0;
+  }
+
 .project-info p {
   box-sizing: border-box;
   vertical-align: top;
-  display: none;
-  width: 50%;
   height: 100%;
+  margin-left: 20%;
   float: left;
-  margin-left: 5%;
-  letter-spacing: 2px;
 }
 
 .about-menu {
@@ -180,6 +191,9 @@ body{
 .bild {
   font-size: 8em;
   display: inline-block;
+  float: right;
+  margin-right: 10%;
+
  
 }
 

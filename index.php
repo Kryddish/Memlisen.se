@@ -94,40 +94,45 @@ echo "
 </div>
 
 <div class='block'>
-<div id='main'>
-  <div class='introduction'>
-    <h1 id='portfolio-loggo'>Emmelies Sundell</h1>
-    <p>
-      Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Har du testat att trycka på enter och h?
-    </p>
-    <p>
-      <button class='btnp-style'>Klicka på mig!</button>
-    </p>
+  <div id='main'>
+    <div class='introduction'>
+      <h1 id='portfolio-loggo'>Emmelies Sundell</h1>
+      <p>
+        Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Har du testat att trycka på enter och h?
+      </p>
+      <p>
+        <button class='btnp-style'>Klicka på mig!</button>
+      </p>
+    </div>
   </div>
-</div>
 </article>
 </div>
 
 
-  <div class='project-info'>
-    <h1>About me</h1>
-    <ul class='about-menu'>
-      <li><button class='selected' id='bio' href='#'>Bio</button></li>
-      <li><button id='skills' href='#'>Skills</button></li>
-      <li><button id='experience' href='#'>Experience</button></li>
-    </ul>
+<div class='project-info'>
+  <h1>About me</h1>
+  <ul class='about-menu'>
+    <li><button class='selected' id='bio' href='#'>Bio</button></li>
+    <li><button id='skills' href='#'>Skills</button></li>
+    <li><button id='experience' href='#'>Experience</button></li>
+  </ul>
 
-    <p>
-      Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Denna sida ingår alltså som en del i utbildningen som kallas för 'induviduella projektet'. 
+    <div class='content about'>
+      <p>
+        Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Denna sida ingår alltså som en del i utbildningen som kallas för 'induviduella projektet'. </p> 
 
+        <p>
+        Vi ska alltså skapa en sida och under dessa år utvecckla denna med hjälp av kunskaperna vi får och sedan blir detta vårat examenarbete som vi i framtiden kommer visa upp för att söka jobb. detta betyder alltså att denna sida är ett projektet som hela tiden byggs på nya saker vilket gör att allt kanske inte fungerar som det ska.</p>
 
-      Vi ska alltså skapa en sida och under dessa år utvecckla denna med hjälp av kunskaperna vi får och sedan blir detta vårat examenarbete som vi i framtiden kommer visa upp för att söka jobb. detta betyder alltså att denna sida är ett projektet som hela tiden byggs på nya saker vilket gör att allt kanske inte fungerar som det ska.
+        <p>
+        upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!
 
-      upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!
+      </p>
 
-    </p>
+        <button class='btna-style'>Gå till sidan mer om mig</button><button class='btn-style'>Kontaka mig!</button> 
+    </div>
 
-
+    <div class='content'>
      <p>
       skills Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 18 år gammal och studerar på kyh i odenplan till front end devolper. Denna sida ingår alltså som en del i utbildningen som kallas för 'induviduella projektet'. 
 
@@ -136,19 +141,21 @@ echo "
 
       upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!
     </p>
+  </div>
 
-     <p>
-      Experience upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!. 
+  <div class='content'>
+
+   <p>
+    Experience upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!. 
 
 
-      Vi ska alltså skapa en sida och under dessa år utvecckla denna med hjälp av kunskaperna vi får och sedan blir detta vårat examenarbete som vi i framtiden kommer visa upp för att söka jobb. detta betyder alltså att denna sida är ett projektet som hela tiden byggs på nya saker vilket gör att allt kanske inte fungerar som det ska.
+    Vi ska alltså skapa en sida och under dessa år utvecckla denna med hjälp av kunskaperna vi får och sedan blir detta vårat examenarbete som vi i framtiden kommer visa upp för att söka jobb. detta betyder alltså att denna sida är ett projektet som hela tiden byggs på nya saker vilket gör att allt kanske inte fungerar som det ska.
 
-      upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!
-    </p>
-    <h2 class='bild'>Bild</h2>
-
-</div><!-- 
-      <button class='btna-style'>Gå till sidan mer om mig</button><button class='btn-style'>Kontaka mig!</button> -->
+    upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!
+  </p>
+</div>
+<h2 class='bild'>Bild</h2>
+</div>
 
 
 
