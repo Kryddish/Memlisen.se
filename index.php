@@ -132,16 +132,29 @@ echo "
         <button class='btna-style'>Gå till sidan mer om mig</button><button class='btn-style'>Kontaka mig!</button> 
     </div>
 
-    <div class='content'>
-     <p>
-      skills Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 18 år gammal och studerar på kyh i odenplan till front end devolper. Denna sida ingår alltså som en del i utbildningen som kallas för 'induviduella projektet'. 
+    <div class='content skills'>
+      <div id='skillbars'>
 
+        <div class='skill_name' id='skill_php'>PHP</div>
+        <div class='skillbar_wrapper'>
+          <div class='skillbar_bar' id='skillbar_php'></div>
+          <div class='skill_bar_percent'>85%</div>
+        </div>
 
-      Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 18 år gammal och studerar på kyh i odenplan till front end devolper. Denna sida ingår alltså som en del i utbildningen som kallas för 'induviduella projektet'.
+        <div class='skill_name' id='skill_asp'>Sleep</div>
+        <div class='skillbar_wrapper'>
+          <div class='skillbar_bar' id='skillbar_asp'></div>
+          <div class='skill_bar_percent'>100%</div>
+        </div>
 
-      upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!
-    </p>
-  </div>
+        <div class='skill_name' id='skill_jsp'>JSP</div>
+        <div class='skillbar_wrapper'>
+          <div class='skillbar_bar' id='skillbar_jsp'></div>
+          <div class='skill_bar_percent'>75%</div>
+        </div>
+
+     </div>
+    </div>
 
   <div class='content'>
 
