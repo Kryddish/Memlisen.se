@@ -112,9 +112,9 @@ echo "
   <div class='project-info'>
     <h1>About me</h1>
     <ul class='about-menu'>
-      <li><a class='selected' id='bio' href='#'>Bio</a></li>
-      <li><a id='skills' href='#'>Skills</a></li>
-      <li><a id='experience' href='#'>Experience</a></li>
+      <li><button class='selected' id='bio' href='#'>Bio</button></li>
+      <li><button id='skills' href='#'>Skills</button></li>
+      <li><button id='experience' href='#'>Experience</button></li>
     </ul>
 
     <p>
@@ -124,7 +124,9 @@ echo "
       Vi ska alltså skapa en sida och under dessa år utvecckla denna med hjälp av kunskaperna vi får och sedan blir detta vårat examenarbete som vi i framtiden kommer visa upp för att söka jobb. detta betyder alltså att denna sida är ett projektet som hela tiden byggs på nya saker vilket gör att allt kanske inte fungerar som det ska.
 
       upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!
+
     </p>
+
 
      <p>
       skills Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 18 år gammal och studerar på kyh i odenplan till front end devolper. Denna sida ingår alltså som en del i utbildningen som kallas för 'induviduella projektet'. 
@@ -145,7 +147,8 @@ echo "
     </p>
     <h2 class='bild'>Bild</h2>
 
-</div>
+</div><!-- 
+      <button class='btna-style'>Gå till sidan mer om mig</button><button class='btn-style'>Kontaka mig!</button> -->
 
 
 

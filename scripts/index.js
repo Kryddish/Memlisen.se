@@ -9,13 +9,13 @@ $(document).ready(function() {
 	$(content[0]).css("display", "inline-block");
 
 	// När man klickar en länk
-	$(".project-info a").click(function(event) {
+	$(".project-info button").click(function(event) {
 
 		// Sparar det klickade elementet
 		var clickedElement = event.target;
 
 		// Tar bort klassen "selected" från varje länk
-		$('.project-info a').removeClass("selected");
+		$('.project-info buttton').removeClass("selected");
 
 		// Lägger till klassen "selected" på klickat element
 		$(clickedElement).addClass("selected");
