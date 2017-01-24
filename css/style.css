@@ -1,10 +1,7 @@
 /* ========================================
             Main
 ======================================== */ 
-
-
-
-*{margin: 0; padding: 0;}
+html{margin: 0; padding: 0;}
 
 @font-face {
   font-family: caveman;
@@ -339,6 +336,103 @@ body{
   text-decoration: none;
   color: black;
 }
+
+
+
+.section_work{
+    margin-top: 10%;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to right, black 0%, black 100%);
+}
+
+  .section_work:after{
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: inherit;
+      z-index: -1;
+      bottom: 0;
+      transform-origin: left top;
+      transform: skewY(-3deg);
+  }
+
+.work {
+  height: 1000px;
+  background-color: black;
+}
+
+.work h1{
+  color: #33d6ff;
+  text-align: center;
+  text-decoration: underline;
+}
+
+
+.section_contact{
+  margin-top: -2%;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to right, #0dbbe2 0%, rgb(16, 19, 94) 100%);
+}
+
+  .section_contact:after{
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: inherit;
+      z-index: 1;
+      bottom: 0;
+      transform-origin: left top;
+      transform: skewY(-3deg);
+  }
+
+.contact {
+  margin-top: -2%;
+  height: 600px;
+  background: linear-gradient(to right, #0dbbe2 0%, rgb(16, 19, 94) 100%);
+}
+
+.contact h1{
+  text-align: center;
+}
+
+.contact-div{
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+}
+
+    input[type=text], input[type=email]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+     }
+
+        input[type=text]:focus {
+            background-color: lightblue;
+            border: 1px solid #234b62;
+        }
+
+            input[type=email]:focus {
+                background-color: lightblue;
+                border: 1px solid #234b62;
+            }
+
+                input[type=submit] {
+                    display: block;
+                    margin: 0 auto 20px auto;
+                }
+
+
 
 
 /* ========================================

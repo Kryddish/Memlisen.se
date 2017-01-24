@@ -97,7 +97,7 @@ echo "
   <div id='main'>
     <div class='introduction'>
       <h1 id='portfolio-loggo'>Emmelies Sundell</h1>
-      <p class='project-info-p'>
+      <p>
         Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Har du testat att trycka på enter och h?
       </p>
       <p>
@@ -176,38 +176,110 @@ echo "
             <em>worked with over 1200 animals on Spånga gymnasium.</em></p>
           </div>
 
-            <div class='b_bottom evidensia'>
-          <img src='http://evidensia.se/wp-content/uploads/2016/12/evidensia-se.svg' />
-          <p>Animal caretakeer | winter 2016 | Stockholm </br>
-            <em>worked as an animal caretaker on an animal hospital.</em></p>
-          </div>
+          <div class='b_bottom evidensia'>
+            <img src='http://evidensia.se/wp-content/uploads/2016/12/evidensia-se.svg' />
+            <p>Animal caretakeer | winter 2016 | Stockholm </br>
+              <em>worked as an animal caretaker on an animal hospital.</em></p>
+            </div>
 
-        <div class='b_bottom'>
-          <img src='http://kyh.se/wp-content/uploads/2015/12/logo140.png' />
-          <p style='margin-left: 10%;'>Front end devoloper | KYH | Stockholm </br>
-            <em>currently studying at KYH to become front end devoloper</em></p>
-          </div>
-
-
-          <div class='b_bottom'>
-           <img src='http://varumarkesmanual.stockholm.se/sites/all/themes/jupiter/logo.png' />
-           <p>Spånga gymnasium | Djurvårdare</br>
-            <em>graduate in 2016 as an animalcaretakeer</em></p>
-          </div>
-
-          <a href='mittcv.php' class='btna-style'>Click here to see more</a>
+            <div class='b_bottom'>
+              <img src='http://kyh.se/wp-content/uploads/2015/12/logo140.png' />
+              <p style='margin-left: 10%;'>Front end devoloper | KYH | Stockholm </br>
+                <em>currently studying at KYH to become front end devoloper</em></p>
+              </div>
 
 
+              <div class='b_bottom'>
+               <img src='http://varumarkesmanual.stockholm.se/sites/all/themes/jupiter/logo.png' />
+               <p>Spånga gymnasium | Djurvårdare</br>
+                <em>graduate in 2016 as an animalcaretakeer</em></p>
+              </div>
 
-
+              <a href='mittcv.php' class='btna-style'>Click here to see more</a>
     </div><!-- 
     <h2 class='bild'>Bild</h2> -->
+</div>
+
+<div class='work'>
+    <div class= 'section_work'>
+      <h1>Work</h1>
+    </div>
+</div>
+
+
+  <div class='section_contact'></div>
+<div class='contact'>
+    <h1>Contact me!</h1>
+  
+
+  <div class='contact-div'>
+      Järfälla, Sweden<br>
+      Mobil: 0708769638<br>
+      Email: emmelie.sundell@hotmail.com<br>
+    <p>Swing by for a cup of coffee, or leave me a note:</p>
+    <form method='post'>
+      <input name='name' class='input-style input-border ' type='text' placeholder='Namn'>
+      <input name='email' class='input-style input-border' type='email' placeholder='Email'>
+      <input name='phone' class='input-style input-border ' type='text' placeholder='Telefonnummer'>
+      <input name='text' class='input-style input-border' type='text' placeholder='skriv din text här...'>
+      <input type='submit' class='send-btn margin w3-right'>
+
+      <div class='fb-like' data-href='https://memlisen.se' data-width='200' data-layout='standard' data-action='like' data-show-faces='true' data-share='true'></div>
+
+      <script src='//platform.linkedin.com/in.js' type='text/javascript'></script>
+      <script type='IN/MemberProfile' data-id='https://www.linkedin.com/in/emmelie-sundell-41bba2128' data-format='hover' data-text='Emmelie Sundell'></script>
+        
+    </form>
   </div>
 
 
+</div> ";
 
+if($_POST) {
+  $to = "emmelie.sundell@hotmail.com";
+  $subject = "From www.memlisen.se";
 
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $phone = $_POST['phone'];
+  $message = $_POST['text'];
 
+  $query = "
+     
+      INSERT INTO messages
+      (
+        meddelande,
+        avsändare, 
+        telefonnummer,
+        epost
+      )
+
+      VALUES 
+      (
+        '$message',
+        '$name',
+        '$phone',
+        '$email'
+      )
+
+    ";
+
+    mysqli_query($database, $query);
+
+  $message = <<<EMAIL
+ 
+ Sent from; $name , $email
+  Meddelande;
+  $message
+EMAIL;
+  mail($to, $subject, $message);
+  $feedback = 'Your message has been sent!';
+  echo $feedback;
+  $headers .= 'Content-type: text/html; charset=UTF-8';
+
+}
+
+echo "
 <!-- 
 <div class='hangman'>
   <div class='wrapper'>
