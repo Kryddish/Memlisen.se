@@ -97,7 +97,7 @@ echo "
   <div id='main'>
     <div class='introduction'>
       <h1 id='portfolio-loggo'>Emmelies Sundell</h1>
-      <p>
+      <p class='project-info-p'>
         Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Har du testat att trycka på enter och h?
       </p>
       <p>
