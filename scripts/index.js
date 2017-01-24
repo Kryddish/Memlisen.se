@@ -36,11 +36,13 @@ $(window).scroll(function(){
 		// saved the pushed element
 		var clickedElement = event.target;
 
+		// add class selceted on clicked element
+		$(clickedElement).addClass("selected");
+
 		// remove class selected from the element
 		$('.project-info buttton').removeClass("selected");
 
-		// add class selceted on clicked element
-		$(clickedElement).addClass("selected");
+
 
 		// check id on element
 		if($(clickedElement).attr("id") == "bio" && chosen != 1) {
@@ -51,9 +53,11 @@ $(window).scroll(function(){
 		if($(clickedElement).attr("id") == "skills" && chosen != 2) {
 			$(content).css("display", "none");
 			$(content[1]).css("display", "inline-block");
-			$("#skillbar_php").animate({width:'85%'},1500);
-			$("#skillbar_asp").animate({width:'100%'},1500);
-			$("#skillbar_jsp").animate({width:'75%'},1500);
+			$("#skillbar_php").animate({width:'85%'},850);
+			$("#skillbar_asp").animate({width:'100%'},1000);
+			$("#skillbar_jsp").animate({width:'75%'},750);
+			$("#skillbar_html").animate({width:'80%'},800);
+			$("#skillbar_css").animate({width:'80%'},800);
 
 	
 			chosen = 2;

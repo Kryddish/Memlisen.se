@@ -117,58 +117,92 @@ echo "
     <li><button id='experience' href='#'>Experience</button></li>
   </ul>
 
-    <div class='content about'>
-      <p>
-        Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Denna sida ingår alltså som en del i utbildningen som kallas för 'induviduella projektet'. </p> 
+  <div class='content about'>
+    <p>
+      Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Denna sida ingår alltså som en del i utbildningen som kallas för 'induviduella projektet'. </p> 
 
-        <p>
+      <p>
         Vi ska alltså skapa en sida och under dessa år utvecckla denna med hjälp av kunskaperna vi får och sedan blir detta vårat examenarbete som vi i framtiden kommer visa upp för att söka jobb. detta betyder alltså att denna sida är ett projektet som hela tiden byggs på nya saker vilket gör att allt kanske inte fungerar som det ska.</p>
 
         <p>
-        upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!
+          upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!
 
-      </p>
+        </p>
 
         <button class='btna-style'>Gå till sidan mer om mig</button><button class='btn-style'>Kontaka mig!</button> 
-    </div>
+      </div>
 
-    <div class='content skills'>
-      <div id='skillbars'>
+      <div class='content skills'>
+        <div id='skillbars'>
 
-        <div class='skill_name' id='skill_php'>PHP</div>
-        <div class='skillbar_wrapper'>
-          <div class='skillbar_bar' id='skillbar_php'></div>
-          <div class='skill_bar_percent'>85%</div>
+          <div class='skill_name' id='skill_php'>PHP</div>
+          <div class='skillbar_wrapper'>
+            <div class='skillbar_bar' id='skillbar_php'></div>
+            <div class='skill_bar_percent'>50%</div>
+          </div>
+
+          <div class='skill_name' id='skill_asp'>Sleep</div>
+          <div class='skillbar_wrapper'>
+            <div class='skillbar_bar' id='skillbar_asp'></div>
+            <div class='skill_bar_percent'>100%</div>
+          </div>
+
+          <div class='skill_name' id='skill_jsp'>JSP</div>
+          <div class='skillbar_wrapper'>
+            <div class='skillbar_bar' id='skillbar_jsp'></div>
+            <div class='skill_bar_percent'>75%</div>
+          </div>
+
+          <div class='skill_name' id='skill_html'>HTML</div>
+          <div class='skillbar_wrapper'>
+            <div class='skillbar_bar' id='skillbar_html'></div>
+            <div class='skill_bar_percent'>80%</div>
+          </div>
+
+          <div class='skill_name' id='skill_css'>CSS</div>
+          <div class='skillbar_wrapper'>
+            <div class='skillbar_bar' id='skillbar_css'></div>
+            <div class='skill_bar_percent'>80%</div>
+          </div>
+
         </div>
+      </div>
 
-        <div class='skill_name' id='skill_asp'>Sleep</div>
-        <div class='skillbar_wrapper'>
-          <div class='skillbar_bar' id='skillbar_asp'></div>
-          <div class='skill_bar_percent'>100%</div>
-        </div>
+      <div class='content experience'>
 
-        <div class='skill_name' id='skill_jsp'>JSP</div>
-        <div class='skillbar_wrapper'>
-          <div class='skillbar_bar' id='skillbar_jsp'></div>
-          <div class='skill_bar_percent'>75%</div>
-        </div>
+        <div class='spanga_work b_bottom'>
+          <img src='http://varumarkesmanual.stockholm.se/sites/all/themes/jupiter/logo.png' />
+          <p>Animal caretakeer | summer 2016 | Stockholm </br>
+            <em>worked with over 1200 animals on Spånga gymnasium.</em></p>
+          </div>
 
-     </div>
-    </div>
+            <div class='b_bottom evidensia'>
+          <img src='http://evidensia.se/wp-content/uploads/2016/12/evidensia-se.svg' />
+          <p>Animal caretakeer | winter 2016 | Stockholm </br>
+            <em>worked as an animal caretaker on an animal hospital.</em></p>
+          </div>
 
-  <div class='content'>
+        <div class='b_bottom'>
+          <img src='http://kyh.se/wp-content/uploads/2015/12/logo140.png' />
+          <p style='margin-left: 10%;'>Front end devoloper | KYH | Stockholm </br>
+            <em>currently studying at KYH to become front end devoloper</em></p>
+          </div>
 
-   <p>
-    Experience upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!. 
+
+          <div class='b_bottom'>
+           <img src='http://varumarkesmanual.stockholm.se/sites/all/themes/jupiter/logo.png' />
+           <p>Spånga gymnasium | Djurvårdare</br>
+            <em>graduate in 2016 as an animalcaretakeer</em></p>
+          </div>
+
+          <a href='mittcv.php' class='btna-style'>Click here to see more</a>
 
 
-    Vi ska alltså skapa en sida och under dessa år utvecckla denna med hjälp av kunskaperna vi får och sedan blir detta vårat examenarbete som vi i framtiden kommer visa upp för att söka jobb. detta betyder alltså att denna sida är ett projektet som hela tiden byggs på nya saker vilket gör att allt kanske inte fungerar som det ska.
 
-    upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!
-  </p>
-</div>
-<h2 class='bild'>Bild</h2>
-</div>
+
+    </div><!-- 
+    <h2 class='bild'>Bild</h2> -->
+  </div>
 
 
 
