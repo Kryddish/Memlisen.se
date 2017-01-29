@@ -2,11 +2,11 @@
 
 session_start();
 
-echo "<link rel='stylesheet' href='../css/admin.css'>"; 
+echo "<link rel='stylesheet' href='css/admin.css'>"; 
 
 if (isset($_POST['password'])) {
-	$username = mysqli_real_escape_string($database, $_POST['username']);
-	$password = mysqli_real_escape_string($database, $_POST['password'];
+	$username =  $_POST['username'];
+	$password = $_POST['password'];
 
 	if ($username == 'admin' && $password == 'maow') {
 		$_SESSION['loggedin'] = true;

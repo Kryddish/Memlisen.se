@@ -366,7 +366,7 @@ body{
   }
 
 .work {
-  height: 1000px;
+  height: 1300px;
   background-color: black;
 }
 
@@ -376,7 +376,16 @@ body{
   text-decoration: underline;
 }
 
+.youtube-video{
+  text-align: center;
+}
 
+.goat-work {
+  height: 25%;
+   width: 25%;
+   padding: 5% 3% 0 5%;
+   
+}
 
 /* ========================================
             Contact
@@ -384,8 +393,7 @@ body{
 
 
 .section_contact{
-  margin-top: -2%;
-    height: 100px;
+    height: 110px;
     width: 100%;
     position: relative;
     background: linear-gradient(to right, #0dbbe2 0%, rgb(16, 19, 94) 100%);
@@ -404,13 +412,13 @@ body{
   }
 
 .contact {
-  margin-top: -2%;
   height: 600px;
   background: linear-gradient(to right, #0dbbe2 0%, rgb(16, 19, 94) 100%);
 }
 
 .contact h1{
   text-align: center;
+  margin: 0;
 }
 
 .contact-div{

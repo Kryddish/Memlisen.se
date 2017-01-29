@@ -19,7 +19,7 @@ $(document).keydown(function (e) {
     found = true;
   }
 
-  });
+});
 
 $(document).keyup(function (e) {
   delete keys[e.which];
@@ -49,7 +49,7 @@ $(document).keyup(function (e) {
 
 
   // create alphabet ul
-  var buttons = function () {
+  function buttons() {
     myButtons = document.getElementById('buttons');
     letters = document.createElement('ul');
 
@@ -66,7 +66,7 @@ $(document).keyup(function (e) {
     
   
   // Select Catagory
-  var selectCat = function () {
+  function selectCat() {
     if (chosenCategory === categories[0]) {
       catagoryName.innerHTML = "Kategorin är djurater!";
     } else if (chosenCategory === categories[1]) {
@@ -77,7 +77,7 @@ $(document).keyup(function (e) {
   }
 
   // Create geusses ul
-   result = function () {
+   function result() {
     wordHolder = document.getElementById('hold');
     correct = document.createElement('ul');
 
@@ -99,7 +99,7 @@ $(document).keyup(function (e) {
   }
   
   // Show lives
-   comments = function () {
+   function comments() {
     showLives.innerHTML = "Du har " + lives + " liv";
     if (lives < 1) {
       showLives.innerHTML = "Spelet är slut";
@@ -112,14 +112,14 @@ $(document).keyup(function (e) {
   }
 
       // Animate man
-  var animate = function () {
+  function animate() {
     var drawMe = lives ;
     drawArray[drawMe]();
   }
 
   
    // Hangman
-  canvas =  function(){
+  function canvas() {
 
     myStickman = document.getElementById("stickman");
     context = myStickman.getContext('2d');
@@ -128,7 +128,7 @@ $(document).keyup(function (e) {
     context.lineWidth = 2;
   };
   
-    head = function(){
+    function head() {
       myStickman = document.getElementById("stickman");
       context = myStickman.getContext('2d');
       context.beginPath();
@@ -136,55 +136,55 @@ $(document).keyup(function (e) {
       context.stroke();
     }
     
-  draw = function($pathFromx, $pathFromy, $pathTox, $pathToy) {
+  function draw($pathFromx, $pathFromy, $pathTox, $pathToy) {
     
     context.moveTo($pathFromx, $pathFromy);
     context.lineTo($pathTox, $pathToy);
     context.stroke(); 
 }
 
-   frame1 = function() {
-     draw (0, 150, 150, 150);
-   };
-   
-   frame2 = function() {
-     draw (10, 0, 10, 600);
-   };
-  
-   frame3 = function() {
-     draw (0, 5, 70, 5);
-   };
-  
-   frame4 = function() {
-     draw (60, 5, 60, 15);
-   };
-  
-   torso = function() {
-     draw (60, 36, 60, 70);
-   };
-  
-   rightArm = function() {
-     draw (60, 46, 100, 50);
-   };
-  
-   leftArm = function() {
-     draw (60, 46, 20, 50);
-   };
-  
-   rightLeg = function() {
-     draw (60, 70, 100, 100);
-   };
-  
-   leftLeg = function() {
-     draw (60, 70, 20, 100);
-   };
+function frame1() {
+  draw (0, 150, 150, 150);
+}
+ 
+function frame2() {
+  draw (10, 0, 10, 600);
+}
+
+function frame3() {
+  draw (0, 5, 70, 5);
+}
+
+function frame4() {
+  draw (60, 5, 60, 15);
+}
+
+function torso() {
+  draw (60, 36, 60, 70);
+}
+
+function rightArm() {
+  draw (60, 46, 100, 50);
+}
+
+function leftArm() {
+  draw (60, 46, 20, 50);
+}
+
+function rightLeg() {
+  draw (60, 70, 100, 100);
+}
+
+function leftLeg() {
+  draw (60, 70, 20, 100);
+}
   
   drawArray = [rightLeg, leftLeg, rightArm, leftArm,  torso,  head, frame4, frame3, frame2, frame1]; 
 
 
   // OnClick Function
-   check = function () {
-    list.onclick = function () {
+  function check() {
+    $(list).click(function() {
       var geuss = (this.innerHTML);
       this.setAttribute("class", "active");
       this.onclick = null;
@@ -203,11 +203,11 @@ $(document).keyup(function (e) {
         comments();
       }
     }
-  }
-  
+  });
+
     
   // Play
-  play = function () {
+  function play() {
     categories = [
         ["flodhäst", "zebra", "mygga", "fjäril", "ekorre", "leopardgecko", "sköldpadda"],
         ["dr who", "breaking bad", "the walking dead", "game of thrones", "one tree hill", "luke cage", "war and peace", "daredevil", "stranger things", "halt and catch fire" ],
@@ -217,7 +217,6 @@ $(document).keyup(function (e) {
     chosenCategory = categories[Math.floor(Math.random() * categories.length)];
     word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
     word = word.replace(/\s/g, "-");
-    console.log();
     buttons();
 
     geusses = [ ];
@@ -234,29 +233,30 @@ $(document).keyup(function (e) {
   
   // Hint
 
-    hint.onclick = function() {
+    $("#hint").click(function() {
 
-      hints = [
+      var hints = [
         ["Gillar vatten", "Liten och surrar", "Kan flyga, färgglad", "Klättrar i träd", "Liten ödla", "Långsam med ett skal", "Ett kattdjur", "Stor och farlig med 4 ramar",
          "Gillar lera", "röd, lever bland träden", "lever i vatten", "knubbig, lever i djupare vatten", "gillar att slå upp sin stjärt", "har stora horn" ],
 
         ["En mystisk doktor", "Skapar froger", "Världen har gått under..", "winter is comming..", "High school och basket", "Skygg men skottsäker marvel hjälte", 
         "Baserad på en novell  under franska invasionen", "Blind brottskämpe", "Pojkes försvinnande i India", "80-talet, mordern teknik"],
-        ["Nordlig stad i UK", "Har en drottning", "Ligger i Spanien", "Stad i Nederländerna", "Czech Republic capital", "Stor stad i Sverige", "Stort torn, fin kultur", ]
+
+        ["Nordlig stad i UK", "Har en drottning", "Ligger i Spanien", "Stad i Nederländerna", "Czech Republic capital", "Stor stad i Sverige", "Stort torn, fin kultur"]
     ];
 
     var catagoryIndex = categories.indexOf(chosenCategory);
     var hintIndex = chosenCategory.indexOf(word);
     showClue.innerHTML = "Ledtråd: - " +  hints [catagoryIndex][hintIndex];
-  };
+  });
 
    // Reset
 
-  document.getElementById('reset').onclick = function() {
+  $("#reset").click(function() {
     correct.parentNode.removeChild(correct);
     letters.parentNode.removeChild(letters);
     showClue.innerHTML = "";
     context.clearRect(0, 0, 400, 400);
     play();
-  }
+  });
 });
