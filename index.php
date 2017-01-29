@@ -27,10 +27,10 @@ echo "
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' href='css/style.css'>
   <link rel='stylesheet' type='text/css' href='css/menu.css'>
-  <!--   <link rel='stylesheet' type='text/css' href='css/hangman.css'> -->
+    <link rel='stylesheet' type='text/css' href='css/hangman.css'>
   <script src='scripts/jquery.min.js'></script>
   <script src='scripts/menu.js'></script>
-  <!--   <script src='scripts/hangman.js'></script> -->
+    <script src='scripts/hangman.js'></script>
 </head>
 <body>
 
@@ -150,7 +150,7 @@ echo "
           <div class='skill_name' id='skill_jsp'>JSP</div>
           <div class='skillbar_wrapper'>
             <div class='skillbar_bar' id='skillbar_jsp'></div>
-            <div class='skill_bar_percent'>75%</div>
+            <div class='skill_bar_percent'>60%</div>
           </div>
 
           <div class='skill_name' id='skill_html'>HTML</div>
@@ -196,8 +196,8 @@ echo "
               </div>
 
               <a href='mittcv.php' class='btna-style'>Click here to see more</a>
-    </div><!-- 
-    <h2 class='bild'>Bild</h2> -->
+    </div>
+    <img src='css/images/myAvatar.png'>
 </div>
 
 <div class='work'>
@@ -280,7 +280,6 @@ EMAIL;
 }
 
 echo "
-<!-- 
 <div class='hangman'>
   <div class='wrapper'>
     <h1>Hänga gubbe</h1>
@@ -298,7 +297,7 @@ echo "
     <button id='hint'>Ledtråd</button>
     <button id='reset'>Spela igen!</button>
   </div>
-</div> -->
+</div> 
 
 
 
