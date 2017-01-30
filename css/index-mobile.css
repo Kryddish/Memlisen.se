@@ -4,7 +4,10 @@
 
 /* mobile 320px*480px*/
 @media only screen and (max-width: 760px){
-.index-body{
+.start{display: none;}
+.project-info{display: none;}
+.work{display: none;}
+.section-contact{
   display: none;
 }
 

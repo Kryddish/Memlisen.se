@@ -21,6 +21,10 @@
     transition: 0.3s
 }
 
+#myNavbar li {
+  list-style-type: none;
+}
+
 .sidenav a:hover, .offcanvas a:focus{
     color: #f1f1f1;
 }
@@ -37,6 +41,7 @@
   top: 10%;
   left: 0;
   z-index: 1;
+  position: fixed;
 }
 
 #nav-container.pushed {
@@ -53,6 +58,7 @@
   -moz-transition: margin 600ms;
   transition: margin 600ms;
   cursor: pointer;
+  
 }
 
 .toggle-icon .bar {

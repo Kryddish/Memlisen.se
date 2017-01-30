@@ -202,8 +202,8 @@ function leftLeg() {
       } else {
         comments();
       }
-    }
-  });
+    });
+  };
 
     
   // Play

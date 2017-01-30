@@ -25,10 +25,10 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 	<input type='submit' name='logout' value='Logout'>
 	</form>
 	
-      <a href='../?page=home'>Startsida</a>
-      <a href='../?page=about'>Om mig</a>        
-      <a href='../?page=resume'>CV</a>
-      <a href='../?page=portfolio'>Portfolio</a>
+      <a href='?page=home'>Startsida</a>
+      <a href='?page=about'>Om mig</a>        
+      <a href='?page=resume'>CV</a>
+      <a href='?page=portfolio'>Portfolio</a>
     
 
 
@@ -41,7 +41,7 @@ else {
 	<form id='login-form' method='post'>
 	<label>Användarnamn:</label><input type='text' name='username'>
 	<label>Lösenord:</label><input type='password' name='password' >
-	<input type='submit' value='Login'>
+	<label></label><input type='submit' value='Login'>
 	</form>
 
 

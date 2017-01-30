@@ -212,6 +212,7 @@ echo "
 
 <table>
   <tr>
+
     <img class='goat-work' src='css/images/gladagetstart.png'>
     <img class='goat-work' src='css/images/gladagetstart.png'>
     <img class='goat-work' src='css/images/gladagetstart.png'>
@@ -313,11 +314,6 @@ echo "
   </div>
 </div> 
 
-
-
-<!-- /* ========================================
-Mobile screen
-======================================== */ -->
 
 
 <script type='text/javascript' src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5818b18185638455'></script> 

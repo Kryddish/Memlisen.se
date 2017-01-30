@@ -1,61 +1,89 @@
-//Count down to Internship
-var internship = 'January 15 2018 08:00:00 GMT+0100';
-initializeClock('clockLIA', internship);
+ (function countdownOne(){
+   var today = new Date();
+   var end = new Date(2018, 0, 15);
 
-//Count down to Graduation
-var graduation = 'May 31 2018 12:00:00 GMT+0100';
-initializeClock('clockGraduation', graduation);
+   var current = today.getTime();
+   var event = end.getTime();
+   var remaining = event - current;
 
-function initializeClock(clockID, endtime){
-  var clock = document.getElementById(clockID);
-  var daysSpan = clock.querySelector('.days');
-  var hoursSpan = clock.querySelector('.hours');
-  //var minutesSpan = clock.querySelector('.minutes');
-  //var secondsSpan = clock.querySelector('.seconds');
+   var s = Math.floor(remaining / 1000);
+   var m = Math.floor(s / 60);
+   var h = Math.floor(m / 60);
+   var d = Math.floor(h / 24);
 
- function updateClock(){
-    var time = getTimeRemaining(endtime);
-    daysSpan.innerHTML = time.days;
-    hoursSpan.innerHTML = ('0' + time.hours).slice(-2);
-      //minutesSpan.innerHTML = ('0' + time.minutes).slice(-2);
-      //secondsSpan.innerHTML = ('0' + time.seconds).slice(-2);
+   h %= 24;
+   m %= 60;
+   s %= 60;
 
-    if (time.total<=0) {
-      clearInterval(timeinterval);
-    }
-  }
+   if(h < 10){
+     h = "0" + h;
+   }
+   if(m < 10){
+     m = "0" + m;
+   }
+   if(s < 10){
+     s = "0" + s;
+   }
 
-  updateClock(); // run function once at first to avoid delay
-  var timeinterval = setInterval(updateClock, 1000);
-}
+   $('#days').html(d);
+   $('#hours').html(h);
+   $('#minutes').html(m);
+   $('#seconds').html(s);
 
-function getTimeRemaining(endtime){
-  var time = Date.parse(endtime) - Date.parse(new Date());
-    //var seconds = Math.floor(( time / 1000) % 60);
-    //var minutes = Math.floor((time / 1000 / 60) % 60);
-    var hours = Math.floor((time / (1000 * 60 * 60)) % 24);
-    var days = Math.floor(time / (1000 * 60 * 60 * 24));
+   var start = setTimeout(countdownOne, 1000);
 
-    return {
-      'total':time,
-      'days':days,
-      'hours':hours,
-      //'minutes':minutes,
-      //'seconds':seconds
-  };
-}
+   if (remaining <= 0) {
+     clearTimeout(start);
+     $('#days').html("D");
+     $('#hours').html("O");
+     $('#minutes').html("N");
+     $('#seconds').html("E");
+   }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName('close')[0];
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    expandWindow.style.display = 'none';
-}
 
-// When the user clicks anywhere outside of the expandWindow, close it
-window.onclick = function(event) {
-    if (event.target == expandWindow && expanded == true) {
-        expandWindow.style.display = 'none';
-        expanded = false;
-    }
-}
+
+ })();
+
+ (function countdownTwo(){
+   var today = new Date();
+   var end = new Date(2018, 4, 31);
+
+   var current = today.getTime();
+   var event = end.getTime();
+   var remaining = event - current;
+
+   var s = Math.floor(remaining / 1000);
+   var m = Math.floor(s / 60);
+   var h = Math.floor(m / 60);
+   var d = Math.floor(h / 24);
+
+   h %= 24;
+   m %= 60;
+   s %= 60;
+
+   if(h < 10){
+     h = "0" + h;
+   }
+   if(m < 10){
+     m = "0" + m;
+   }
+   if(s < 10){
+     s = "0" + s;
+   }
+
+   $('#daysTwo').html(d);
+   $('#hoursTwo').html(h);
+   $('#minutesTwo').html(m);
+   $('#secondsTwo').html(s);
+
+   setTimeout(countdownTwo, 1000);
+
+   if (remaining <= 0) {
+     clearTimeout(start);
+     $('#daysTwo').html("D");
+     $('#hoursTwo').html("O");
+     $('#minutesTwo').html("N");
+     $('#secondsTwo').html("E");
+   }
+
+ })();

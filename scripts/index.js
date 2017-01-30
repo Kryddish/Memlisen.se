@@ -68,6 +68,8 @@ $(window).scroll(function(){
 			chosen = 3;
 		}
 	});
-
+$('.goat-work').click(function() {
+   location.href = 'http://memlisen.se/gladageten';
+  });
 
 });

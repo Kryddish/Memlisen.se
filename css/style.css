@@ -13,10 +13,14 @@ body{
   width: 100%;
   padding: 0;
   margin: 0;
+   background-color: #eee;
 }
 
 
-
+.only-on-mobile {display: none;}
+#aboutme-mobile{display: none;}
+#last{display: none;}
+#portfolio-m{display: none;}
 /* ========================================
             Head
 ======================================== */ 
@@ -36,6 +40,7 @@ body{
     background: inherit;
     z-index: -1;
     bottom: 0;
+    left: 0;
     transform-origin: right bottom;
     transform: skewY(-3deg);
 }
@@ -85,7 +90,6 @@ body{
     font-size: 18px;
     display: inline-block;
     margin-top: 3%;
-    padding: 1%;
     margin-left: 25%;
 
 }
@@ -124,13 +128,15 @@ body{
 .project-info {
   display: block;
   height: 100vh;
+
 }
 
 .project-info h1{
   text-align: center;
   text-decoration: underline;
   font-size: 42px;
-  margin-top: 10%;
+  margin: 10% 0 0 0;
+  padding: 0;
   
 }
 
@@ -159,19 +165,19 @@ body{
 
 .about-menu {
   text-align: center;
-  padding: 2%;
+  margin: 0;
+  padding: 0;
 }
   .about-menu li{
     display: inline;
-    width: 100%;
-    padding: 2%;
+
   }
 
   .about-menu li button {
     color: black;
     text-decoration: none;
     background-color: transparent;
-    border: 2px solid white;
+    border: 2px solid #eee;
     font-size: 22px;
     display: inline-block;
   }
@@ -361,6 +367,7 @@ body{
       background: inherit;
       z-index: -1;
       bottom: 0;
+      left: 0;
       transform-origin: left top;
       transform: skewY(-3deg);
   }
@@ -383,8 +390,14 @@ body{
 .goat-work {
   height: 25%;
    width: 25%;
-   padding: 5% 3% 0 5%;
+   margin: 5% 3% 0 5%;
    
+}
+
+.goat-work:hover{
+border-radius: 50%;
+transition: 1s;
+padding: 0;
 }
 
 /* ========================================
@@ -459,8 +472,6 @@ form {
             Mobile
 ======================================== */ 
 
-
-
 @media only screen and (max-width: 760px) {
 
 #portfolio-loggo {
@@ -479,6 +490,16 @@ form {
     font-size: 14px;
     text-align: center;
     width: 90%;
+}
+
+.block{background:none;}
+
+iframe{
+  width: 150px;
+}
+
+.about-menu{
+  display: block;
 }
 
 }
