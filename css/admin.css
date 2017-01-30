@@ -52,6 +52,15 @@ input[type=submit]{
     color: white;
 }
 
+
+.message{
+	border: 2px dashed red;
+	width: 80%;
+	text-align: center;
+	margin: 0  0 0 10% ;
+}
+
+
 @media only screen and (max-width: 760px){
 
 	#login-form {

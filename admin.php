@@ -29,11 +29,32 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
       <a href='?page=about'>Om mig</a>        
       <a href='?page=resume'>CV</a>
       <a href='?page=portfolio'>Portfolio</a>
-    
+
 
 
 
 				";
+  $query = "
+  SELECT * 
+  FROM messages
+  ";
+
+    $result = mysqli_query($database, $query);
+
+    while ($row = mysqli_fetch_assoc($result)) {
+    	echo "
+    	<div class='message'>
+    	<h4>Meddelanden från hemsidan:</h4><br>
+    	<label>Från:<p>{$row['avsändare']}</p></label><p>epost:</p>
+    	<p>{$row['epost']}</p><br>
+    	<p>Telefon:</p><p>{$row['telefonnummer']}</p><br>
+    	<p>meddelande:</p><p>{$row['meddelande']}</p>
+    	</div>
+
+
+
+    	";
+    }
 }
 
 else {
