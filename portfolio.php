@@ -1,6 +1,6 @@
 <?php
 
-
+if ($_SESSION['loggedin'] == false){
 echo "
 <!DOCTYPE html>
 <html>
@@ -33,7 +33,7 @@ echo "
     <div class='introduction'>
       <h1 id='portfolio-loggo'>Emmelies Portfolio</h1>
       <p>
-        Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Har du testat att trycka på enter och h?
+        Hej! Kul att du hittade hit! Detta är då min Portfolio sida där du ser mina projekt jag gjort och snart även pågångde projekt. Denna sida är under uppbyggnad!
       </p>
       <p>
         <button class='btnp-style'>Klicka på mig!</button>
@@ -59,7 +59,7 @@ echo "
 </html>
 ";
 
-
+}
 
 
 

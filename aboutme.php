@@ -1,4 +1,6 @@
 <?php 
+
+if ($_SESSION['loggedin'] == false){
 echo "
 <!DOCTYPE html>
 <html>
@@ -32,7 +34,7 @@ echo "
     <div class='introduction'>
       <h1 style=' font-size: 50px;' id='portfolio-loggo'>So, you want to find out more about me?</h1>
       <p>
-        Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Har du testat att trycka på enter och h?
+        Hej! Kul att du hittade hit! Detta är då sidan om mig som just nu inte alls har så mycket innehåll. Tanken är att en blogg ska läggas in och lite mer info och mig och vad jag sysslar med :)
       </p>
       <p>
         <button class='btnp-style'>Klicka på mig!</button>
@@ -49,4 +51,5 @@ echo "
   </body>
 </html>
 ";
+}
 ?>

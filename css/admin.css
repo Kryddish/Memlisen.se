@@ -47,8 +47,7 @@ input[type=password] {
 
 input[type=submit]{
 	padding: 2%;
-    width: 10%;
-    background-color: #023C23;
+     background-color: #023C23;
     color: white;
 }
 

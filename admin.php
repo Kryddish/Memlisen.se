@@ -5,8 +5,8 @@ session_start();
 echo "<link rel='stylesheet' href='css/admin.css'>"; 
 
 if (isset($_POST['password'])) {
-	$username =  $_POST['username'];
-	$password = $_POST['password'];
+	$username = mysqli_real_escape_string($database, $_POST['username']);
+	$password = mysqli_real_escape_string($database, $_POST['password']);
 
 	if ($username == 'admin' && $password == 'maow') {
 		$_SESSION['loggedin'] = true;
@@ -14,21 +14,17 @@ if (isset($_POST['password'])) {
 	}
 }
 
-if (isset($_POST['logout'])) {
-	$_SESSION['loggedin'] = false;
-}
 
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 	echo "
-	<h2>Välkommen admin!</h2>
-	<form method='post'>
-	<input type='submit' name='logout' value='Logout'>
-	</form>
-	
-      <a href='?page=home'>Startsida</a>
+	<div><form method='post'>
+<a href='?page=admin'>admin-start</a>
+<a href='/index.php'>Startsida</a>
       <a href='?page=about'>Om mig</a>        
       <a href='?page=resume'>CV</a>
       <a href='?page=portfolio'>Portfolio</a>
+    <input type='submit' name='logout' value='Logout'>
+  </form></div>
 
 
 

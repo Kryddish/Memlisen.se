@@ -1,4 +1,6 @@
 <?php
+
+if ($_SESSION['loggedin'] == false){
 echo "
 <!DOCTYPE html>
 <html>
@@ -50,6 +52,7 @@ echo "
     </form>
   </div>
   ";
+}
 
   if($_POST) {
   $to = "emmelie.sundell@hotmail.com";
@@ -94,9 +97,11 @@ EMAIL;
   $headers .= 'Content-type: text/html; charset=UTF-8';
 
 }
+if ($_SESSION['loggedin'] == false){
 echo "
 </body>
 </html>
 ";
+}
 
  

@@ -1,4 +1,5 @@
 <?php 
+if ($_SESSION['loggedin'] == false){
   echo "
   <!DOCTYPE html>
 <html>
@@ -435,7 +436,7 @@ window.onclick = function(event) {
 
 
 ";
-
+}
  ?>
 
 

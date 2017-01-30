@@ -1,57 +1,59 @@
 <?php 
 $database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784', 'mjaumaow123', '219317-memlisendb' );
-// error_reporting(0);
+error_reporting(0);
 session_start();
 // mysqli_query($link, 'SET NAMES utf8');
 
 if ($_SESSION['loggedin'] == true) {
 echo "
-<link rel='stylesheet' href='css/admin.css'>
-<div class='fixed'>
-  <h2>Välkommen admin!</h2>
-  <form method='post'>
+<div><form method='post'>
+<a href='?page=admin'>admin-start</a>
+<a href='/index.php'>Startsida</a>
+      <a href='?page=about'>Om mig</a>        
+      <a href='?page=resume'>CV</a>
+      <a href='?page=portfolio'>Portfolio</a>
     <input type='submit' name='logout' value='Logout'>
   </form></div>
   ";
 }
-if (isset($_POST['logout'])) {
-$_SESSION['loggedin'] = false;
+if ($_POST['logout']) {
+  if(session_destroy()){
+    header("Location: /");
+  }
 }
 
-echo "
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Memlisen.se | Emmelie Sundell | Portfolio | Student KYH</title>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' href='css/style.css'>
-  <link rel='stylesheet' type='text/css' href='css/menu.css'>
-    <link rel='stylesheet' type='text/css' href='css/hangman.css'>
-  <script src='scripts/jquery.min.js'></script>
-  <script src='scripts/menu.js'></script>
-    <script src='scripts/hangman.js'></script>
-</head>
-<body>
+if ($_SESSION['loggedin'] == false) {
+  echo "
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Memlisen.se | Emmelie Sundell | Portfolio | Student KYH</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
+    <link rel='stylesheet' type='text/css' href='css/menu.css'>
+      <link rel='stylesheet' type='text/css' href='css/hangman.css'>
+    <script src='scripts/jquery.min.js'></script>
+    <script src='scripts/menu.js'></script>
+      <script src='scripts/hangman.js'></script>
+  </head>
+  <body>
 
-  <!--facebook share plugin, hämtad kod-->
-  <div id='fb-root'></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = '//connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v2.8';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+    <!--facebook share plugin, hämtad kod-->
+    <div id='fb-root'></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = '//connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v2.8';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
   ";
+}
 
   $page = $_GET['page'];
 
   switch ($page) {
-
-  case 'index':
-  include("index.php");
-  break;
 
   case 'about':
   include("aboutme.php");
@@ -65,190 +67,196 @@ echo "
   include("portfolio.php");
   break;
 
+  case 'contact':
+  include("kontakt.php");
+  break;
+
   case 'admin':
   include("admin.php");
   break;
   
   default:
 
-  echo "
-
-  <article class='start'>
-    <div id='mySidenav' class='sidenav'>
-     <ul class='navbar' id='myNavbar'>
-      <li><a href='?page=index'>Startsida</a></li>
-      <li><a href='?page=about'>Om mig</a></li>        
-      <li><a href='?page=resume'>CV</a></li>
-      <li><a href='?page=portfolio'>Portfolio</a></li>
-    </li>
-  </ul>
-</div>
-
-<!-- Knappen -->
-<div id='nav-container'>
-  <div class='toggle-icon'>
-    <span class='bar'></span>
-    <span class='bar'></span>
-    <span class='bar'></span>
+  if ($_SESSION['loggedin'] == false) {
+    echo "
+    <article class='start'>
+      <div id='mySidenav' class='sidenav'>
+       <ul class='navbar' id='myNavbar'>
+        <li><a href='?page=index'>Startsida</a></li>
+        <li><a href='?page=about'>Om mig</a></li>        
+        <li><a href='?page=resume'>CV</a></li>
+        <li><a href='?page=portfolio'>Portfolio</a></li>
+        <li><a href='?page=contact'>Kontakt</a></li>
+      </li>
+    </ul>
   </div>
-</div>
 
-<div class='block'>
-  <div id='main'>
-    <div class='introduction'>
-      <h1 id='portfolio-loggo'>Emmelies Sundell</h1>
-      <p>
-        Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Har du testat att trycka på enter och h?
-      </p>
-      <p>
-        <button class='btnp-style'>Klicka på mig!</button>
-      </p>
+  <!-- Knappen -->
+  <div id='nav-container'>
+    <div class='toggle-icon'>
+      <span class='bar'></span>
+      <span class='bar'></span>
+      <span class='bar'></span>
     </div>
   </div>
-</article>
-</div>
+
+  <div class='block'>
+    <div id='main'>
+      <div class='introduction'>
+        <h1 id='portfolio-loggo'>Emmelies Sundell</h1>
+        <p>
+          Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Har du testat att trycka på enter och h?
+        </p>
+        <p>
+          <button class='btnp-style'>Klicka på mig!</button>
+        </p>
+      </div>
+    </div>
+  </article>
+  </div>
 
 
-<div class='project-info'>
-  <h1>About me</h1>
-  <ul class='about-menu'>
-    <li><button class='selected' id='bio' href='#'>Bio</button></li>
-    <li><button id='skills' href='#'>Skills</button></li>
-    <li><button id='experience' href='#'>Experience</button></li>
-  </ul>
+  <div class='project-info'>
+    <h1>About me</h1>
+    <ul class='about-menu'>
+      <li><button class='selected' id='bio' href='#'>Bio</button></li>
+      <li><button id='skills' href='#'>Skills</button></li>
+      <li><button id='experience' href='#'>Experience</button></li>
+    </ul>
 
-  <div class='content about'>
-    <p>
-      Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Denna sida ingår alltså som en del i utbildningen som kallas för 'induviduella projektet'. </p> 
-
+    <div class='content about'>
       <p>
-        Vi ska alltså skapa en sida och under dessa år utvecckla denna med hjälp av kunskaperna vi får och sedan blir detta vårat examenarbete som vi i framtiden kommer visa upp för att söka jobb. detta betyder alltså att denna sida är ett projektet som hela tiden byggs på nya saker vilket gör att allt kanske inte fungerar som det ska.</p>
+        Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Denna sida ingår alltså som en del i utbildningen som kallas för 'induviduella projektet'. </p> 
 
         <p>
-          upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!
+          Vi ska alltså skapa en sida och under dessa år utvecckla denna med hjälp av kunskaperna vi får och sedan blir detta vårat examenarbete som vi i framtiden kommer visa upp för att söka jobb. detta betyder alltså att denna sida är ett projektet som hela tiden byggs på nya saker vilket gör att allt kanske inte fungerar som det ska.</p>
 
-        </p>
+          <p>
+            upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!
 
-        <button class='btna-style'>Gå till sidan mer om mig</button><button class='btn-style'>Kontaka mig!</button> 
-      </div>
+          </p>
 
-      <div class='content skills'>
-        <div id='skillbars'>
-
-          <div class='skill_name' id='skill_php'>PHP</div>
-          <div class='skillbar_wrapper'>
-            <div class='skillbar_bar' id='skillbar_php'></div>
-            <div class='skill_bar_percent'>50%</div>
-          </div>
-
-          <div class='skill_name' id='skill_asp'>Sleep</div>
-          <div class='skillbar_wrapper'>
-            <div class='skillbar_bar' id='skillbar_asp'></div>
-            <div class='skill_bar_percent'>100%</div>
-          </div>
-
-          <div class='skill_name' id='skill_jsp'>JSP</div>
-          <div class='skillbar_wrapper'>
-            <div class='skillbar_bar' id='skillbar_jsp'></div>
-            <div class='skill_bar_percent'>60%</div>
-          </div>
-
-          <div class='skill_name' id='skill_html'>HTML</div>
-          <div class='skillbar_wrapper'>
-            <div class='skillbar_bar' id='skillbar_html'></div>
-            <div class='skill_bar_percent'>80%</div>
-          </div>
-
-          <div class='skill_name' id='skill_css'>CSS</div>
-          <div class='skillbar_wrapper'>
-            <div class='skillbar_bar' id='skillbar_css'></div>
-            <div class='skill_bar_percent'>80%</div>
-          </div>
-
+          <button class='btna-style'>Gå till sidan mer om mig</button><button class='btn-style'>Kontaka mig!</button> 
         </div>
-      </div>
 
-      <div class='content experience'>
+        <div class='content skills'>
+          <div id='skillbars'>
 
-        <div class='spanga_work b_bottom'>
-          <img src='http://varumarkesmanual.stockholm.se/sites/all/themes/jupiter/logo.png' />
-          <p>Animal caretakeer | summer 2016 | Stockholm </br>
-            <em>worked with over 1200 animals on Spånga gymnasium.</em></p>
-          </div>
-
-          <div class='b_bottom evidensia'>
-            <img src='http://evidensia.se/wp-content/uploads/2016/12/evidensia-se.svg' />
-            <p>Animal caretakeer | winter 2016 | Stockholm </br>
-              <em>worked as an animal caretaker on an animal hospital.</em></p>
+            <div class='skill_name' id='skill_php'>PHP</div>
+            <div class='skillbar_wrapper'>
+              <div class='skillbar_bar' id='skillbar_php'></div>
+              <div class='skill_bar_percent'>50%</div>
             </div>
 
-            <div class='b_bottom'>
-              <img src='http://kyh.se/wp-content/uploads/2015/12/logo140.png' />
-              <p style='margin-left: 10%;'>Front end devoloper | KYH | Stockholm </br>
-                <em>currently studying at KYH to become front end devoloper</em></p>
-              </div>
+            <div class='skill_name' id='skill_asp'>Sleep</div>
+            <div class='skillbar_wrapper'>
+              <div class='skillbar_bar' id='skillbar_asp'></div>
+              <div class='skill_bar_percent'>100%</div>
+            </div>
 
+            <div class='skill_name' id='skill_jsp'>JSP</div>
+            <div class='skillbar_wrapper'>
+              <div class='skillbar_bar' id='skillbar_jsp'></div>
+              <div class='skill_bar_percent'>60%</div>
+            </div>
+
+            <div class='skill_name' id='skill_html'>HTML</div>
+            <div class='skillbar_wrapper'>
+              <div class='skillbar_bar' id='skillbar_html'></div>
+              <div class='skill_bar_percent'>80%</div>
+            </div>
+
+            <div class='skill_name' id='skill_css'>CSS</div>
+            <div class='skillbar_wrapper'>
+              <div class='skillbar_bar' id='skillbar_css'></div>
+              <div class='skill_bar_percent'>80%</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class='content experience'>
+
+          <div class='spanga_work b_bottom'>
+            <img src='http://varumarkesmanual.stockholm.se/sites/all/themes/jupiter/logo.png' />
+            <p>Animal caretakeer | summer 2016 | Stockholm </br>
+              <em>worked with over 1200 animals on Spånga gymnasium.</em></p>
+            </div>
+
+            <div class='b_bottom evidensia'>
+              <img src='http://evidensia.se/wp-content/uploads/2016/12/evidensia-se.svg' />
+              <p>Animal caretakeer | winter 2016 | Stockholm </br>
+                <em>worked as an animal caretaker on an animal hospital.</em></p>
+              </div>
 
               <div class='b_bottom'>
-               <img src='http://varumarkesmanual.stockholm.se/sites/all/themes/jupiter/logo.png' />
-               <p>Spånga gymnasium | Djurvårdare</br>
-                <em>graduate in 2016 as an animalcaretakeer</em></p>
-              </div>
-
-              <a href='mittcv.php' class='btna-style'>Click here to see more</a>
-    </div>
-<!--     <img src='css/images/myAvatar.png'> -->
-</div>
-
-<div class='work'>
-    <div class= 'section_work'>
-      <h1>Work</h1>
-
-    </div>
-    <div class='youtube-video'>
-<iframe width='900' height='455' src='https://www.youtube.com/embed/mZdxFBccimQ' frameborder='0' allowfullscreen></iframe>
-<p style='color: white; margin: 0;'><em>Detta är då en video vi gjorde i gymansiumet inför djurexpot vi hade. Creed till Cecilia Norgren som filmade och redigerade!</em></p>
-</div>
-
-<table>
-  <tr>
-
-    <img class='goat-work' src='css/images/gladagetstart.png'>
-    <img class='goat-work' src='css/images/gladagetstart.png'>
-    <img class='goat-work' src='css/images/gladagetstart.png'>
-  </tr>
-</table>
-
-</div>
+                <img src='http://kyh.se/wp-content/uploads/2015/12/logo140.png' />
+                <p style='margin-left: 10%;'>Front end devoloper | KYH | Stockholm </br>
+                  <em>currently studying at KYH to become front end devoloper</em></p>
+                </div>
 
 
-  <div class='section_contact'></div>
-<div class='contact'>
-    <h1>Contact me!</h1>
-  
+                <div class='b_bottom'>
+                 <img src='http://varumarkesmanual.stockholm.se/sites/all/themes/jupiter/logo.png' />
+                 <p>Spånga gymnasium | Djurvårdare</br>
+                  <em>graduate in 2016 as an animalcaretakeer</em></p>
+                </div>
 
-  <div class='contact-div'>
-      Järfälla, Sweden<br>
-      Mobil: 0708769638<br>
-      Email: emmelie.sundell@hotmail.com<br>
-    <p>Swing by for a cup of coffee, or leave me a note:</p>
-    <form method='post'>
-      <input name='name' class='input-style input-border ' type='text' placeholder='Namn'>
-      <input name='email' class='input-style input-border' type='email' placeholder='Email'>
-      <input name='phone' class='input-style input-border ' type='text' placeholder='Telefonnummer'>
-      <input name='text' class='input-style input-border' type='text' placeholder='skriv din text här...'>
-      <input type='submit' class='send-btn margin w3-right'>
+                <a href='mittcv.php' class='btna-style'>Click here to see more</a>
+      </div>
+  <!--     <img src='css/images/myAvatar.png'> -->
+  </div>
 
-      <div class='fb-like' data-href='https://memlisen.se' data-width='200' data-layout='standard' data-action='like' data-show-faces='true' data-share='true'></div>
+  <div class='work'>
+      <div class= 'section_work'>
+        <h1>Work</h1>
 
-      <script src='//platform.linkedin.com/in.js' type='text/javascript'></script>
-      <script type='IN/MemberProfile' data-id='https://www.linkedin.com/in/emmelie-sundell-41bba2128' data-format='hover' data-text='Emmelie Sundell'></script>
-        
-    </form>
+      </div>
+      <div class='youtube-video'>
+  <iframe width='900' height='455' src='https://www.youtube.com/embed/mZdxFBccimQ' frameborder='0' allowfullscreen></iframe>
+  <p style='color: white; margin: 0;'><em>Detta är då en video vi gjorde i gymansiumet inför djurexpot vi hade. Creed till Cecilia Norgren som filmade och redigerade!</em></p>
+  </div>
+
+  <table>
+    <tr>
+
+      <img class='goat-work' src='css/images/gladagetstart.png'>
+      <img class='goat-work' src='css/images/gladagetstart.png'>
+      <img class='goat-work' src='css/images/gladagetstart.png'>
+    </tr>
+  </table>
+
   </div>
 
 
-</div> ";
+    <div class='section_contact'></div>
+  <div class='contact'>
+      <h1>Contact me!</h1>
+    
+
+    <div class='contact-div'>
+        Järfälla, Sweden<br>
+        Mobil: 0708769638<br>
+        Email: emmelie.sundell@hotmail.com<br>
+      <p>Swing by for a cup of coffee, or leave me a note:</p>
+      <form method='post'>
+        <input name='name' class='input-style input-border ' type='text' placeholder='Namn'>
+        <input name='email' class='input-style input-border' type='email' placeholder='Email'>
+        <input name='phone' class='input-style input-border ' type='text' placeholder='Telefonnummer'>
+        <input name='text' class='input-style input-border' type='text' placeholder='skriv din text här...'>
+        <input type='submit' class='send-btn margin w3-right'>
+
+        <div class='fb-like' data-href='https://memlisen.se' data-width='200' data-layout='standard' data-action='like' data-show-faces='true' data-share='true'></div>
+
+        <script src='//platform.linkedin.com/in.js' type='text/javascript'></script>
+        <script type='IN/MemberProfile' data-id='https://www.linkedin.com/in/emmelie-sundell-41bba2128' data-format='hover' data-text='Emmelie Sundell'></script>
+          
+      </form>
+    </div>
+
+
+  </div> ";
+  }
 
 if($_POST) {
   $to = "emmelie.sundell@hotmail.com";
@@ -294,33 +302,36 @@ EMAIL;
 
 }
 
-echo "
-<div class='hangman'>
-  <div class='wrapper'>
-    <h1>Hänga gubbe</h1>
-    <h4>Använd alfabetet nedan för att kunna gissa. Fastnar du så klicka på ledtråd för att få hjälp.</h4>
-    <p id='catagoryName'></p>
-  </div>
-  <div class='wrapper'>
-    <div id='buttons'></div>  
-  </div>
-  <div id='hold'></div>
-  <p id='mylives'></p>
-  <p id='clue'>Ledtråden -</p>  
-  <canvas id='stickman'>This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
-  <div class='container'>
-    <button id='hint'>Ledtråd</button>
-    <button id='reset'>Spela igen!</button>
-  </div>
-</div> 
+if ($_SESSION['loggedin'] == false) {
+  echo "
+  <div class='hangman'>
+    <div class='wrapper'>
+      <h1>Hänga gubbe</h1>
+      <h4>Använd alfabetet nedan för att kunna gissa. Fastnar du så klicka på ledtråd för att få hjälp.</h4>
+      <p id='catagoryName'></p>
+    </div>
+    <div class='wrapper'>
+      <div id='buttons'></div>  
+    </div>
+    <div id='hold'></div>
+    <p id='mylives'></p>
+    <p id='clue'>Ledtråden -</p>  
+    <canvas id='stickman'>This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+    <div class='container'>
+      <button id='hint'>Ledtråd</button>
+      <button id='reset'>Spela igen!</button>
+    </div>
+  </div> 
 
 
 
-<script type='text/javascript' src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5818b18185638455'></script> 
-<script src='scripts/index.js'></script>
-</body>
-</html>
-";
+  <script type='text/javascript' src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5818b18185638455'></script> 
+  <script src='scripts/index.js'></script>
+  </body>
+  </html>
+  ";
+}
+
 break;
 }
 ?>

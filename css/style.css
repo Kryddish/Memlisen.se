@@ -422,6 +422,7 @@ padding: 0;
       bottom: 0;
       transform-origin: left top;
       transform: skewY(-3deg);
+      left: 0;
   }
 
 .contact {
