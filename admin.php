@@ -7,6 +7,12 @@ echo "<link rel='stylesheet' href='css/admin.css'>";
 if (isset($_POST['password'])) {
 	$username = mysqli_real_escape_string($database, $_POST['username']);
 	$password = mysqli_real_escape_string($database, $_POST['password']);
+	
+	 // Hacker protection
+    $username = stripslashes($username); // removes slash
+    $password = stripslashes($password);
+    $username = mysqli_real_escape_string($connection, $username); //removes dangerous strings
+    $password = mysqli_real_escape_string($connection, $password);
 
 	if ($username == 'admin' && $password == 'maow') {
 		$_SESSION['loggedin'] = true;
@@ -17,18 +23,6 @@ if (isset($_POST['password'])) {
 
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 	echo "
-	<div><form method='post'>
-<a href='?page=admin'>admin-start</a>
-<a href='/index.php'>Startsida</a>
-      <a href='?page=about'>Om mig</a>        
-      <a href='?page=resume'>CV</a>
-      <a href='?page=portfolio'>Portfolio</a>
-    <input type='submit' name='logout' value='Logout'>
-  </form></div>
-
-
-
-
 				";
   $query = "
   SELECT * 
@@ -40,13 +34,22 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     while ($row = mysqli_fetch_assoc($result)) {
     	echo "
     	<div class='message'>
-    	<h4>Meddelanden från hemsidan:</h4><br>
-    	<label>Från:<p>{$row['avsändare']}</p></label><p>epost:</p>
-    	<p>{$row['epost']}</p><br>
-    	<p>Telefon:</p><p>{$row['telefonnummer']}</p><br>
-    	<p>meddelande:</p><p>{$row['meddelande']}</p>
-    	</div>
+		<h4>Meddelanden från hemsidan:</h4>
+		<table>
+			<tr>
+				<td>Avsändare:</td><td>{$row['avsändare']}</td>
+			</tr>
+			<tr>
+				<td>epost:</td><td>{$row['epost']}</td>
+			</tr>
+			<tr>
+				<td>Telefon:</td><td>{$row['telefonnummer']}</td>
+			</tr>
 
+			<tr><td>meddelande:</td><td>{$row['meddelande']}</td></tr>
+
+		</table>
+	</div>
 
 
     	";

@@ -52,4 +52,16 @@ echo "
 </html>
 ";
 }
+
+if ($_SESSION['loggedin'] == true){
+  echo "
+  <h1>Under counstraction</h1>
+
+
+
+
+
+  ";
+
+}
 ?>

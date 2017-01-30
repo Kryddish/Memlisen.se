@@ -8,7 +8,7 @@ if ($_SESSION['loggedin'] == true) {
 echo "
 <div><form method='post'>
 <a href='?page=admin'>admin-start</a>
-<a href='/index.php'>Startsida</a>
+<a href='?page=default'>Startsida</a>
       <a href='?page=about'>Om mig</a>        
       <a href='?page=resume'>CV</a>
       <a href='?page=portfolio'>Portfolio</a>
@@ -334,4 +334,18 @@ if ($_SESSION['loggedin'] == false) {
 
 break;
 }
+
+if ($_SESSION['loggedin'] == true){
+  echo "
+  <h1>Under counstraction</h1>
+
+
+
+
+
+  ";
+
+}
+
+
 ?>
