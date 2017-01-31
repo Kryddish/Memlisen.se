@@ -1,5 +1,5 @@
 <?php 
-$database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784', 'mjaumaow123', '219317-memlisendb' );
+// $database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784', 'mjaumaow123', '219317-memlisendb' );
 error_reporting(0);
 session_start();
 // mysqli_query($link, 'SET NAMES utf8');
