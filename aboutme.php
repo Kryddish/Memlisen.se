@@ -48,10 +48,26 @@ echo "
       </p>
       <img src='css/images/myAvatar.png' style='margin-top: 5%;'>
     </div>
+    ";
+   $query = "SELECT * FROM blogginlägg ORDER BY date DESC";
+
+$result = mysqli_query($database, $query);
+
+while ($row= mysqli_fetch_assoc($result)) {
+  echo "
+  <div class='p-post'>
+  <img src='cat.jpg'>
+  <h2>{$row['title']}</h2>
+  <p>{$row['date']}</p>
+  <p>Blogginlägg: {$row['id']}</p>
+  <p>{$row['message']}</p>
+  <form method='post'>
+  </form>
+  ";
+}
+}
  
 
-
-";
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
   $database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784', 'mjaumaow123', '219317-memlisendb' );
   if (isset($_POST['remove'])) {
