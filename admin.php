@@ -11,8 +11,6 @@ if (isset($_POST['password'])) {
 	 // Hacker protection
     $username = stripslashes($username); // removes slash
     $password = stripslashes($password);
-    $username = mysqli_real_escape_string($connection, $username); //removes dangerous strings
-    $password = mysqli_real_escape_string($connection, $password);
 
 	if ($username == 'admin' && $password == 'maow') {
 		$_SESSION['loggedin'] = true;
