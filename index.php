@@ -1,7 +1,7 @@
 <?php 
-$database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784', 'mjaumaow123', '219317-memlisendb' );
-// error_reporting(0);
-session_start();
+// $database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784', 'mjaumaow123', '219317-memlisendb' );
+error_reporting(0);
+// session_start();
 // mysqli_query($link, 'SET NAMES utf8');
 
 if ($_SESSION['loggedin'] == true) {
@@ -103,7 +103,7 @@ if ($_SESSION['loggedin'] == false) {
   <div class='block'>
     <div id='main'>
       <div class='introduction'>
-        <h1 id='portfolio-loggo'>Emmelies Sundell</h1>
+        <h1 id='portfolio-loggo'>Emmelie Sundell</h1>
         <p>
           Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Har du testat att trycka på enter och h?
         </p>
@@ -117,27 +117,33 @@ if ($_SESSION['loggedin'] == false) {
 
 
   <div class='project-info'>
-    <h1>About me</h1>
+    <h1>Om mig</h1>
     <ul class='about-menu'>
-      <li><button class='selected' id='bio' href='#'>Bio</button></li>
-      <li><button id='skills' href='#'>Skills</button></li>
-      <li><button id='experience' href='#'>Experience</button></li>
+      <li><button class='selected' id='bio' href='#'>Om</button></li>
+      <li><button id='skills' href='#'>Kunskaper</button></li>
+      <li><button id='experience' href='#'>Yrkeserfarenheter</button></li>
     </ul>
 
     <div class='content about'>
       <p>
-        Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Denna sida ingår alltså som en del i utbildningen som kallas för 'induviduella projektet'. </p> 
-
+        Hej! Kul att du hittade hit! Mitt namn är Emmelie och jag är 19 år gammal och studerar på kyh i odenplan till front end devolper. Denna sida ingår alltså som en del i utbildningen som kallas för 'induviduella projektet'. Vi ska alltså skapa en sida och under dessa år utvecckla denna med hjälp av kunskaperna vi får och sedan blir detta vårat examenarbete som vi i framtiden kommer visa upp för att söka jobb. detta betyder alltså att denna sida är ett projektet som hela tiden byggs på nya saker vilket gör att allt kanske inte fungerar som det ska.
+      </p> 
+      <br>
         <p>
-          Vi ska alltså skapa en sida och under dessa år utvecckla denna med hjälp av kunskaperna vi får och sedan blir detta vårat examenarbete som vi i framtiden kommer visa upp för att söka jobb. detta betyder alltså att denna sida är ett projektet som hela tiden byggs på nya saker vilket gör att allt kanske inte fungerar som det ska.</p>
-
-          <p>
             upptäcker du något eller vill ge feedback så tveka inte att höra av dig! men tänk också på att visa buggar kanske ska finnas där och att sidorna är långt ifrån klara. Ta därför denna sida med lite ro. Jag hoppas ändå att du gillar min sida och jag är glad att du titta förbi!
+        </p><br>
+      <img class='icon' src='css/images/instagram.png'>
+      <img class='icon' src='css/images/facebook.png'>
+      <img class='icon' src='css/images/twitter.png'>
+      <img class='icon' src='css/images/gmail.png'><br>
 
-          </p>
+    
+      <img style='width: 20%; height: 300px; padding: 2%;' src='css/images/meohest.jpg'>
+      <img  class='head-img' src='css/images/jaag.png'>
+      <img style='width: 20%; height: 300px; padding: 2%;' src='css/images/myAvatar.jpg'>
+    
 
-          <button class='btna-style'>Gå till sidan mer om mig</button><button class='btn-style'>Kontaka mig!</button> 
-        </div>
+    </div>
 
         <div class='content skills'>
           <div id='skillbars'>

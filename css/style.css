@@ -4,16 +4,15 @@
 html{margin: 0; padding: 0;}
 
 @font-face {
-  font-family: caveman;
-  src: url('caveman.ttf');
+  font-family: logo;
+  src: url(logo.ttf);
 }
 
+
 body{
-  font-family: caveman;
-  width: 100%;
+   width: 100%;
   padding: 0;
   margin: 0;
-   background-color: #eee;
 }
 
 
@@ -21,6 +20,9 @@ body{
 #aboutme-mobile{display: none;}
 #last{display: none;}
 #portfolio-m{display: none;}
+
+
+
 /* ========================================
             Head
 ======================================== */ 
@@ -50,7 +52,7 @@ body{
     font-size: 22px;
     width: 50%;
     color: white;
-     text-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 2px black;
     margin: auto;
     font-style: oblique;
     display: block;
@@ -60,10 +62,14 @@ body{
     color: #0dbbe2;
     text-shadow: 4px 4px 2px rgb(16, 19, 94);
     text-align: center;
-    font-size: 78px;
-    margin-top: 15%;
+    font-size: 8em;
+    font-family: logo;
+    margin: 0;
 }
 
+.introduction{
+  padding-top: 15%;
+}
 
 
 /* ========================================
@@ -83,22 +89,6 @@ body{
   .btn-style:hover {
         background-color: #0dbbe2;
     }
-
-.btna-style{
-     background-color: transparent;
-    border: 2px solid #0dbbe2;
-    font-size: 18px;
-    display: inline-block;
-    margin-top: 3%;
-    margin-left: 25%;
-
-}
-  .btna-style:hover {
-        background-color: #0dbbe2;
-    }
-
-
-
 
 .btnp-style {
     margin: 5%;
@@ -127,15 +117,14 @@ body{
 
 .project-info {
   display: block;
-  height: 100vh;
+  height: 100%;
 
 }
 
 .project-info h1{
   text-align: center;
-  text-decoration: underline;
   font-size: 42px;
-  margin: 10% 0 0 0;
+  margin: 8% 0 0 0;
   padding: 0;
   
 }
@@ -143,25 +132,14 @@ body{
 .project-info div.content {
   display: none;
   overflow: auto;
+  text-align: center;
 }
-
-  .about{
-    width: 50%;
-
-  }
 
       .about p{
-    width: 80%;
-    padding: 0 0 16px 0;
+    width: 50%;
+    margin: 0;
+    padding: 10px;
   }
-
-.about p {
-  box-sizing: border-box;
-  vertical-align: top;
-  height: 100%;
-  margin-left: 20%;
-  float: left;
-}
 
 .about-menu {
   text-align: center;
@@ -177,7 +155,7 @@ body{
     color: black;
     text-decoration: none;
     background-color: transparent;
-    border: 2px solid #eee;
+    border: none;
     font-size: 22px;
     display: inline-block;
   }
@@ -192,28 +170,37 @@ body{
       text-decoration: underline;
       
     }
+.icon {
+  margin: 12px;
+}
 
-.bild {
-  font-size: 8em;
-  display: inline-block;
-  float: right;
-  margin-right: 10%;
-
- 
+.icon:hover {
+  box-shadow: 4px 4px 2px rgb(16, 19, 94);
+  width: 40px;
 }
 
 
 
+
+.head-img{
+  width: 20%;
+  height: 300px;
+  text-align: center;
+  margin: 2%;
+}
+
 /* ========================================
             Skillbar
 ======================================== */ 
-
 
 #skillbars {
   margin:0 auto;
   padding:0px;
   text-align:center;
   width:995px;
+  margin-top: 5%;
+
+  margin-left: 25%;
 }
 
   #skillbars h1 {
@@ -314,6 +301,7 @@ body{
 
 .experience {
   width: 100%;
+  margin-left: 15%;
 }
 
     .experience img, p{
@@ -356,7 +344,7 @@ body{
     height: 100px;
     width: 100%;
     position: relative;
-    background: linear-gradient(to right, black 0%, black 100%);
+    background-color: #d6b4dd;
 }
 
   .section_work:after{
@@ -374,11 +362,10 @@ body{
 
 .work {
   height: 1300px;
-  background-color: black;
+  background-color: #d6b4dd;
 }
 
 .work h1{
-  color: #33d6ff;
   text-align: center;
   text-decoration: underline;
 }
