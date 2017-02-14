@@ -117,7 +117,7 @@ body{
 
 .project-info {
   display: block;
-  height: 100%;
+  height: 100vh;
 
 }
 
@@ -335,57 +335,7 @@ body{
 
 
 
-/* ========================================
-            Work
-======================================== */ 
 
-.section_work{
-    margin-top: 10%;
-    height: 100px;
-    width: 100%;
-    position: relative;
-    background-color: #d6b4dd;
-}
-
-  .section_work:after{
-      content: '';
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background: inherit;
-      z-index: -1;
-      bottom: 0;
-      left: 0;
-      transform-origin: left top;
-      transform: skewY(-3deg);
-  }
-
-.work {
-  height: 1300px;
-  background-color: #d6b4dd;
-}
-
-.work h1{
-  text-align: center;
-  text-decoration: underline;
-}
-
-.youtube-video{
-  text-align: center;
-}
-
-.goat-work {
-  height: 25%;
-   width: 25%;
-   margin: 5% 3% 0 5%;
-   
-}
-
-.goat-work:hover{
-border-radius: 50%;
-transition: 1s;
-padding: 0;
-}
 
 /* ========================================
             Contact

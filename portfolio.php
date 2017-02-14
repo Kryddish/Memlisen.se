@@ -44,7 +44,7 @@ echo "
 </div>
 
 <article class='box-style'>
-  <div class='p-info' style='padding-top: 10%;'>
+  <div class='p-info' style='padding-top: 10%; width: 50%;'>
     <p class='portfolio-title'>Den Glada Geten</p>
         <p class='portfolio-text'>
           Detta var ett gruppprojekt vi hade i skolan där i skulle göra en bkoningssida efter en kunds önskemål. Vi höll på me dprojektet ganska länge och detta är resultatet. Klicka på knappen nedan för att se liveversionen.
@@ -52,7 +52,20 @@ echo "
     <a href='http://memlisen.se/gladageten/' class='portfolio-btn'>
         Gladageten.se
     </a>
-  </div><img src='css/images/gladagetstart.png'>
+  </div><img style='width: 50%; right: 0;' src='css/images/gladagetstart.png'>
+</article>
+
+<article class='box-style'>
+<img style='width: 50%;' src='css/images/linett.png'>
+  <div class='p-info' style='padding-top: 10%;'>
+    <p class='portfolio-title'>Linett Carlsson</p>
+        <p class='portfolio-text'>
+          En hemsida jag gjorde åt en nära vän till mis som ritaar mycket och har planer på att börja sälja sina bilder. detta är ett pågående projekt jag sysslar med på fritiden! 
+        </p>
+    <a href='http://memlisen.se/linett/' class='portfolio-btn'>
+        Gladageten.se
+    </a>
+  </div>
 </article>
 
 </body>

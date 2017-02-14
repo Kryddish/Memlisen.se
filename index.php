@@ -213,28 +213,6 @@ if ($_SESSION['loggedin'] == false) {
   <!--     <img src='css/images/myAvatar.png'> -->
   </div>
 
-  <div class='work'>
-      <div class= 'section_work'>
-        <h1>Work</h1>
-
-      </div>
-      <div class='youtube-video'>
-  <iframe width='900' height='455' src='https://www.youtube.com/embed/mZdxFBccimQ' frameborder='0' allowfullscreen></iframe>
-  <p style='color: white; margin: 0;'><em>Detta är då en video vi gjorde i gymansiumet inför djurexpot vi hade. Creed till Cecilia Norgren som filmade och redigerade!</em></p>
-  </div>
-
-  <table>
-    <tr>
-
-      <img class='goat-work' src='css/images/gladagetstart.png'>
-      <img class='goat-work' src='css/images/gladagetstart.png'>
-      <img class='goat-work' src='css/images/gladagetstart.png'>
-    </tr>
-  </table>
-
-  </div>
-
-
     <div class='section_contact'></div>
   <div class='contact'>
       <h1>Contact me!</h1>
@@ -259,7 +237,7 @@ if ($_SESSION['loggedin'] == false) {
           
       </form>
     </div>
-
+<!--   <iframe width='900' height='455' src='https://www.youtube.com/embed/mZdxFBccimQ' frameborder='0' allowfullscreen></iframe> -->
 
   </div> ";
   }
