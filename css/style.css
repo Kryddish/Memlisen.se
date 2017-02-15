@@ -4,8 +4,13 @@
 html{margin: 0; padding: 0;}
 
 @font-face {
-  font-family: logo;
-  src: url(logo.ttf);
+  font-family: caveman;
+  src: url(caveman.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(OpenSans.ttf);
 }
 
 
@@ -13,14 +18,9 @@ body{
    width: 100%;
   padding: 0;
   margin: 0;
+  font-family: OpenSans;
+  color: rgb(83, 82, 82);
 }
-
-
-.only-on-mobile {display: none;}
-#aboutme-mobile{display: none;}
-#last{display: none;}
-#portfolio-m{display: none;}
-
 
 
 /* ========================================
@@ -63,7 +63,7 @@ body{
     text-shadow: 4px 4px 2px rgb(16, 19, 94);
     text-align: center;
     font-size: 8em;
-    font-family: logo;
+    font-family: caveman;
     margin: 0;
 }
 
@@ -152,7 +152,6 @@ body{
   }
 
   .about-menu li button {
-    color: black;
     text-decoration: none;
     background-color: transparent;
     border: none;
@@ -165,11 +164,8 @@ body{
       text-decoration: underline;
     }
 
-    .selected {
-      color: red;
-      text-decoration: underline;
-      
-    }
+  
+    
 .icon {
   margin: 12px;
 }
@@ -301,7 +297,6 @@ body{
 
 .experience {
   width: 100%;
-  margin-left: 15%;
 }
 
     .experience img, p{
@@ -346,7 +341,7 @@ body{
     height: 110px;
     width: 100%;
     position: relative;
-    background: linear-gradient(to right, #0dbbe2 0%, rgb(16, 19, 94) 100%);
+    background: linear-gradient(to right, #bee8f2 0%, rgb(145, 222, 219) 100%)
 }
 
   .section_contact:after{
@@ -364,7 +359,7 @@ body{
 
 .contact {
   height: 600px;
-  background: linear-gradient(to right, #0dbbe2 0%, rgb(16, 19, 94) 100%);
+  background: linear-gradient(to right, #bee8f2 0%, rgb(145, 222, 219) 100%);
 }
 
 .contact h1{
@@ -413,15 +408,18 @@ form {
 @media only screen and (max-width: 760px) {
 
 #portfolio-loggo {
-    padding: 10%;
-    font-size: 30px;
-    text-align: center;
+  font-size: 20vw;
+  text-align: center;
+}
+
+
+.introduction p {
+  font-size: 40px;
+  text-shadow: none;
 }
 
 .btnp-style {
-  float: left;
-  margin: 25%;
-  padding: 3%;
+text-align: center;
 }
 
 .introduction p{
@@ -430,15 +428,23 @@ form {
     width: 90%;
 }
 
-.block{background:none;}
+.block{
+  background: black;
+}
 
 iframe{
   width: 150px;
 }
 
 .about-menu{
-  display: block;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
+
+
+
+
 
 }
 

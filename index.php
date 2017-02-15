@@ -8,8 +8,7 @@ if ($_SESSION['loggedin'] == true) {
 echo "
 <div><form method='post'>
 <a href='?page=admin'>admin-start</a>
-<a href='?page=default'>Startsida</a>
-      <a href='?page=about'>Om mig</a>        
+<a href='?page=default'>Startsida</a>       
       <a href='?page=resume'>CV</a>
       <a href='?page=portfolio'>Portfolio</a>
     <input type='submit' name='logout' value='Logout'>
@@ -55,9 +54,6 @@ if ($_SESSION['loggedin'] == false) {
 
   switch ($page) {
 
-  case 'about':
-  include("aboutme.php");
-  break;
 
   case 'resume':
   include("mittcv.php");
@@ -65,10 +61,6 @@ if ($_SESSION['loggedin'] == false) {
 
   case 'portfolio':
   include("portfolio.php");
-  break;
-
-  case 'contact':
-  include("kontakt.php");
   break;
 
   case 'admin':
@@ -82,11 +74,9 @@ if ($_SESSION['loggedin'] == false) {
     <article class='start'>
       <div id='mySidenav' class='sidenav'>
        <ul class='navbar' id='myNavbar'>
-        <li><a href='?page=index'>Startsida</a></li>
-        <li><a href='?page=about'>Om mig</a></li>        
+        <li><a href='?page=index'>Startsida</a></li>    
         <li><a href='?page=resume'>CV</a></li>
         <li><a href='?page=portfolio'>Portfolio</a></li>
-        <li><a href='?page=contact'>Kontakt</a></li>
       </li>
     </ul>
   </div>
@@ -215,7 +205,7 @@ if ($_SESSION['loggedin'] == false) {
 
     <div class='section_contact'></div>
   <div class='contact'>
-      <h1>Contact me!</h1>
+      <h1>Kontakta mig!</h1>
     
 
     <div class='contact-div'>
@@ -228,7 +218,7 @@ if ($_SESSION['loggedin'] == false) {
         <input name='email' class='input-style input-border' type='email' placeholder='Email'>
         <input name='phone' class='input-style input-border ' type='text' placeholder='Telefonnummer'>
         <input name='text' class='input-style input-border' type='text' placeholder='skriv din text här...'>
-        <input type='submit' class='send-btn margin w3-right'>
+        <input type='submit' class='btn-style'>
 
         <div class='fb-like' data-href='https://memlisen.se' data-width='200' data-layout='standard' data-action='like' data-show-faces='true' data-share='true'></div>
 
@@ -302,8 +292,8 @@ if ($_SESSION['loggedin'] == false) {
     <p id='clue'>Ledtråden -</p>  
     <canvas id='stickman'>This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
     <div class='container'>
-      <button id='hint'>Ledtråd</button>
-      <button id='reset'>Spela igen!</button>
+      <button class='button-hm' id='hint'>Ledtråd</button>
+      <button class='button-hm' id='reset'>Spela igen!</button>
     </div>
   </div> 
 

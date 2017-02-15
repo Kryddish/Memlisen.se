@@ -78,8 +78,7 @@ canvas{
   text-align:center;
   display:block;
 }
-
-button{
+.button-hm{
   @include corners (5px);
   background-color: #cdb7b5;
   color: #8b3a62;
