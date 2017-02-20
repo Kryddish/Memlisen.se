@@ -410,6 +410,7 @@ form {
 #portfolio-loggo {
   font-size: 20vw;
   text-align: center;
+  padding: 5%;
 }
 
 
@@ -428,23 +429,37 @@ text-align: center;
     width: 90%;
 }
 
-.block{
-  background: black;
-}
 
 iframe{
   width: 150px;
 }
 
 .about-menu{
-  display: inline-block;
-  margin: 0;
-  padding: 0;
+ display: none;
 }
 
+.project-info {
+  height: 100%;
+}
 
+.about {
+  width: 100vw;
+}
 
+.about p {
+  width: 80%;
+  font-size: 18px;
+}
 
+.img-me {
+  display: none;
+}
+
+.headimg-me {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 5%;
+}
 
 }
 

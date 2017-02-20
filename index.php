@@ -1,7 +1,7 @@
 <?php 
-// $database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784', 'mjaumaow123', '219317-memlisendb' );
+//$database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784', 'mjaumaow123', '219317-memlisendb' );
 error_reporting(0);
-// session_start();
+session_start();
 // mysqli_query($link, 'SET NAMES utf8');
 
 if ($_SESSION['loggedin'] == true) {
@@ -128,9 +128,9 @@ if ($_SESSION['loggedin'] == false) {
       <img class='icon' src='css/images/gmail.png'><br>
 
     
-      <img style='width: 20%; height: 300px; padding: 2%;' src='css/images/meohest.jpg'>
-      <img  class='head-img' src='css/images/jaag.png'>
-      <img style='width: 20%; height: 300px; padding: 2%;' src='css/images/myAvatar.jpg'>
+      <img class='img-me' style='width: 20%; height: 300px; padding: 2%;' src='css/images/meohest.jpg'>
+      <img class='headimg-me' class='head-img' src='css/images/jaag.png'>
+      <img class='img-me' style='width: 20%; height: 300px; padding: 2%;' src='css/images/myAvatar.jpg'>
     
 
     </div>
