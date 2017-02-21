@@ -6,6 +6,7 @@ echo "
 <html>
 <head>
   <link rel='stylesheet' type='text/css' href='css/portfolio.css'>
+  <script src='scripts/memory.js'></script>
 	<title></title>
 </head>
 <body class='portfolio-body'>
@@ -51,11 +52,11 @@ echo "
     <a href='http://memlisen.se/gladageten/' class='portfolio-btn'>
         Gladageten.se
     </a>
-  </div><img style='width: 50%; right: 0;' src='css/images/gladagetstart.png'>
+  </div><img src='css/images/gladagetstart.png'>
 </article>
 
 <article class='box-style'>
-<img style='width: 50%;' src='css/images/linett.png'>
+<img class='left-img' src='css/images/linett.png'>
   <div class='p-info' style='padding-top: 10%;'>
     <p class='portfolio-title'>Linett Carlsson</p>
         <p class='portfolio-text'>
@@ -65,6 +66,18 @@ echo "
         Gladageten.se
     </a>
   </div>
+</article>
+
+<article class='box-style'>
+  <div class='p-info' style='padding-top: 10%; width: 50%;'>
+    <p class='portfolio-title'>Memory Game</p>
+        <p class='portfolio-text'>
+          Detta är ett spel som vi har skapat i es6. Detta är ett spel som vi har skapat i es6. Detta är ett spel som vi har skapat i es6. Detta är ett spel som vi har skapat i es6. Detta är ett spel som vi har skapat i es6. Detta är ett spel som vi har skapat i es6. 
+        </p>
+    <button class='portfolio-btn' onclick='memory()'>
+        Starta
+    </button>
+  </div><img id='mem-image' src='css/images/memory.png'><main></main>
 </article>
 
 </body>

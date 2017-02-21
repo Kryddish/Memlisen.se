@@ -34,7 +34,7 @@ if ($_SESSION['loggedin'] == false) {
       <link rel='stylesheet' type='text/css' href='css/hangman.css'>
     <script src='scripts/jquery.min.js'></script>
     <script src='scripts/menu.js'></script>
-      <script src='scripts/hangman.js'></script>
+    <script src='scripts/hangman.js'></script>
   </head>
   <body>
 
@@ -110,7 +110,7 @@ if ($_SESSION['loggedin'] == false) {
     <h1>Om mig</h1>
     <ul class='about-menu'>
       <li><button class='selected' id='bio' href='#'>Om</button></li>
-      <li><button id='skills' href='#'>Kunskaper</button></li>
+      <li><button id='skills' href='#'>Projekt</button></li>
       <li><button id='experience' href='#'>Yrkeserfarenheter</button></li>
     </ul>
 
@@ -129,14 +129,14 @@ if ($_SESSION['loggedin'] == false) {
 
     
       <img class='img-me' style='width: 20%; height: 300px; padding: 2%;' src='css/images/meohest.jpg'>
-      <img class='headimg-me' class='head-img' src='css/images/jaag.png'>
+      <img class='head-img' src='css/images/jaag.png'>
       <img class='img-me' style='width: 20%; height: 300px; padding: 2%;' src='css/images/myAvatar.jpg'>
     
 
     </div>
 
-        <div class='content skills'>
-          <div id='skillbars'>
+  <!--       <div class='content skills'> -->
+          <!-- <div id='skillbars'>
 
             <div class='skill_name' id='skill_php'>PHP</div>
             <div class='skillbar_wrapper'>
@@ -168,8 +168,12 @@ if ($_SESSION['loggedin'] == false) {
               <div class='skill_bar_percent'>80%</div>
             </div>
 
+          </div> -->
+                  <!-- </div> -->
+          <div class='content' style='margin-left: 20%; margin-top: 5%; border-radius: 3%;'>
+          <iframe width='700' height='500' src='https://www.youtube.com/embed/mZdxFBccimQ' frameborder='0' allowfullscreen></iframe>
+          <button class='btn-style'>Klicka här för att se mer</button>
           </div>
-        </div>
 
         <div class='content experience'>
 
@@ -200,7 +204,6 @@ if ($_SESSION['loggedin'] == false) {
 
                 <a href='mittcv.php' class='btna-style'>Click here to see more</a>
       </div>
-  <!--     <img src='css/images/myAvatar.png'> -->
   </div>
 
     <div class='section_contact'></div>
@@ -227,8 +230,6 @@ if ($_SESSION['loggedin'] == false) {
           
       </form>
     </div>
-<!--   <iframe width='900' height='455' src='https://www.youtube.com/embed/mZdxFBccimQ' frameborder='0' allowfullscreen></iframe> -->
-
   </div> ";
   }
 

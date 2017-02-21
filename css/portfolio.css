@@ -1,3 +1,7 @@
+button {
+	cursor: pointer;
+}
+
 .portfolio-body{
 	background-image: url('http://il2.picdn.net/shutterstock/videos/7105267/thumb/1.jpg');
 	background-repeat: no-repeat;
@@ -31,18 +35,29 @@
 	vertical-align: top;
 }
 
-	.portfolio-title{
+.right-img{
+	
+	width: 50%; right: 0;
+}
+
+.left-img{
+	width: 50%;
+}
+
+	#portfolio-loggo{
 		font-size: 50px;
 		margin: 0;
 		color: #0dbbe2;
 		padding-bottom: 5%;
-		
 	}
 
 	.portfolio-text{
 		width: 70%;
 		padding-bottom: 10%;
 
+	}
+
+	.portfolio-title {
 
 	}
 
@@ -59,6 +74,53 @@
 
 	}
 
+	@media only screen and (max-width: 760px){
+		.portfolio-btn {
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+
 		.portfolio-btn:hover{
 			background-color: #0dbbe2;
 		}
+
+	.cards{
+		margin: 2%;
+		width: 100px;
+		height: 100px;
+		background-color: #ff80bf;
+		border: none;
+		font-size: 25px;
+		transition: 0.5s;
+		box-shadow: 2px 2px 2px #800040;
+		color: #ff80bf;
+		
+	}
+
+	.cards:hover {
+		box-shadow: 8px 8px 3px #800040;
+		padding: 6%;
+		border: none;
+	}
+
+	.cards:focus {
+		outline:0;
+		border: 2px solid;
+		box-shadow: none;
+	}
+
+	main{
+		
+	width: 50%; right: 0;
+	display: inline-block;
+
+	}
+
+	.klar {
+		background-color: grey;
+	}
+
+	.klar:hover{
+		box-shadow: none;
+	}

@@ -20,8 +20,7 @@ echo "
 
   <div id='mySidenav' class='sidenav'>
    <ul class='navbar' id='myNavbar'>
-    <li><a href='/'>Startsida</a></li>
-    <li><a href='?page=about'>Om mig</a></li>        
+    <li><a href='/'>Startsida</a></li>        
     <li><a href='?page=resume'>CV</a></li>
     <li><a href='?page=portfolio'>Portfolio</a></li>
   </li>
