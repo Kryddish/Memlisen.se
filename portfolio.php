@@ -63,7 +63,7 @@ echo "
           En hemsida jag gjorde åt en nära vän till mis som ritaar mycket och har planer på att börja sälja sina bilder. detta är ett pågående projekt jag sysslar med på fritiden! 
         </p>
     <a href='http://memlisen.se/linett/' class='portfolio-btn'>
-        Gladageten.se
+        Linett.se
     </a>
   </div>
 </article>
@@ -72,7 +72,7 @@ echo "
   <div class='p-info' style='padding-top: 10%; width: 50%;'>
     <p class='portfolio-title'>Memory Game</p>
         <p class='portfolio-text'>
-          Detta är ett spel som vi har skapat i es6. Detta är ett spel som vi har skapat i es6. Detta är ett spel som vi har skapat i es6. Detta är ett spel som vi har skapat i es6. Detta är ett spel som vi har skapat i es6. Detta är ett spel som vi har skapat i es6. 
+          Detta är ett spel som vi har skapat i es6. Klicka på 'Start' för att börja! klicka på två kort och se om du lyckas klara spelet! :) Fortfarande inte helt klart och är medveten om vissa buggar. 
         </p>
     <button class='portfolio-btn' onclick='memory()'>
         Starta
@@ -80,6 +80,40 @@ echo "
   </div><img id='mem-image' src='css/images/memory.png'><main></main>
 </article>
 
+<article class='box-style'>
+<div id='start-screen' class='screen'>
+    <h1>Snake game!</h1>
+    <img style='height: 40%' src='https://img.clipartfest.com/8629f3563be1059aea7e0ebbd52c577b_cartoon-snakes-clip-art-page-2-snake-png-clipart_320-320.png'>
+    <button onclick='newGame();'>Starta</button>
+  </div>
+
+  <div id='game-over' class='screen'>
+    <h1>Game over!</h1>
+    <img style='height: 40%' src='https://img.clipartfox.com/b0893e279f1f8f4f012f9f940a2455ae_long-cute-snake-clipart-cute-snake-clipart-transparent_800-566.png'>
+    <button onclick='newGame();'>Kör igen!</button>
+    <p id='score'>Score: </p>
+  </div>
+  <canvas id='canvas' width=500 height=400></canvas>
+
+<!--     <div id='time'>
+    <h2>Tid: </h2>
+    <div id='hours'></div><div id='minutes'></div><div id='seconds'></div>
+  </div> -->
+  <div class='p-info' style='padding-top: 10%;'>
+    <p class='portfolio-title'>Snake game</p>
+    <div class='portfolio-text' id='time'>
+        <h2>Tid: </h2>
+        <div id='hours'></div><div id='minutes'></div><div id='seconds'></div>
+      </div>
+    <a href='http://memlisen.se/linett/' class='portfolio-btn'>
+      Maow
+    </a>
+  </div>
+</article>
+
+
+
+<script src='scripts/snake.js'></script>
 </body>
 </html>
 ";

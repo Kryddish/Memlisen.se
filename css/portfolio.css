@@ -58,6 +58,10 @@ button {
 	}
 
 	.portfolio-title {
+		text-align: center;
+		display: block;
+		font-weight: bold;
+		font-size: 20px;
 
 	}
 
@@ -86,13 +90,18 @@ button {
 		}
 
 	.cards{
+		background-size: 0 0;
 		margin: 2%;
 		width: 100px;
 		height: 100px;
 		background-color: #ff80bf;
+		z-index: 99999;
 		border: none;
 		font-size: 25px;
-		transition: 0.5s;
+
+		transition: 
+		box-shadow 0.5s;
+
 		box-shadow: 2px 2px 2px #800040;
 		color: #ff80bf;
 		
@@ -100,7 +109,6 @@ button {
 
 	.cards:hover {
 		box-shadow: 8px 8px 3px #800040;
-		padding: 6%;
 		border: none;
 	}
 
@@ -111,16 +119,74 @@ button {
 	}
 
 	main{
-		
 	width: 50%; right: 0;
 	display: inline-block;
-
-	}
+	text-align: center;
+	margin: auto;
+}
 
 	.klar {
 		background-color: grey;
+		border: 1px solid black;
+		background-size: 100% 100%;
 	}
 
 	.klar:hover{
 		box-shadow: none;
 	}
+
+		canvas{
+			border: 2px solid black;
+			display: none;
+			padding: 0;
+			width: 50%;
+		}
+
+
+			.screen h1{color: cyan; padding: 4%; }
+
+		.screen button{
+			background-color: black;
+			color: cyan;
+			border: none;
+			font-size: 30px;
+			padding: 4%;
+		}
+
+		button:hover{background-color: cyan; color: black;}
+
+		.screen{
+			background-color: black;
+			width: 50%;
+			text-align: center;
+			display: inline-block;
+			
+		}
+
+		#start-screen h1, button {
+			padding: 2%;
+			display: block;
+			margin: auto;
+			padding: 4%;
+		}
+
+		#game-over{
+			display: none;
+		}
+
+		#game-over p{
+			color: cyan;
+			font-size: 50px;
+		}
+
+		#time {
+			display: none;
+/*			padding: 0;
+			color: cyan;
+			background-color: black;
+			width: 50%;*/
+			text-align: center;
+		}
+			#hours{display: inline-block; font-size: 20px;}
+			#minutes{display: inline-block; font-size: 20px;}
+			#seconds{display: inline-block; font-size: 20px;}
