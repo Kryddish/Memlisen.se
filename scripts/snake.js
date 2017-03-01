@@ -99,13 +99,15 @@ document.onkeydown = checkKey;
 function checkKey(e) {
 	var key=e.which;
 
-	if (key=="83" || key=="40") { //down
+	if (key=="83" || key=="40") {
+	preventDefault(e); //down
 		if (yoffset>=0) {
 			yoffset = 10; xoffset = 0;
 		}
 	}
 
-	if (key=="87" || key=="38") { //up
+	if (key=="87" || key=="38") {
+	preventDefault(e); //up
 		if (yoffset <=0) {
 			yoffset = -10; xoffset = 0;
 		}
@@ -135,8 +137,8 @@ function collision(){
 }
 
 function xfood(){
-	food={x:Math.floor(Math.random() * (490 - 0)/10) * 10, y:Math.floor
-		(Math.random() * (490 - 0)/10)*10};
+	food={x:Math.floor(Math.random() * (390 - 0)/10) * 10, y:Math.floor
+		(Math.random() * (390 - 0)/10)*10};
 		ctx.fillStyle = "red";
 		ctx.fillRect(food.x, food.y, 10, 10);
 	}

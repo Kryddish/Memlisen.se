@@ -170,7 +170,7 @@ if ($_SESSION['loggedin'] == false) {
 
           </div> -->
                   <!-- </div> -->
-          <div class='content' style='margin-left: 20%; margin-top: 5%; border-radius: 3%;'>
+          <div class='content' style='text-align: center; margin: auto;'>
           <iframe width='700' height='500' src='https://www.youtube.com/embed/mZdxFBccimQ' frameborder='0' allowfullscreen></iframe>
           <button class='btn-style'>Klicka här för att se mer</button>
           </div>

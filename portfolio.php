@@ -74,11 +74,13 @@ echo "
         <p class='portfolio-text'>
           Detta är ett spel som vi har skapat i es6. Klicka på 'Start' för att börja! klicka på två kort och se om du lyckas klara spelet! :) Fortfarande inte helt klart och är medveten om vissa buggar. 
         </p>
-    <button class='portfolio-btn' onclick='memory()'>
+    <button class='portfolio-btn''>
         Starta
     </button>
   </div><img id='mem-image' src='css/images/memory.png'><main></main>
 </article>
+<!-- 
+ onclick='memory() -->
 
 <article class='box-style'>
 <div id='start-screen' class='screen'>
