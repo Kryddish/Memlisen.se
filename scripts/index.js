@@ -18,6 +18,9 @@ $(window).scroll(function(){
 		"opacity": 1 - $(window).scrollTop() / 200,
 		"margin-top": -($(this).scrollTop()/2) + "px"
 	});
+	$(".project-info").css({
+		"opacity": 0 + ($(window).scrollTop() - $(".project-info").offset().top + 400) / 300,
+	});
 });
 
 
