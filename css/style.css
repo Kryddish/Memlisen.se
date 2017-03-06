@@ -306,7 +306,10 @@ body{
       margin-top: 3%;
     }
 
-
+.experience img {
+  width: 20%;
+  display: inline-block;
+}
 
 .b_bottom {
   border-bottom: 1px solid grey;
@@ -329,6 +332,11 @@ body{
   color: black;
 }
 
+.e-headline {
+  font-weight: bold;
+  font-size: 22px;
+  
+}
 
 
 

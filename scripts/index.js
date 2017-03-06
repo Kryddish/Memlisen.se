@@ -21,6 +21,12 @@ $(window).scroll(function(){
 	$(".project-info").css({
 		"opacity": 0 + ($(window).scrollTop() - $(".project-info").offset().top + 400) / 300,
 	});
+		$(".section_contact").css({
+		"opacity": 0 + ($(window).scrollTop() - $(".section_contact").offset().top + 600) / 300,
+	});
+				$(".contact").css({
+		"opacity": 0 + ($(window).scrollTop() - $(".contact").offset().top + 700) / 300,
+	});
 });
 
 

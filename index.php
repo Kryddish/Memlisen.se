@@ -130,7 +130,7 @@ if ($_SESSION['loggedin'] == false) {
     
       <img class='img-me' style='width: 20%; height: 300px; padding: 2%;' src='css/images/meohest.jpg'>
       <img class='head-img' src='css/images/jaag.png'>
-      <img class='img-me' style='width: 20%; height: 300px; padding: 2%;' src='css/images/myAvatar.jpg'>
+      <img class='img-me' style='width: 20%; height: 300px; padding: 2%;' src='css/images/me.png'>
     
 
     </div>
@@ -177,9 +177,10 @@ if ($_SESSION['loggedin'] == false) {
 
         <div class='content experience'>
 
+        <p class='e-headline'>Ykreserfarenheter;</p>
           <div class='spanga_work b_bottom'>
-            <img src='http://varumarkesmanual.stockholm.se/sites/all/themes/jupiter/logo.png' />
-            <p>Animal caretakeer | summer 2016 | Stockholm </br>
+            <img src='css/images/stockholmstad.png' />
+            <p>Djurvårdare | sommaren 2016 | Stockholm </br>
               <em>worked with over 1200 animals on Spånga gymnasium.</em></p>
             </div>
 
@@ -189,6 +190,7 @@ if ($_SESSION['loggedin'] == false) {
                 <em>worked as an animal caretaker on an animal hospital.</em></p>
               </div>
 
+              <p class='e-headline'>Utbildning;</p>
               <div class='b_bottom'>
                 <img src='http://kyh.se/wp-content/uploads/2015/12/logo140.png' />
                 <p style='margin-left: 10%;'>Front end devoloper | KYH | Stockholm </br>
@@ -197,8 +199,8 @@ if ($_SESSION['loggedin'] == false) {
 
 
                 <div class='b_bottom'>
-                 <img src='http://varumarkesmanual.stockholm.se/sites/all/themes/jupiter/logo.png' />
-                 <p>Spånga gymnasium | Djurvårdare</br>
+                 <img src='css/images/stockholmstad.png' />
+                 <p>Spånga gymnasium | 2013-2016 | Djurvårdare</br>
                   <em>graduate in 2016 as an animalcaretakeer</em></p>
                 </div>
 
