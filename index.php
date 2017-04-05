@@ -1,10 +1,7 @@
 <?php 
-//$database = mysqli_connect('memlisendb-219317.mysql.binero.se', '219317_ul80784', 'mjaumaow123', '219317-memlisendb' );
-error_reporting(0);
 session_start();
-// mysqli_query($link, 'SET NAMES utf8');
 
-if ($_SESSION['loggedin'] == true) {
+if (isset($_SESSION['loggedin']) == true) {
 echo "
 <div><form method='post'>
 <a href='?page=admin'>admin-start</a>
@@ -15,13 +12,13 @@ echo "
   </form></div>
   ";
 }
-if ($_POST['logout']) {
+if (isset($_POST['logout'])) {
   if(session_destroy()){
     header("Location: /");
   }
 }
 
-if ($_SESSION['loggedin'] == false) {
+if (isset($_SESSION['loggedin']) == false) {
   echo "
   <!DOCTYPE html>
   <html>
@@ -49,11 +46,9 @@ if ($_SESSION['loggedin'] == false) {
     }(document, 'script', 'facebook-jssdk'));</script>
   ";
 }
-
   $page = $_GET['page'];
 
   switch ($page) {
-
 
   case 'resume':
   include("mittcv.php");
@@ -69,7 +64,7 @@ if ($_SESSION['loggedin'] == false) {
   
   default:
 
-  if ($_SESSION['loggedin'] == false) {
+  if (isset($_SESSION['loggedin']) == false) {
     echo "
     <article class='start'>
       <div id='mySidenav' class='sidenav'>
@@ -128,9 +123,9 @@ if ($_SESSION['loggedin'] == false) {
       <img class='icon' src='css/images/gmail.png'><br>
 
     
-      <img class='img-me' style='width: 20%; height: 300px; padding: 2%;' src='css/images/meohest.jpg'>
+      <img class='img-me' style='width: 20%; height: 300px; padding: 2%;' src='css/images/meohest.JPG'>
       <img class='head-img' src='css/images/jaag.png'>
-      <img class='img-me' style='width: 20%; height: 300px; padding: 2%;' src='css/images/me.png'>
+      <img class='img-me' style='width: 20%; height: 300px; padding: 2%;' src='css/images/me.PNG'>
     
 
     </div>
@@ -218,68 +213,21 @@ if ($_SESSION['loggedin'] == false) {
         Mobil: 0708769638<br>
         Email: emmelie.sundell@hotmail.com<br>
       <p>Swing by for a cup of coffee, or leave me a note:</p>
-      <form method='post'>
-        <input name='name' class='input-style input-border ' type='text' placeholder='Namn'>
-        <input name='email' class='input-style input-border' type='email' placeholder='Email'>
-        <input name='phone' class='input-style input-border ' type='text' placeholder='Telefonnummer'>
-        <input name='text' class='input-style input-border' type='text' placeholder='skriv din text här...'>
-        <input type='submit' class='btn-style'>
-
-        <div class='fb-like' data-href='https://memlisen.se' data-width='200' data-layout='standard' data-action='like' data-show-faces='true' data-share='true'></div>
-
-        <script src='//platform.linkedin.com/in.js' type='text/javascript'></script>
-        <script type='IN/MemberProfile' data-id='https://www.linkedin.com/in/emmelie-sundell-41bba2128' data-format='hover' data-text='Emmelie Sundell'></script>
-          
-      </form>
+      <div id='form'>
+        <input id='name' class='input-style input-border ' type='text' placeholder='Namn'>
+        <input id='email' class='input-style input-border' type='email' placeholder='Email'>
+        <input id='phone' class='input-style input-border ' type='text' placeholder='Telefonnummer'>
+        <input id='text' class='input-style input-border' type='text' placeholder='skriv din text här...'>
+        <button id='mail' class='btn-style'>Skicka</button>
+        <div class='fb-like' data-href='https://memlisen.se' data-width='200' data-layout='standard' data-action='like' data-show-faces='true' data-share='true' />
+      </div>
+      <script src='//platform.linkedin.com/in.js' type='text/javascript'></script>
+      <script type='IN/MemberProfile' data-id='https://www.linkedin.com/in/emmelie-sundell-41bba2128' data-format='hover' data-text='Emmelie Sundell'></script>
     </div>
   </div> ";
   }
 
-if($_POST) {
-  $to = "emmelie.sundell@hotmail.com";
-  $subject = "From www.memlisen.se";
-
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $phone = $_POST['phone'];
-  $message = $_POST['text'];
-
-  $query = "
-     
-      INSERT INTO messages
-      (
-        meddelande,
-        avsändare, 
-        telefonnummer,
-        epost
-      )
-
-      VALUES 
-      (
-        '$message',
-        '$name',
-        '$phone',
-        '$email'
-      )
-
-    ";
-
-    mysqli_query($database, $query);
-
-  $message = <<<EMAIL
- 
- Sent from; $name , $email
-  Meddelande;
-  $message
-EMAIL;
-  mail($to, $subject, $message);
-  $feedback = 'Your message has been sent!';
-  echo $feedback;
-  $headers .= 'Content-type: text/html; charset=UTF-8';
-
-}
-
-if ($_SESSION['loggedin'] == false) {
+if (isset($_SESSION['loggedin']) == false) {
   echo "
   <div class='hangman'>
     <div class='wrapper'>
@@ -299,30 +247,17 @@ if ($_SESSION['loggedin'] == false) {
       <button class='button-hm' id='reset'>Spela igen!</button>
     </div>
   </div> 
-
-
-
   <script type='text/javascript' src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5818b18185638455'></script> 
   <script src='scripts/index.js'></script>
   </body>
   </html>
   ";
 }
-
 break;
 }
 
-if ($_SESSION['loggedin'] == true){
-  echo "
-  <h1>Under counstraction</h1>
-
-
-
-
-
-  ";
-
+if (isset($_SESSION['loggedin']) == true){
+  echo "<h1>Under counstraction</h1>";
 }
-
 
 ?>

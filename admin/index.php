@@ -1,16 +1,15 @@
 <?php 
-
+include("../config.php");
 session_start();
 
 echo "<link rel='stylesheet' href='../css/admin.css'>"; 
 
 if (isset($_POST['password'])) {
 	$username = mysqli_real_escape_string($database, $_POST['username']);
-	$password = mysqli_real_escape_string($database, $_POST['password'];
+	$password = mysqli_real_escape_string($database, $_POST['password']);
 
 	if ($username == 'admin' && $password == 'maow') {
 		$_SESSION['loggedin'] = true;
-
 	}
 }
 
@@ -28,12 +27,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
       <a href='../?page=home'>Startsida</a>
       <a href='../?page=about'>Om mig</a>        
       <a href='../?page=resume'>CV</a>
-      <a href='../?page=portfolio'>Portfolio</a>
-    
-
-
-
-				";
+      <a href='../?page=portfolio'>Portfolio</a>";
 }
 
 else {

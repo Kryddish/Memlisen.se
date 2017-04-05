@@ -1,0 +1,38 @@
+body{
+    background-color: black;
+    color: cyan;
+}
+
+
+
+.contact-div{
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+}
+
+    input[type=text], input[type=email]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+     }
+
+        input[type=text]:focus {
+            background-color: lightblue;
+            border: 1px solid #234b62;
+        }
+
+            input[type=email]:focus {
+                background-color: lightblue;
+                border: 1px solid #234b62;
+            }
+
+                input[type=submit] {
+                    display: block;
+                    margin: 0 auto 20px auto;
+                }
+

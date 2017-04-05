@@ -1,0 +1,507 @@
+/* ========================================
+            Main
+======================================== */ 
+html{margin: 0; padding: 0;}
+
+@font-face {
+  font-family: caveman;
+  src: url('caveman.ttf');
+}
+
+body{
+  font-family: caveman;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+   background-color: #eee;
+}
+
+
+.only-on-mobile {display: none;}
+#aboutme-mobile{display: none;}
+#last{display: none;}
+#portfolio-m{display: none;}
+/* ========================================
+            Head
+======================================== */ 
+
+.block{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(https://images.alphacoders.com/106/106571.jpg);
+}
+
+.block:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    transform-origin: right bottom;
+    transform: skewY(-3deg);
+}
+
+.introduction p {
+    text-align: center;
+    font-size: 22px;
+    width: 50%;
+    color: white;
+     text-shadow: 2px 2px 2px black;
+    margin: auto;
+    font-style: oblique;
+    display: block;
+}
+
+#portfolio-loggo {
+    color: #0dbbe2;
+    text-shadow: 4px 4px 2px rgb(16, 19, 94);
+    text-align: center;
+    font-size: 78px;
+    margin-top: 15%;
+}
+
+
+
+/* ========================================
+            Button styles
+======================================== */ 
+
+.btn-style{
+   background-color: transparent;
+    border: 2px solid #0dbbe2;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 3%;
+    padding: 1%;
+    margin-left: 5%;
+
+}
+  .btn-style:hover {
+        background-color: #0dbbe2;
+    }
+
+.btna-style{
+     background-color: transparent;
+    border: 2px solid #0dbbe2;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 3%;
+    margin-left: 25%;
+
+}
+  .btna-style:hover {
+        background-color: #0dbbe2;
+    }
+
+
+
+
+.btnp-style {
+    margin: 5%;
+    padding: 2%;
+    background-color: transparent;
+    border: 2px solid #0dbbe2;
+    font-size: 18px;
+    font-family: caveman;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    
+
+}
+
+    .btnp-style:hover {
+        background-color: #0dbbe2;
+    }
+
+
+
+
+/* ========================================
+            Project
+======================================== */ 
+
+
+.project-info {
+  display: block;
+  height: 100vh;
+
+}
+
+.project-info h1{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 42px;
+  margin: 10% 0 0 0;
+  padding: 0;
+  
+}
+
+.project-info div.content {
+  display: none;
+  overflow: auto;
+}
+
+  .about{
+    width: 50%;
+
+  }
+
+      .about p{
+    width: 80%;
+    padding: 0 0 16px 0;
+  }
+
+.about p {
+  box-sizing: border-box;
+  vertical-align: top;
+  height: 100%;
+  margin-left: 20%;
+  float: left;
+}
+
+.about-menu {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+  .about-menu li{
+    display: inline;
+
+  }
+
+  .about-menu li button {
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid #eee;
+    font-size: 22px;
+    display: inline-block;
+  }
+
+    .about-menu li button:hover{
+      color: blue;
+      text-decoration: underline;
+    }
+
+    .selected {
+      color: red;
+      text-decoration: underline;
+      
+    }
+
+.bild {
+  font-size: 8em;
+  display: inline-block;
+  float: right;
+  margin-right: 10%;
+
+ 
+}
+
+
+
+/* ========================================
+            Skillbar
+======================================== */ 
+
+
+#skillbars {
+  margin:0 auto;
+  padding:0px;
+  text-align:center;
+  width:995px;
+}
+
+  #skillbars h1 {
+    margin-top:100px;
+    font-size:55px;
+    color:#2E64FE;
+  }
+
+    #skillbars h1 a {
+      color:#2E64FE;
+      font-size:18px;
+    }
+
+.skill_name {
+  margin-left:250px;
+  width:50px;
+  height:40px;
+  line-height:40px;
+  font-weight:bold;
+  font-size:13px;
+  color:white;
+  clear:both;
+  float:left;
+  border-radius:3px 0px 0px 3px;
+}
+
+  #skill_php {
+    background-color:#088A85;
+  }
+
+      #skill_asp {
+        background-color:#5858FA;
+      }
+        #skill_jsp {
+          background-color:#04B404;
+        }
+
+          #skill_html {
+            background-color: pink;
+          }
+
+            #skill_css {
+            background-color: blue;
+            }
+
+
+.skillbar_wrapper {
+  float:left;
+  position:relative;
+  display:block;
+  margin-bottom:15px;
+  width:400px;
+  background-color:#E6E6E6;
+  height:40px;
+  border-radius:0px 3px 3px 0px;
+}
+
+.skillbar_bar {
+  height:40px;
+  width:0px;
+  border-radius:0px 3px 3px 0px;
+}
+
+#skillbar_php {
+  background-color:#01DFD7;
+}
+  #skillbar_asp {
+    background-color:#8181F7;
+  }
+
+    #skillbar_jsp {
+      background-color:#01DF01;
+    }
+
+      #skillbar_html {
+        background-color: purple;
+      }
+
+        #skillbar_css {
+        background-color: purple;
+        }
+
+.skill_bar_percent  {
+  position:absolute;
+  right:10px;
+  top:0;
+  font-size:12px;
+  height:35px;
+  line-height:35px;
+  color:black;
+}
+
+
+
+/* ========================================
+            experience
+======================================== */ 
+
+.experience {
+  width: 100%;
+}
+
+    .experience img, p{
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 3%;
+    }
+
+
+
+.b_bottom {
+  border-bottom: 1px solid grey;
+   width: 50%; 
+   margin-left: 10%;
+  padding-bottom: 1%: 
+}
+
+.evidensia img{
+  width: 20%;
+  padding-bottom: 2%;
+}
+
+.evidensia p{
+  padding-left: 8%;
+}
+
+.experience a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+/* ========================================
+            Work
+======================================== */ 
+
+.section_work{
+    margin-top: 10%;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to right, black 0%, black 100%);
+}
+
+  .section_work:after{
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: inherit;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      transform-origin: left top;
+      transform: skewY(-3deg);
+  }
+
+.work {
+  height: 1300px;
+  background-color: black;
+}
+
+.work h1{
+  color: #33d6ff;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.youtube-video{
+  text-align: center;
+}
+
+.goat-work {
+  height: 25%;
+   width: 25%;
+   margin: 5% 3% 0 5%;
+   
+}
+
+.goat-work:hover{
+border-radius: 50%;
+transition: 1s;
+padding: 0;
+}
+
+/* ========================================
+            Contact
+======================================== */ 
+
+
+.section_contact{
+    height: 110px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to right, #0dbbe2 0%, rgb(16, 19, 94) 100%);
+}
+
+  .section_contact:after{
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: inherit;
+      z-index: 1;
+      bottom: 0;
+      transform-origin: left top;
+      transform: skewY(-3deg);
+      left: 0;
+  }
+
+.contact {
+  height: 600px;
+  background: linear-gradient(to right, #0dbbe2 0%, rgb(16, 19, 94) 100%);
+}
+
+.contact h1{
+  text-align: center;
+  margin: 0;
+}
+
+.contact-div{
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+}
+
+    input[type=text], input[type=email]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+     }
+
+        input[type=text]:focus {
+            background-color: lightblue;
+            border: 1px solid #234b62;
+        }
+
+            input[type=email]:focus {
+                background-color: lightblue;
+                border: 1px solid #234b62;
+            }
+
+                input[type=submit] {
+                    display: block;
+                    margin: 0 auto 20px auto;
+                }
+
+
+
+
+/* ========================================
+            Mobile
+======================================== */ 
+
+@media only screen and (max-width: 760px) {
+
+#portfolio-loggo {
+    padding: 10%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.btnp-style {
+  float: left;
+  margin: 25%;
+  padding: 3%;
+}
+
+.introduction p{
+    font-size: 14px;
+    text-align: center;
+    width: 90%;
+}
+
+.block{background:none;}
+
+iframe{
+  width: 150px;
+}
+
+.about-menu{
+  display: block;
+}
+
+}
+

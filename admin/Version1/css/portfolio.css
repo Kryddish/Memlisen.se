@@ -1,0 +1,74 @@
+.introduction p {
+    text-align: center;
+    font-size: 22px;
+    width: 50%;
+    color: white;
+    font-weight: bold;
+    margin: auto;
+}
+
+#portfolio-loggo {
+    padding-top: 10%;
+    color: #0dbbe2;
+    text-shadow: 4px 4px 2px rgb(16, 19, 94);
+    text-align: center;
+    font-size: 78px;
+}
+
+article {
+  position: relative;
+  z-index: 1;
+}
+
+article:before {
+  content: " ";
+  position: absolute;
+  width: 100vw; 
+  height: 100vh;  
+  opacity: .7; 
+  z-index: -1;
+  background: url(https://images.alphacoders.com/106/106571.jpg);
+}
+
+.btnp-style {
+    margin: 4%;
+    background-color: transparent;
+    color: white;
+    border: 2px solid #0dbbe2;
+    font-size: 18px;
+
+}
+
+    .btnp-style:hover {
+        background-color: #0dbbe2;
+    }
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 760px) {
+
+#portfolio-loggo {
+    padding: 10%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.btnp-style {
+  float: left;
+  margin: 25%;
+  padding: 3%;
+}
+
+.introduction p{
+    font-size: 14px;
+    text-align: center;
+    width: 90%;
+}
+
+}

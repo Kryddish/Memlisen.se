@@ -1,0 +1,18 @@
+#aboutme {
+	background-image: url(images/cat.jpg);
+	background-repeat: no-repeat;
+     background-size: 100% 100%; 
+     height: 100%;
+}
+
+	.clickme-button:hover{
+		background-color: cyan;
+	}
+
+.aboutme-section{
+	background-color: white;
+}
+
+.p-post{
+	background-color: white;
+}

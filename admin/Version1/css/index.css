@@ -1,0 +1,457 @@
+
+
+/* ========================================
+   osynligt i browsern
+   ======================================== */
+
+   #aboutme-mobile {
+    display: none;
+   }
+
+   .header-m {
+    display: none;
+   }
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: headline;
+    src: url(fonts/headline.otf);
+}
+
+
+/* ========================================
+   Main
+   ======================================== */
+*{margin: 0px; padding: 0}
+
+
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+
+body, html{
+    height: 100%;
+    color: #2a5157;
+    line-height: 1.8;
+            }
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+   
+a { color: #990003 
+}
+
+.margin{
+    margin-top:16px;
+    margin-bottom:16px; 
+}
+
+.padding{
+    padding-top:64px;
+    padding-bottom:64px;}
+
+    .w3-wide {letter-spacing: 10px;}
+    .w3-hover-opacity {cursor: pointer;}
+    #arrow-down{width: 25%; display: block; margin-left: 30%; margin-top: 50%;} 
+
+    .only-on-mobile {
+        display: none;
+    }
+
+
+/* ========================================
+   Bilder
+   ======================================== */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    .bgimg-2, .bgimg-3 {
+        opacity: 0.7;
+    }
+
+  /* First image (Logo. Full height) */
+ .bgimg-1 {
+        background-image: url('images/bb-8.jpg');
+        min-height: 100%;
+    }
+
+        /* Second image (Portfolio) */
+        .bgimg-2 {
+            background-image: url("http://sareklint.se/Johanna/images/boris_images/boris_sida_1.jpg");
+            min-height: 400px;
+        }
+
+            /* Third image (Contact) */
+            .bgimg-3 {
+                background-image: url("http://www.agria.se/imagevault/publishedmedia/mvuxjp10eo2tqziuxpyv/katt-gaspar_-2-.jpg");
+                min-height: 400px;
+            }
+
+.img-me{
+    border-radius:50%;
+    width: 70%;
+    }
+
+.img-fullsize{
+    z-index:3;
+    display:none;padding-top:100px;
+    position:fixed;left:0;
+    top:0;width:100%;
+    height:100%;
+    overflow:auto;
+    background-color:rgb(0,0,0);
+    background-color:rgba(0,0,0,0.4);
+    color:#fff;
+    background-color:#000;}
+
+.pitcure-position{
+    position:relative
+}
+
+.picture-header{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%)
+}
+
+
+
+/* ========================================
+   Menu
+   ======================================== */
+
+
+.navbar{
+    list-style-type: none;
+    background-color: rgba(200);
+    float: left;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+    .navbar li{
+        float: left;
+    }
+        .navbar li a{
+            display: block;
+            padding: 8px 16px;
+        }
+            .navbar li a:hover{
+                color: #000;
+                background-color: #ccc;
+            }
+                .navbar a{
+                    text-decoration: none;
+                }
+
+.menu-position {
+    position:fixed;
+    z-index:1;
+}
+
+
+/* ========================================
+   Head
+   ======================================== */
+
+
+.content{
+    max-width:980px;
+    margin:auto;
+}
+
+.rubrik{
+    font-size:36px;
+    letter-spacing:4px;
+}
+
+
+.heading{
+    text-align:center;
+}
+
+.w3-row:after,.w3-row-padding:after{
+    content:"";
+    display:table;
+    clear:both;
+    background-color: #ecf0f5;
+}
+
+
+
+/* ========================================
+   Kontaktformulär
+   ======================================== */
+
+
+.contact-div{
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+}
+
+    input[type=text], input[type=email]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+     }
+
+        input[type=text]:focus {
+            background-color: lightblue;
+            border: 1px solid #234b62;
+        }
+
+            input[type=email]:focus {
+                background-color: lightblue;
+                border: 1px solid #234b62;
+            }
+
+                input[type=submit] {
+                    display: block;
+                    margin: 0 auto 20px auto;
+                }
+
+
+
+/* ========================================
+   Inputs
+   ======================================== */
+
+
+.input-style{
+    padding:8px;
+    display:block;
+    border:none;
+    border-bottom:1px solid #808080;
+    width:100%
+}
+
+    .input-border {
+        border:1px solid #ccc
+    }
+
+
+
+/* ========================================
+   Buttons
+   ======================================== */
+
+
+.send-btn{
+    border:none;
+    display:inline-block;
+    outline:0;padding:6px 16px;
+    vertical-align:middle;overflow:hidden;
+    text-decoration:none!important;
+    color:#fff;background-color:#000;   
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+    .send-btn:hover{
+        box-shadow:0 8px 16px 0 
+        rgba(0,0,0,0.2),0 6px 20px 0 
+        rgba(0,0,0,0.19)}
+
+            .close-btn:hover{
+                color:#fff; 
+                background-color:#f44336
+            }
+
+.btn-style{
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+#arrow-down-m{
+    display: none;
+}
+
+
+
+/* ========================================
+   Mobile screen
+   ======================================== */
+
+
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-width: 1024px) {
+
+.bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+}}
+
+
+/* mobile 320px*480px*/
+@media only screen and (max-width: 760px){
+
+#body {
+    display: none;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3  {
+    background-image: none;
+    display: none;
+}
+
+.navbar {
+    display: none;
+ }
+
+ .picture-header{
+    font-size: 14px;
+    text-align: center;
+}
+
+#arrow-down-m{
+    display: block;
+    text-align: center;
+    width: 20%;
+    margin: 50% auto 0 auto;
+}
+
+#projekt {
+    display: none;
+}
+
+
+.only-on-mobile {
+    background-image: url(images/mobile-bg.jpg);
+    background-size: 100% 100%;
+    display: block;
+    text-align: center;
+    color: #00F9FF;
+    font-size: 10px;
+    height: 100vh;
+}
+
+.mobile-head{
+    padding-top: 12%;
+    font-weight: normal;
+    font-size: 50px;
+    font-family: headline;
+}
+
+#aboutme-mobile{
+    height: 100vh;
+    background-image: url('images/night-town.jpg');
+    background-size: 100% 100%;
+    color: #00F9FF;
+    text-align: center;
+    display: block;
+}
+
+#portfolio-m {
+    background-image: url(http://trendar.nu/upload/media/posts/2016-04/18/speltavlingen-kodkampen-ska-fa-fler-barn-och-unga-intresserade-av-programmering_1460968832-b.jpg);
+    height: 100vh;
+     background-size: 100% 100%;
+    text-align: center;
+    color: #00F9FF;
+}
+
+
+
+  #aboutme-mobile p{
+      padding: 2%;
+      color: cyan;
+      background-color: rgba(0, 0, 0, 0.19);
+
+  }
+
+   #aboutme-mobile #more-m {
+    float: right;
+   } 
+
+      #aboutme-mobile img{
+        width: 55%;
+        height: 35%;
+        border-radius: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-filter: grayscale(60%); /* Safari 6.0 - 9.0 */
+         filter: grayscale(60%);
+      }
+        #aboutme-mobile a{
+          text-decoration: none;
+        }
+            #aboutme-mobile h5 {
+                margin-top: -2%;
+                color: white;
+            }
+.header-m {
+    background: rgba(130, 130, 130, 0.6);
+    padding: 5%;
+    margin-bottom: 2%;
+    margin-top: -5%;
+
+}
+
+#next {
+    float: right;
+    font-size: 30px;
+    margin-top: 20%;
+    
+}
+
+#last {
+    float: left;
+    font-size: 30px;
+    margin-top: 20%;
+    
+}
+
+.navbar.responsive {
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: absolute;
+    margin-top: 20%;
+    
+    list-style-type: none;
+    background-color: black;
+}
+.navbar.responsive li {
+    float: none;
+    display: block;
+}
+
+
+
+
+
+}
+
+/* gör så all text i 2 stycket syns om skärmen är tillräcklig stor */
+@media only screen and (min-width:601px){
+    .w3-col.m4{width:33.33333%}
+    .w3-col.m6,.w3-half{width:49.99999%}
+    .w3-col.m8{width:66.66666%}
+}
+
+.w3-col,.w3-half{float:left;width:100%}
+.w3-col.m3{width:24.99999%}
+
+
+@media only screen and (max-width: 760px) {
+    .bgimg-1 {
+        background-image: none;
+    }
+}

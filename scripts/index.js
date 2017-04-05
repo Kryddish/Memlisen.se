@@ -77,8 +77,28 @@ $(window).scroll(function(){
 			chosen = 3;
 		}
 	});
-$('.goat-work').click(function() {
-   location.href = 'http://memlisen.se/gladageten';
-  });
 
+	$('.goat-work').click(function() {
+		location.href = 'http://memlisen.se/gladageten';
+	});
+
+	$("#mail").click(function() {
+		let name = $("#name").val();
+		let email = $("#email").val();
+		let phone = $("#phone").val();
+		let text = $("#text").val();
+
+		$.post("../ajax/mail.php", {
+			name: name,
+			email: email,
+			phone: phone,
+			text: text
+		}, function(data, status) {
+			alert("Ditt meddelande har blivit skickat!");
+			$("#form").css("display", "none");
+		})
+		.fail(function() {
+			alert( "Ett fel uppstod, vänligen försök igen." );
+		});
+	});
 });
